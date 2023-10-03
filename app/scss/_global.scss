@@ -1,0 +1,104 @@
+body {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   line-height: 1;
+   background-color: $fontColor;
+   font-size: 32px;
+   color: $fontColor;
+}
+
+.container {
+   max-width: 1100px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+
+.section {
+
+   @media (max-width: 576px) {  
+
+   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.btn-icon {
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+
+   &:hover {
+      outline: 1px solid $accent;
+   }
+
+   &:active {
+      box-shadow: 0px 0px 5px 2px $accent;
+   }
+}
+
+.input {
+   transition: all 0.3s ease-in-out;
+   outline: 0 solid transparent;
+   cursor: pointer;
+
+   &:hover {
+      border: 1px solid $accent;
+   }
+
+   &:focus {
+      border: 1px solid $accent;
+   }
+   &:focus::placeholder {
+      color: transparent;
+   }
+
+   &::placeholder {
+      position: relative;
+      font-size: 12px;
+      color: $fontColor;
+   }
+}
+
+.btn {
+   background-color: $accent;
+   border: 1px solid transparent;
+   padding: 8px 15px;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+   
+   
+   &:hover {
+      color: $accent;
+      background-color: $fontColor;
+      border: 1px solid$accent;
+   }
+
+   &:active {
+      box-shadow: 0px 0px 5px 2px $accent;
+      color: $fontColor;
+   }
+}
+
+.link {
+   border: 1px solid transparent;
+   
+   &:hover {
+      color: $accent;
+      border-bottom: 1px solid$accent;
+   }
+}

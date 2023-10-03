@@ -1,0 +1,144 @@
+.footer {
+   background-color: $bgColor;
+   padding: 43px 0 66px;
+
+      &__logo{
+         margin-bottom: 14px;
+      }
+
+      &__wrapper {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+		&__networks {
+		}
+
+		&__networks-btns {
+         display: flex;
+         column-gap: 30px;
+		}
+
+		&__networks-btn {
+         position: relative;
+         width: 40px;
+         height: 40px;
+         border-radius: 10px;
+         background-color: $accent;
+         transition: all 0.2s ease-in-out;
+
+         &:hover {
+            background-color: $fontColor;
+         }
+
+         &:active {
+            box-shadow: 0px 0px 5px 2px $accent;
+            color: $fontColor;
+         }
+		}
+
+		&__network {
+		}
+
+		&__network--telegram,
+      &__network--instagram {
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 22px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.2s ease-in-out;
+         }
+
+         &:hover::after {
+            filter: invert(69%) sepia(99%) saturate(444%) hue-rotate(355deg) brightness(97%) contrast(109%);
+         }
+
+		}
+      
+      &__network--telegram {
+         &::after {
+            background-image: url('../images/sprite.svg#icon-telegram');
+         }
+      }
+
+		&__network--instagram {
+         &::after {
+            background-image: url('../images/sprite.svg#icon-instagram');
+         }
+		}
+
+		&__data {
+         display: flex;
+         column-gap: 75px;
+		}
+
+		&__data-block {
+		}
+
+		&__block-titel {
+         font-size: 24px;
+         margin-bottom: 18px;
+		}
+
+		&__data-list {
+         display: flex;
+         flex-direction: column;
+         row-gap: 10px;
+		}
+
+		&__data-item {
+         font-size: 16px;
+         color: $silverLight;
+		}
+
+		&__email {
+		}
+}
+.container {
+}
+.logo {
+
+		&__icon {
+		}
+}
+.email {
+
+		&__title {
+         font-size: 20px;
+		}
+
+		&__text {
+         font-size: 14px;
+         margin-bottom: 10px;
+         color: $silverLight;
+		}
+
+		&__registr {
+		}
+
+		&__fild {
+         width: 190px;
+         font-size: 12px;
+         padding: 7px 14px;
+         background-color: #363636;
+         border: 1px solid transparent;
+         color: $fontColor;
+
+         &::placeholder {
+            font-size: 12px;
+            color: $accent;
+         }
+		}
+
+		&__btn {
+         font-size: 12px;
+		}
+}
+

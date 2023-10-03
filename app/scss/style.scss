@@ -1,0 +1,10 @@
+@import '../../node_modules/swiper/swiper-bundle'; 
+/* БЕЗ .css !!!!!(Импортируем содержимое, а не строку) */
+@import "reset";
+@import "fonts";
+@import "vars";
+@import "global";
+@import "mixins";
+@import "./components/head";
+@import "./components/footer";
+

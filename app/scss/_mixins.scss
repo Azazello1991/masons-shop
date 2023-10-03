@@ -1,0 +1,17 @@
+@mixin r($width) {
+  @media (max-width: #{$width}px) {  
+    @content;
+   }
+}
+
+@mixin rm($width) {
+  @media (min-width: #{$width}px) {
+    @content;
+   }
+}
+
+@mixin rh($height) {
+  @media (max-height: #{$height}px) {
+    @content;
+   }
+}

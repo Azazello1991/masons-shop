@@ -1,0 +1,148 @@
+.header {
+   background-color: $bgColor;
+   padding: 20px 30px;
+
+		&__top {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 12px;
+		}
+
+		&__input {
+         position: relative;
+         width: 225px;
+         height: 30px;
+         border-radius: 15px;
+         border: 1px solid $fontColor;
+         padding: 7px 32px;
+         color: $fontColor;
+         font-size: 16px;
+         background-color: transparent;
+         background-image: url('../images/icon/icon-lupa.svg');
+         background-repeat: no-repeat;
+         background-position: 10px center;
+      }
+
+		&__nav-top {
+         display: flex;
+         align-items: center;
+         column-gap: 30px;
+		}
+
+      &__languages {
+         display: flex;
+         align-items: center;
+         column-gap: 11px;
+		}
+
+		&__language-btn {
+         font-size: 16px;
+         background-color: transparent;
+         color: #868686;;
+         border: 0px solid transparent;
+         padding-left: 0;
+         transition: all 0.3s ease-in-out;
+         cursor: pointer;
+
+         &:not(:last-child) {
+            border-right: 1px solid $fontColor;
+            padding-right: 9px;
+         }
+
+         &:hover {
+            text-decoration: underline;
+         }
+		}
+
+      &__language-btn.active {
+         color: $fontColor;
+      }
+
+      &__cabinet {
+         display: flex;
+         align-items: center;
+         column-gap: 30px;
+		}
+
+      &__cabinet-btn {
+         position: relative;
+         width: 28px;
+         height: 28px;
+         background-color: transparent;
+         border: 0px solid transparent;
+         border-radius: 5px;
+      }
+
+
+		&__cart-btn,
+      &__lickes-btn {
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 25px;
+         }
+		}
+      
+      &__cart-btn::after {
+         background-image: url('../images/sprite.svg#icon-cart');
+      }
+
+		&__lickes-btn {
+         &::after {
+            background-image: url('../images/sprite.svg#icon-like');
+         }
+		}
+}
+
+.logo {
+   display: block;
+   width: 184px;
+   height: 63px;
+
+   &__icon {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}
+
+.nav {
+
+		&__list {
+         display: flex;
+         column-gap: 2px;
+		}
+      
+		&__category {
+         display: block;
+         padding: 13px 31px 16px 31px;
+         transform: skewX(-20deg);
+         transition: all 0.2s ease-in-out;
+         
+         &:hover {
+            outline: 1px solid $accent;
+         }
+
+         &:active {
+            box-shadow: 0px 0px 5px 2px $accent;
+         }
+		}
+
+      &__category.active {
+         background-color: $fontColor;
+         color: #090909;
+      }
+      
+      &__category-name {
+         display: block;
+         font-size: 18px;
+         transform: skewX(20deg);
+      }
+}
