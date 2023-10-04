@@ -1,35 +1,149 @@
-@font-face {
-   font-family: 'Rubik-italic';
-   font-weight: 400;
-   font-style: italic;
-   src: url('../fonts/Rubik-Italic.woff2') format('woff2'),
-   url('../fonts/Rubik-Italic.woff') format('woff');
-   font-display: swap;
-}
+// ------------- Inter:
 
 @font-face {
-   font-family: 'Rubik-500';
-   font-weight: 500;
+   font-family: 'Inter-700';
+   font-weight: 700;
    font-style: normal;
-   src: url('../fonts/Rubik-Medium.woff2') format('woff2'),
-   url('../fonts/Rubik-Medium.woff') format('woff');
+   src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+   url('../fonts/Inter-Bold.woff') format('woff');
    font-display: swap;
 }
 
 @font-face {
-   font-family: 'Rubik-400';
+   font-family: 'Inter-400';
    font-weight: 400;
    font-style: normal;
-   src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
-      url('../fonts/Rubik-Regular.woff') format('woff');
+   src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+   url('../fonts/Inter-Regular.woff') format('woff');
    font-display: swap;
 }
 
 @font-face {
-   font-family: 'Rubik-300';
+   font-family: 'Inter-600';
+   font-weight: 600;
+   font-style: normal;
+   src: url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+      url('../fonts/Inter-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+
+// ---------------Montserrat:
+
+@font-face {
+   font-family: 'Montserrat-700';
+   font-weight: 700;
+   font-style: normal;
+   src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+      url('../fonts/Montserrat-Bold.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Montserrat-800';
+   font-weight: 800;
+   font-style: normal;
+   src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Montserrat-ExtraBold..woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Montserrat-300';
    font-weight: 300;
    font-style: normal;
-   src: url('../fonts/Rubik-Light.woff2') format('woff2'),
-      url('../fonts/Rubik-Light.woff') format('woff');
+   src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+      url('../fonts/Montserrat-Light.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Montserrat-500';
+   font-weight: 500;
+   font-style: normal;
+   src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+      url('../fonts/Montserrat-Medium.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Montserrat-400';
+   font-weight: 400;
+   font-style: normal;
+   src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+      url('../fonts/Montserrat-Regular.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Montserrat-600';
+   font-weight: 600;
+   font-style: normal;
+   src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+      url('../fonts/Montserrat-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+
+// ---------------MontserratAlternates:
+
+@font-face {
+   font-family: 'MontserratAlternates-300';
+   font-weight: 300;
+   font-style: normal;
+   src: url('../fonts/MontserratAlternates-Light.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-Light.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'MontserratAlternates-500';
+   font-weight: 500;
+   font-style: normal;
+   src: url('../fonts/MontserratAlternates-Medium.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-Medium.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'MontserratAlternates-400';
+   font-weight: 400;
+   font-style: normal;
+   src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-Regular.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'MontserratAlternates-600';
+   font-weight: 600;
+   font-style: normal;
+   src: url('../fonts/MontserratAlternates-SemiBold.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+
+// ---------------- Roboto:
+
+@font-face {
+   font-family: 'Roboto-700';
+   font-weight: 700;
+   font-style: normal;
+   src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Roboto-300';
+   font-weight: 300;
+   font-style: normal;
+   src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Roboto-500';
+   font-weight: 500;
+   font-style: normal;
+   src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
+   font-display: swap;
+}
+@font-face {
+   font-family: 'Roboto-400';
+   font-weight: 400;
+   font-style: normal;
+   src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');
    font-display: swap;
 }

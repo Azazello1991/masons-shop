@@ -38,9 +38,6 @@
          }
 		}
 
-		&__network {
-		}
-
 		&__network--telegram,
       &__network--instagram {
          &::after {
@@ -79,10 +76,9 @@
          column-gap: 75px;
 		}
 
-		&__data-block {
-		}
 
 		&__block-titel {
+         @extend %montserrat-600;
          font-size: 24px;
          margin-bottom: 18px;
 		}
@@ -94,6 +90,7 @@
 		}
 
 		&__data-item {
+         @extend %montserratAlternates-400;
          font-size: 16px;
          color: $silverLight;
 		}
@@ -101,8 +98,7 @@
 		&__email {
 		}
 }
-.container {
-}
+
 .logo {
 
 		&__icon {
@@ -112,12 +108,14 @@
 
 		&__title {
          font-size: 20px;
+         @extend %montserrat-600;
 		}
 
 		&__text {
          font-size: 14px;
          margin-bottom: 10px;
          color: $silverLight;
+         @extend %montserratAlternates-400;
 		}
 
 		&__registr {
@@ -134,11 +132,13 @@
          &::placeholder {
             font-size: 12px;
             color: $accent;
+            @extend %montserrat-300;
          }
 		}
 
 		&__btn {
          font-size: 12px;
+         @extend %montserrat-500;
 		}
 }
 

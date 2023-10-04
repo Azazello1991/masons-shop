@@ -1,5 +1,8 @@
 .header {
-   background-color: $bgColor;
+   position: fixed;
+   left: 0;
+   right: 0;
+   background-color: transparent;
    padding: 20px 30px;
 
 		&__top {
@@ -22,6 +25,7 @@
          background-image: url('../images/icon/icon-lupa.svg');
          background-repeat: no-repeat;
          background-position: 10px center;
+         @extend %inter-400;
       }
 
 		&__nav-top {
@@ -42,6 +46,7 @@
          color: #868686;;
          border: 0px solid transparent;
          padding-left: 0;
+         @extend %inter-400;
          transition: all 0.3s ease-in-out;
          cursor: pointer;
 
@@ -125,6 +130,7 @@
          padding: 13px 31px 16px 31px;
          transform: skewX(-20deg);
          transition: all 0.2s ease-in-out;
+         @extend %montserrat-300;
          
          &:hover {
             outline: 1px solid $accent;

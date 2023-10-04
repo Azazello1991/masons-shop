@@ -1,9 +1,10 @@
 body {
+   @extend %roboto-300;
    position: relative;
    display: flex;
    flex-direction: column;
    line-height: 1;
-   background-color: $fontColor;
+   background-color: $bgColor;
    font-size: 32px;
    color: $fontColor;
 }
