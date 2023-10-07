@@ -13,6 +13,7 @@ const svgSprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
+const lightgallery = require('lightgallery');
 
 
 
@@ -66,8 +67,13 @@ function sprite() {
 
 function scripts() {
    return src([ // Добавляем нужные файлы для конкатинации
+      'app/js/jquery.js',
       'node_modules/swiper/swiper-bundle.js',
-      'app/js/main.js'
+      'app/js/lightgallery.min.js',
+      'app/js/lg-video.min.js',
+      'app/js/lg-pager.min.js',
+      'app/js/mixitup.js',
+      'app/js/main.js',
       // 'app/js/*.js',
       // '!app/js/main.min.js'
    ]) // получаем файл style.scss (может быть несколько)

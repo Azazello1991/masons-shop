@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-   max-width: 1100px;
+   max-width: 1120px;
    padding: 0 15px;
    margin: 0 auto;
 }
@@ -20,6 +20,7 @@ body {
 }
 
 .section {
+   margin-bottom: 150px;
 
    @media (max-width: 576px) {  
 
@@ -102,4 +103,22 @@ body {
       color: $accent;
       border-bottom: 1px solid$accent;
    }
+}
+
+.section-title {
+   font-size: 72px;
+   @extend %montserrat-700;
+   line-height: 1;
+   text-align: center;
+}
+
+.section-text {
+   color: $silverLight;
+   @extend %montserratAlternates-300;
+   text-align: center;
+   margin-bottom: 120px;
+}
+
+.section-title-slice {
+   color: $accent;
 }

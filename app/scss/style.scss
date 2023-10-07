@@ -1,5 +1,8 @@
 @import '../../node_modules/swiper/swiper-bundle'; 
 /* БЕЗ .css !!!!!(Импортируем содержимое, а не строку) */
+@import '../../node_modules/lightgallery/scss/lightgallery'; 
+@import '../../node_modules/lightgallery/scss/lg-video';
+@import '../../node_modules/lightgallery/scss/lg-pager';
 @import "reset";
 @import "fonts";
 @import "vars";
@@ -7,5 +10,14 @@
 @import "mixins";
 @import "./components/head";
 @import "./components/hero";
+@import "./components/about";
+@import "./components/example";
+@import "./components/sale";
+@import "./components/top";
+@import "./components/catalog";
+@import "./components/comments";
+@import "./components/video";
+@import "./components/form";
+@import "./components/contacts";
 @import "./components/footer";
 

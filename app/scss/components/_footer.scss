@@ -15,12 +15,41 @@
 		&__networks {
 		}
 
-		&__networks-btns {
+		
+
+		&__data {
          display: flex;
-         column-gap: 30px;
+         column-gap: 75px;
 		}
 
-		&__networks-btn {
+
+		&__block-titel {
+         @extend %montserrat-600;
+         font-size: 24px;
+         margin-bottom: 18px;
+		}
+
+		&__data-list {
+         display: flex;
+         flex-direction: column;
+         row-gap: 10px;
+		}
+
+		&__data-item {
+         @extend %montserratAlternates-400;
+         font-size: 16px;
+         color: $silverLight;
+		}
+
+		&__email {
+		}
+}
+
+.networks {
+   display: flex;
+   column-gap: 30px;
+
+		&__btn {
          position: relative;
          width: 40px;
          height: 40px;
@@ -39,7 +68,8 @@
 		}
 
 		&__network--telegram,
-      &__network--instagram {
+      &__network--instagram,
+      &__network--viber {
          &::after {
             content: '';
             position: absolute;
@@ -69,33 +99,6 @@
          &::after {
             background-image: url('../images/sprite.svg#icon-instagram');
          }
-		}
-
-		&__data {
-         display: flex;
-         column-gap: 75px;
-		}
-
-
-		&__block-titel {
-         @extend %montserrat-600;
-         font-size: 24px;
-         margin-bottom: 18px;
-		}
-
-		&__data-list {
-         display: flex;
-         flex-direction: column;
-         row-gap: 10px;
-		}
-
-		&__data-item {
-         @extend %montserratAlternates-400;
-         font-size: 16px;
-         color: $silverLight;
-		}
-
-		&__email {
 		}
 }
 

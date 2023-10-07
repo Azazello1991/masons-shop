@@ -25,6 +25,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
+    "lightgallery": "^2.7.2",
     "sass": "^1.64.0",
     "swiper": "^10.0.4"
   }

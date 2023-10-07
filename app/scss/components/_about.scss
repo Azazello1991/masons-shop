@@ -1,0 +1,92 @@
+.about {
+
+		&__services-list {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         column-gap: 42px;
+         row-gap: 160px;
+		}
+
+		&__servic {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 30px 65px;
+         width: 334px;
+         transition: all 0.4s ease-in-out;
+
+         &:hover .about__picture {
+            transform: rotateY(180deg);
+         }
+
+         &:hover {
+            transform: scale(1.2, 1.2);
+            border-radius: 35px;
+            box-shadow: inset 0px 0px 30px 0px $accent;
+         }
+
+         &:hover .about__subtitle {
+            color: $accent;
+            transform: scale(1.5, 1.5);
+            margin-bottom: 20px;
+         }
+
+         &:hover .catalog__deskription {
+            transform: scale(1.5, 1.5) rotate(360deg);
+            transition: all 1s ease-in-out;
+         }
+		}
+
+		&__subtitle {
+         width: 188px;
+         font-size: 24px;
+         @extend %montserrat-700;
+         text-align: center;
+         margin-bottom: 15px;
+         transition: all 0.2s ease-in-out;
+		}
+
+		&__description {
+         font-size: 16px;
+         @extend %montserratAlternates-300;
+         margin-bottom: 35px;
+		}
+
+		&__link {
+         padding: 3px;
+         display: block;
+         @extend %montserrat-500;
+         font-size: 16px;
+         color: $accent;
+         text-align: center;
+         margin-bottom: 45px;
+         
+         transition: all 0.2s ease-in-out;
+
+         &:hover {
+            outline: 1px solid $accent;
+         }
+
+         &:hover + .about__picture {
+            transform: rotateY(180deg);
+         }
+
+         &:active {
+            box-shadow: 0px 0px 5px 2px $accent;
+            color: $fontColor;
+         }
+		}
+
+      &__picture {
+         width: 133px;
+         height: 133px;
+         transition: all 0.5s ease-in-out;
+      }
+
+      &__picture img{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+}
+

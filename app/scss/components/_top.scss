@@ -1,0 +1,101 @@
+
+.top {
+
+		&__gallery {
+		}
+}
+
+.gallery {
+   display: flex;
+   column-gap: 2px;
+   margin-bottom: 85px;
+
+		&__category {
+		}
+
+		&__btn {
+         font-size: 24px;
+         padding: 8px 22px;
+         color: $fontColor;
+         @extend %montserrat-400;
+         background-color: transparent;
+         transition: all 0.3s ease-in-out;
+         border: 0 solid transparent;
+
+         &:hover {
+            color: $accent;
+            background-color: $fontColor;
+            outline: 1px solid $accent;
+         }
+
+         &:active {
+            box-shadow: 0px 0px 5px 2px $accent;
+            color: $fontColor;
+         }
+		}
+
+      &__btn.active {
+         background-color: $accent;
+         color: #070707;
+      }
+
+		&__items {
+         display: grid;
+         grid-template: 1fr/repeat(4, 1fr);
+         grid-auto-rows: 1fr;
+         gap: 40px;
+		}
+
+		&__item {
+		}
+}
+
+.card {
+
+		&__wrapper {
+         display: block;
+         transition: all 0.3s ease-in-out;
+         
+            &:hover {
+               transform: scale(1.2, 1.2);
+               border-radius: 35px;
+               padding: 15px 15px 10px;
+               box-shadow: inset 0px 0px 30px 0px $accent;
+            }
+
+            &:hover .card__title {
+               color: $accent;
+               transform: rotate(5deg) scale(1.2, 1.2);
+               margin-bottom: 20px;
+            }
+		}
+
+		&__img {
+         width: 230px;
+         height: 240px;
+         margin-bottom: 25px;
+		}
+
+		&__pictur {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+		}
+
+		&__title {
+         font-size: 20px;
+         @extend %montserrat-300;
+         color: $fontColor;
+         text-align: center;
+         margin-bottom: 5px;
+         transition: all 0.3s ease-in-out;
+		}
+
+		&__pric {
+         display: block;
+         text-align: center;
+         @extend %montserrat-700;
+         font-size: 24px;
+         color: $fontColor;
+		}
+}

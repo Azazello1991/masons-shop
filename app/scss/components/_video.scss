@@ -1,0 +1,43 @@
+
+.section-title-slice {
+}
+.video {
+      &__title {
+         font-size: 48px;
+         @extend %montserrat-600;
+		}
+
+		&__text {
+         @extend %montserrat-300;
+         color: $silverLight;
+         margin-bottom: 40px;
+		}
+
+      &__box {
+         
+      }
+
+      &__link {
+         display: block;
+         max-width: 915px;
+         max-height: 515px;
+         margin: 0 auto;
+         overflow: hidden;
+         transition: all 0.5s ease;
+         
+         &:hover {
+            box-shadow:  $accent 0px 0px 70px 10px;
+         }
+
+         &:hover .video__screen {
+            transform: scale(1.2, 1.2);
+         }
+      }
+      
+      &__screen {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: all 0.5s ease;
+      }
+}
