@@ -4,6 +4,13 @@
          display: grid;
          grid-template-columns: repeat(3, 1fr);
          column-gap: 60px;
+
+         @include r(768) { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+         }
       }
 
 		&__card {

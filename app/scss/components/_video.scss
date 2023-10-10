@@ -11,6 +11,10 @@
          @extend %montserrat-300;
          color: $silverLight;
          margin-bottom: 40px;
+
+         @include r(568) { 
+            font-size: 18px;
+         }
 		}
 
       &__box {

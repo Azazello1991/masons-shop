@@ -1,0 +1,70 @@
+// ------------- burger:
+.burger {
+	width: $burgerWidth; //указываем ширину линий
+	height: $burgerHeight; //указываем высоту линий
+	position: relative;
+   z-index: 1;
+	color: $burgerColor; //указываем цвет линий
+   border: 0 solid transparent;
+   background-color: transparent;
+   display: none;
+
+   @include r(768) { 
+      display: block;
+   }
+
+   @include r(576) { 
+      order: 3;
+   }
+
+	&__line {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		height: $burgerLineHeight; //указываем расстояние между линиями
+		background-color: currentColor;
+		transition: transform 0.3s ease-in-out;
+      // padding: 0 10px;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: $burgerLineHeight;
+		background-color: currentColor;
+		transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		top: calc(100% - $burgerLineHeight);
+	}
+
+	&--active {
+		.burger__line {
+			transform: scale(0);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+			top: 50%;
+			transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+			top: 50%;
+			transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+		}
+	}
+}
+

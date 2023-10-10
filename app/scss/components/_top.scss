@@ -10,17 +10,33 @@
    column-gap: 2px;
    margin-bottom: 85px;
 
+   @include r(768) { 
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 1fr;
+   }
+   @include r(576) { 
+      grid-template-columns: repeat(3, 1fr);
+   }
+
 		&__category {
+         display: flex;
+         justify-content: center;
+         align-items: center;
 		}
 
 		&__btn {
-         font-size: 24px;
+         font-size: clamp(16px, 2vw, 24px);
          padding: 8px 22px;
          color: $fontColor;
          @extend %montserrat-400;
          background-color: transparent;
          transition: all 0.3s ease-in-out;
          border: 0 solid transparent;
+
+         @include r(992) { 
+            padding: 8px 15px;
+         }
 
          &:hover {
             color: $accent;
@@ -44,6 +60,20 @@
          grid-template: 1fr/repeat(4, 1fr);
          grid-auto-rows: 1fr;
          gap: 40px;
+         width: fit-content;
+         margin: 0 auto;
+
+         @include r(992) { 
+            grid-template: 1fr/repeat(3, 1fr);
+         }
+
+         @include r(768) { 
+            grid-template: 1fr/repeat(2, 1fr);
+         }
+
+         @include r(576) { 
+            grid-template: 1fr/repeat(1, 1fr);
+         }
 		}
 
 		&__item {
@@ -71,8 +101,8 @@
 		}
 
 		&__img {
-         width: 230px;
-         height: 240px;
+         max-width: 230px;
+         max-height: 240px;
          margin-bottom: 25px;
 		}
 

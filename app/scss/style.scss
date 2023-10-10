@@ -8,7 +8,9 @@
 @import "vars";
 @import "global";
 @import "mixins";
-@import "./components/head";
+@import "./components/header";
+@import "./components/mobile-menu";
+@import "./components/burget-menu";
 @import "./components/hero";
 @import "./components/about";
 @import "./components/example";

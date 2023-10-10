@@ -1,3 +1,8 @@
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 30%;
+}
+
 body {
    @extend %roboto-300;
    position: relative;
@@ -7,6 +12,10 @@ body {
    background-color: $bgColor;
    font-size: 32px;
    color: $fontColor;
+}
+
+.lock { 
+   overflow: hidden 
 }
 
 .container {
@@ -23,7 +32,7 @@ body {
    margin-bottom: 150px;
 
    @media (max-width: 576px) {  
-
+      margin-bottom: 100px;
    }
 }
 
@@ -110,6 +119,10 @@ body {
    @extend %montserrat-700;
    line-height: 1;
    text-align: center;
+
+   @media (max-width: 992px) {  
+      font-size: 52px;
+   }
 }
 
 .section-text {
@@ -117,8 +130,47 @@ body {
    @extend %montserratAlternates-300;
    text-align: center;
    margin-bottom: 120px;
+
+   @media (max-width: 992px) {  
+      font-size: 20px;
+      margin-bottom: 80px;
+   }
 }
 
 .section-title-slice {
    color: $accent;
 }
+
+
+.swiper-dot {
+   display: inline-block;
+      width: 15px;
+      height: 15px;
+      opacity: 1;
+      background-color: $silverLight;
+      transition: all 0.2s ease-in-out;
+      outline: 0 solid transparent;
+      border-radius: 50%;
+      
+      &:focus {
+         outline: 2px solid $accent;
+      }
+
+      &:hover {
+         outline: 2px solid $accent;
+         background-color: #FFF2ED;
+      }
+
+      &:active {
+         background-color: #FFAE94;
+         outline: 0 solid transparent;
+      }
+
+      &:not(:last-child) {
+         margin-right: 15px;
+      }
+   }
+
+   .swiper-dot--active {
+      background-color: $accent;
+   }

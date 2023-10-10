@@ -4,6 +4,13 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title class="header">Masons branding wordshop</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+   <link rel="manifest" href="./images/favicon/site.webmanifest">
+   <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -15,9 +22,11 @@
                <input class="input header__input" type="text" id="search" placeholder="Поиск">
                <label class="sr-only" for="search">Поиск по сайту</label>
             </div>
+
             <a class="logo" href="#">
                <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
             </a>
+
             <div class="header__nav-top">
                <div class="header__languages">
                   <button class="header__language-btn active" type="button">RU</button>
@@ -28,38 +37,148 @@
                   <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
                </div>
             </div>
+            
+            <button class="burger burger-index--open" type="button"> 
+               <span class="burger__line"></span>
+               <span class="sr-only">Открыть меню</span>
+            </button>
          </div>
+         
 
          <nav class="nav">
             <ul class="nav__list">
                <li class="nav__category-item">
-                  <a class="nav__category active" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
                </li>
+
                <li class="nav__category-item">
-                  <a class="nav__category" href="#"><span class="nav__category-name">Категория</span></a>
+                  <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
                </li>
             </ul>
          </nav>
       </div>
+      <section class="mobile-menu-index menu-hidden">
+            <div class="mobile-menu-index__wrapper">
+               <div class="mobile-menu-index__head">
+      
+                  <a class="logo" href="#">
+                     <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
+                  </a>
+      
+                  <button class="burger burger--active burger-index--close" type="button"> 
+                     <span class="burger__line"></span>
+                     <span class="sr-only">Открыть меню</span>
+                  </button>
+               </div>
+               
+               <div class="mobile-menu-index__nav">
+                  <div class="header__cabinet">
+                     <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
+                     <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                  </div>
+                  <div class="header__languages mobile-menu-index__languages">
+                     <button class="header__language-btn active" type="button">RU</button>
+                     <button class="header__language-btn" type="button">UA</button>
+                  </div>
+               </div>
+      
+               <nav class="nav">
+                  <ul class="nav__list mobile-nav">
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
+                     </li>
+      
+                     <li class="nav__category-item">
+                        <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
+                     </li>
+                  </ul>
+               </nav>
+      
+               <div class="section-form__data">
+                  <form class="form" action="#" method="post">
+                     <ul class="form__list">
+                        <li class="form__item">
+                           <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
+                           <label class="sr-only" for="name">Введите ваше имя</label>
+                        </li>
+         
+                        <li class="form__item">
+                           <input class="form__fild" id="email" type="email" placeholder="Email">
+                           <label class="sr-only" for="email">Введите ваше email</label>
+                        </li>
+         
+                        <li class="form__item">
+                           <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
+                           <label class="sr-only" for="tel">Введите ваш телефон</label>
+                        </li>
+         
+                        <li class="form__item">
+                           <textarea class="form__fild form__textarea" name="comment" id="comment" placeholder="Примечание"></textarea>
+                           <label class="sr-only" for="comment">Введите ваше примечание</label>
+                        </li>
+                     </ul>
+                     <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                  </form>
+                  
+                  <ul class="networks section-form__networks">
+                     <li class="networks__btn">
+                        <a href="#" class="networks__network networks__network--telegram"></a>
+                        <span class="sr-only">Связатся через телеграм</span>
+                     </li>
+            
+                     <li class="networks__btn">
+                        <a href="#" class="networks__network networks__network--viber"></a>
+                        <span class="sr-only">Связатся через вайбер</span>
+                     </li>
+                  </ul>
+               </div>
+               
+            </div>
+         </section>
    </header>
 <main class="main">
 <section class="section hero">
-   <div class="container">
+   <div class="container hero__contain">
      <div class="hero__wrapper">
          <h1 class="hero__title">masons <span class="hero__title-slice">branding </span>wordshop</h1>
          <p class="hero__text">Высококачественная печать Брендирование одежды и аксессуаров</p>
@@ -67,7 +186,7 @@
      </div>
    </div>
 </section>
-<section class="section about">
+<section class="section about" id="about">
    <div class="container">
       <h2 class="section-title about__title">Наши <span class="section-title-slice about__title-slice">услуги</span></h2>
       <p class="section-text about__text">Главной деятельностью масонств</p>
@@ -142,13 +261,13 @@
       </ul>
    </div>
 </section>
-<section class="section example">
+<section class="section example" id="example">
    <div class="container">
       <h2 class="example__title"><span class="section-title-slice example__title-slice">Пример </span>печати</h2>
       <p class="example__text">Это может быть на тебе</p>
 
       <div class="example__slider-wrapper">
-         <div class="example__slider swiper">
+         <div class="swiper example__slider">
             <div class="swiper-wrapper">
    
                <div class="example__slide swiper-slide">
@@ -191,6 +310,7 @@
             <div class="arrow example__arrow--prev"></div>
             <div class="arrow example__arrow--next"></div>
          </div>
+         <div class="example__dots"></div>
       </div>
 
    </div>
@@ -267,12 +387,13 @@
                <div class="arrow sale__arrow--prev"></div>
                <div class="arrow sale__arrow--next"></div>
             </div>
+            <div class="sale__dots"></div>
          </div>
    
       </div>
    </div>
 </section>
-<section class="section top">
+<section class="section top" id="top">
    <div class="container">
       <h2 class="section-title">Топ <span class="section-title-slice">продаж</span></h2>
       <p class="section-text">То, что вам нравиться</p>
@@ -358,7 +479,7 @@
       </ul>
    </div>
 </section>
-<section class="section catalog">
+<section class="section catalog" id="catalog">
    <div class="container">
       <h2 class="section-title">Ката<span class="section-title-slice">лог</span></h2>
       <p class="section-text">Выбирай всё что по душе</p>
@@ -426,7 +547,7 @@
       </ul>
    </div>
 </section>
-<section class="section comments">
+<section class="section comments" id="comments">
    <div class="container">
       <h2 class="section-title">От<span class="section-title-slice">зы</span>вы</h2>
       <p class="section-text comments__text">Только посмотри что о нас говорит твоя соседка</p>
@@ -457,14 +578,16 @@
          </div>
       </div>
 
-      <div class="arrows comments__swiper-arrows">
+      <div class=" comments__swiper-arrows">
          <div class="comments__arrow comments__arrow--prev"></div>
          <div class="comments__arrow comments__arrow--next"></div>
       </div>
+
+      <div class="comments__dots"></div>
    </div>
 </section>
 
-<section class="section video">
+<section class="section video" id="video">
    <div class="container">
       <h2 class="vide__title"><span class="section-title-slice">Ещё есть  </span>сомнения?</h2>
       <p class="video__text">Тогда посмотри это видео и сам всё поймёшь</p>
@@ -527,7 +650,7 @@
       </div>
    </div>
 </section>
-<section class="section contacts">
+<section class="section contacts" id="contacts">
    <div class="container">
       <h2 class="sr-only">График и контакты</h2>
       <ul class="contacts__wrapper">
@@ -560,6 +683,7 @@
    <footer class="footer">
       <div class="container">
          <div class="footer__wrapper">
+            
             <div class="footer__networks">
                <a class="logo footer__logo" href="#">
                   <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
@@ -576,7 +700,6 @@
                      <a class="networks__network networks__network--instagram" href="#" target="_blank"></a>
                   </li>
                </ul>
-
             </div>
       
             <div class="footer__data">

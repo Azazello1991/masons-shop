@@ -10,9 +10,19 @@
          display: flex;
          justify-content: space-between;
          align-items: center;
+
+         @include r(992) { 
+            max-width: 500px;
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: flex-start;
+         }
       }
 
 		&__networks {
+         @include r(992) { 
+            margin-bottom: 50px;
+         }
 		}
 
 		
@@ -20,6 +30,15 @@
 		&__data {
          display: flex;
          column-gap: 75px;
+
+         @include r(992) { 
+            margin-bottom: 50px;
+         }
+
+         @include r(576) { 
+            flex-direction: column;
+            row-gap: 50px;
+         }
 		}
 
 
@@ -33,6 +52,10 @@
          display: flex;
          flex-direction: column;
          row-gap: 10px;
+
+         @include r(768) { 
+            row-gap: 20px;
+         }
 		}
 
 		&__data-item {
@@ -122,6 +145,11 @@
 		}
 
 		&__registr {
+         @include r(576) { 
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+         }
 		}
 
 		&__fild {
@@ -141,6 +169,8 @@
 
 		&__btn {
          font-size: 12px;
+         width: 100px;
+         height: 30px;
          @extend %montserrat-500;
 		}
 }

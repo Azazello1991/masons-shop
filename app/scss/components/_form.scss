@@ -7,13 +7,33 @@
          display: flex;
          justify-content: space-between;
          column-gap: 110px;
+
+         @include r(992) { 
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 20px;
+         }
 		}
 
       &__data {
          width: 100%;
+
+         @include r(992) { 
+            max-width: 500px;
+         }
       }
 
       &__map {
+         padding: 0 10px;
+         width: 100%;
+
+         & iframe {
+            width: 100%;
+         }
+
+         @include r(992) { 
+            margin-bottom: 30px;
+         }
 		}
 }
 

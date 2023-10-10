@@ -5,6 +5,17 @@
          grid-template-columns: repeat(3, 1fr);
          column-gap: 30px; 
          row-gap: 45px;  
+         width: fit-content;
+         margin: 0 auto;
+
+         @include r(768) { 
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+         }
+
+         @include r(576) { 
+            grid-template-columns: repeat(1, 1fr);
+         }
 		}
 
 		&__item {
@@ -55,6 +66,14 @@
          font-size: 32px;
          margin-bottom: 10px;
          transition: all 0.3s ease-in-out;
+
+         @include r(992) { 
+            font-size: 20px;
+         }
+
+         @include r(768) { 
+            font-size: 28px;
+         }
 		}
 
 		&__deskription {

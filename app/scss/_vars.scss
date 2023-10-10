@@ -2,7 +2,14 @@ $accent: #FFC700;
 $fontColor: #ffffff;
 $bgColor: #070707;
 $silverLight: #B7B7B7;
+
+// burger
+$burgerWidth: 30px; //ширина линий - 30px
+$burgerHeight: 20px; //высота линий - 20px
+$burgerLineHeight: 2px; //высота линий 
+$burgerColor: $accent; //цвет 
 // --------------Fonts-------------------//
+
 // Inter
 %inter-400{
    font-family: 'Inter-400';

@@ -2,7 +2,11 @@
 
       &__text {
          max-width: 675px;
-         margin: 0 auto 120px;        
+         margin: 0 auto 120px;    
+         
+         @include r(568) { 
+            margin-bottom: 50px;
+         }
       }
 
 		&__slider-wrapper {
@@ -17,6 +21,15 @@
          max-width: 440px;
          margin: 0 auto;
          background: url('../images/phone.png') center / contain no-repeat;
+
+         @include r(992) { 
+            margin-bottom: 30px;
+         }
+
+         @include r(568) { 
+            max-width: 400px;
+            height: 700px;
+         }
 		}
 
 		&__slide {
@@ -33,6 +46,12 @@
 		&__slide-wrapper {
          max-width: 395px;
          max-height: 860px;
+         position: relative;
+
+         @include r(568) { 
+            max-width: 350px;
+            height: 670px;
+         }
 		}
 
       &__screen {
@@ -42,9 +61,20 @@
       }
 
       &__swiper-arrows {
-         padding: 0 30%;
+         position: absolute;
+         transform: translateY(-50%);
+         transform: translateX(-50%);
+         max-width: 800px;
+         width: 100%;
+         margin: 0 auto;
+         top: 50%;
+         left: 50%;
          display: flex;
          justify-content: space-between;
+
+         @include r(768) { 
+            display: none;
+         }
       }
 
       &__arrow {
@@ -99,6 +129,15 @@
             transform: translateX(10px);
          }
 		}
+
+      &__dots {
+         display: none;
+         
+         @include r(768) { 
+            display: flex;
+            justify-content: center;
+         }
+      }
 }
 
 

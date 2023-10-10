@@ -1,12 +1,16 @@
 .header {
    padding: 20px 30px;
+   position: fixed;
+   left: 0;
+   right: 0;
+   z-index: 999;
+
+   @include r(576) { 
+      padding: 20px 10px 10px;
+   }
    
    &.header--sticky {
-      position: fixed;
-      left: 0;
-      right: 0;
       background-color: $bgColor;
-      z-index: 999;
    }
 
 		&__top {
@@ -15,6 +19,12 @@
          align-items: center;
          margin-bottom: 12px;
 		}
+
+      &__search {
+         @include r(576) { 
+            order: 2;
+         }
+      }
 
 		&__input {
          position: relative;
@@ -30,18 +40,31 @@
          background-repeat: no-repeat;
          background-position: 10px center;
          @extend %inter-400;
+
+         @include r(768) { 
+            max-width: 170px;
+            margin: 0 10px;
+         }
       }
 
 		&__nav-top {
          display: flex;
          align-items: center;
          column-gap: 30px;
+
+         @include r(576) { 
+            display: none;
+         }
 		}
 
       &__languages {
          display: flex;
          align-items: center;
          column-gap: 11px;
+
+         @include r(768) { 
+            display: none;
+         }
 		}
 
 		&__language-btn {
@@ -104,6 +127,7 @@
       }
 
 		&__lickes-btn {
+
          &::after {
             background-image: url('../images/sprite.svg#icon-like');
          }
@@ -115,6 +139,17 @@
    width: 184px;
    height: 63px;
 
+   @include r(992) { 
+      width: 150px;
+      height: 50px;
+   }
+
+   @include r(576) { 
+      width: 100px;
+      height: 40px;
+      order: 1;
+   }
+   
    &__icon {
       width: 100%;
       height: 100%;
@@ -122,20 +157,34 @@
    }
 }
 
+
 .nav {
 
 		&__list {
-         display: flex;
+         display: grid;
+         grid-template-columns: repeat(7, 1fr);
          column-gap: 2px;
          
+         @include r(992) {
+            padding: 5px 10px;
+            overflow-x: auto;
+         }
+
+         @include r(576) {
+            display: none;
+         }
 		}
       
 		&__category {
          display: block;
-         padding: 13px 31px 16px 31px;
+         padding: 15px 30px;
          transform: skewX(-20deg);
          transition: all 0.2s ease-in-out;
          @extend %montserrat-300;
+
+         @include r(768) { 
+            padding: 10px 25px;
+         }
          
          &:hover {
             outline: 1px solid $accent;
@@ -149,11 +198,19 @@
       &__category.active {
          background-color: $fontColor;
          color: $bgColor;
+         @extend %montserrat-700;
       }
       
       &__category-name {
          display: block;
          font-size: 18px;
          transform: skewX(20deg);
+         text-align: center;
+         white-space: nowrap;
+
+         @include r(768) { 
+            font-size: 16px;
+         }
       }
 }
+

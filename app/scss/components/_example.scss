@@ -4,21 +4,42 @@
 		&__title {
          font-size: 48px;
          @extend %montserrat-600;
+
+         @include r(992) { 
+            font-size: 38px;
+         }
 		}
 
 		&__text {
          @extend %montserrat-300;
-         margin-bottom: 18px;
          color: $silverLight;
+         margin-bottom: 18px;
+
+         @include r(992) { 
+            font-size: 20px;
+         }
 		}
 
 		&__slider {
          height: 350px;
+
+         @include r(992) { 
+            max-width: 500px;
+            margin: 0 auto 50px;
+         }
+         @include r(576) { 
+            height: 500px;
+         }
 		}
       
       &__slider-wrapper {
          position: relative;
          margin-bottom: 185px;
+
+         @include r(992) { 
+            margin-bottom: 50px;
+         }
+         
       }
 
       &__slide {
@@ -40,17 +61,17 @@
          height: 200px;
          object-fit: contain;
          object-position: -20px 0px;
+
+         @include r(992) { 
+            width: 300px;
+            height: 300px;
+         }
       }
 
       &__swiper-arrows {
          
       }
 
-      .arrows {
-
-      }
-
-      
       &__arrow--prev {
          &::after {
             background-image: url('../images/sprite.svg#icon-arrow-right');
@@ -71,6 +92,15 @@
             transform: translateX(5px);
          }
       }
+
+      &__dots {
+         display: none;
+
+         @include r(992) { 
+            display: flex;
+            justify-content: center;
+         }
+      }
    }
 
    .arrows {
@@ -81,6 +111,12 @@
          transform: translateY(-50%);
          display: flex;
          justify-content: space-between;
+   }
+
+   .arrows.example__swiper-arrows {
+      @include r(1100) { 
+         display: none;
+      }
    }
    
    .arrow {

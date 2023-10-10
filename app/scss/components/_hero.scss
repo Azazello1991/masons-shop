@@ -1,15 +1,47 @@
 
 .hero {
+   padding-top: 142px;
+   position: relative;
    display: flex;
    align-items: center;
-   padding-top: 142px;
-   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto 150px;
    height: 100vh;
-   background: url('../images/bg-hero.png') 72% 0 / contain no-repeat;
-   margin-bottom: 150px;
+   background: url('../images/hero-bg2.webp') center/ cover no-repeat;
+
+   @include r(768) { 
+      background-position: 70% 50%;
+   }
+
+   @include r(576) { 
+      padding-top: 0px;
+   }
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      @include r(992) { 
+         background-color: rgba(0, 0, 0, 0.5);
+      }
+   }
+
+   &__contain {
+      position: relative;
+      z-index: 2;
+   }
+
 
    &__wrapper {
       max-width: 50%;
+
+      @include r(576) { 
+         max-width: 80%;
+      }
    }
 
    &__title {
@@ -18,6 +50,14 @@
       text-transform: uppercase;
       @extend %montserrat-700;
       margin-bottom: 36px;
+
+      @include r(992) { 
+         font-size: 60px;
+      }
+
+      @include r(576) { 
+         font-size: 48px;
+      }
    }
    
    &__title-slice {
@@ -29,6 +69,10 @@
       columns: $silverLight;
       @extend %montserrat-400;
       margin-bottom: 45px;
+
+      @include r(768) { 
+         font-size: 18px;
+      }
    }
    
    &__link {
@@ -41,6 +85,11 @@
       border: 1px solid transparent;
       padding: 20px 48px;
       transition: all 0.3s ease-in-out;
+
+      @include r(768) { 
+         padding: 15px 35px;
+         font-size: 18px;
+      }
 
       &:hover {
          color: $accent;
