@@ -15,6 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenuIndex.classList.add('menu-hidden'); 
       bodyLock.classList.remove('lock');
    });
+
+
+   // --------- closing mobile-menu after click on catagory:
+   const nav = document.querySelector('.mobile-nav');
+   
+   nav.addEventListener('click', (e) => {
+      const targer = e.target;
+   
+      if (targer.classList.contains('nav__category') || targer.classList.contains('nav__category-name')) {
+         mobileMenuIndex.classList.add('menu-hidden'); 
+         bodyLock.classList.remove('lock');
+      }
+   })
 });
 
 
@@ -94,19 +107,20 @@ if (gallery) {
 }
 
 // Add class "active" to language:
-const languages = document.querySelector('.header__languages');
+const languages = document.querySelectorAll('.header__languages');
 const languageBtns = document.querySelectorAll('.header__language-btn');
 
 if (languages) {
-   languages.addEventListener('click', (e) => {
+   languages.forEach((item) => item.addEventListener('click', (e) => {
       if (e.target.classList.contains('header__language-btn')) {
-         for (let i = 0; i < languageBtns.length; i++) {
-            languageBtns[i].classList.remove('active');
-         };
-         e.target.classList.add('active')
+         languageBtns.forEach((item) => item.classList.remove('active'));
+         const lg = e.target.getAttribute('data-lg');
+         const lgBtn = [...languageBtns].filter(item => item.getAttribute('data-lg') === lg);
+         lgBtn.forEach(item => item.classList.add('active'));
       };
-   });
-}
+   }));
+};
+
 
 // Add class "active" to nav:
 const navList = document.querySelector('.nav__list');
@@ -114,23 +128,16 @@ const navItems = document.querySelectorAll('.nav__category');
 
 if (gallery) {
    navList.addEventListener('click', (e) => {
-      if (e.target.classList.contains('nav__category')) {
-         console.log('true')
+      const targer = e.target;
+      if (targer.classList.contains('nav__category') || targer.classList.contains('nav__category-name')) {
          for (let i = 0; i < navItems.length; i++) {
             navItems[i].classList.remove('active')
          };
 
-         e.target.classList.add('active');
-
-      } else if (e.target.classList.contains('nav__category-name')) {
-         for (let i = 0; i < navItems.length; i++) {
-            navItems[i].classList.remove('active')
-         };
-
-         e.target.parentElement.classList.add('active');
+         targer.classList.add('active');
       }
    });
-}
+};
 
 
 // ----------- Conect mixitup:
