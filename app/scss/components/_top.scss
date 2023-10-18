@@ -81,9 +81,13 @@
 }
 
 .card {
+   max-width: 280px;
+   padding: 10px;
 
 		&__wrapper {
-         display: block;
+         display: flex;
+         align-items: center;
+         flex-direction: column;
          transition: all 0.3s ease-in-out;
          
             &:hover {
@@ -102,7 +106,7 @@
 
 		&__img {
          max-width: 230px;
-         max-height: 240px;
+         height: 240px;
          margin-bottom: 25px;
 		}
 

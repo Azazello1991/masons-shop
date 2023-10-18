@@ -1,0 +1,107 @@
+.pagination {
+   width: fit-content;
+   margin: 0 auto;
+
+		&__list {
+         display: flex;
+         align-items: center;
+         column-gap: 20px;
+		}
+
+		&__link {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 50px;
+         height: 50px;
+         font-size: 24px;
+         @extend %montserrat-500;
+         color: $fontColor;
+         border-radius: 3px;
+         background-color: #252525;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+
+         &:hover {
+            background-color: $accent;
+            color: #ffffff;
+         }
+
+         &:focus {
+            border: 1px solid $accent;
+         }
+
+         &:active {
+            background: #FAEDED;
+            box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.15) inset;
+            color: $bgColor;
+            border: 0 solid transparent;
+         }
+		}
+
+		&__link--current {
+         width: 60px;
+         height: 60px;
+         background-color: $accent;
+         font-size: 32px;
+         @extend %montserrat-700;
+         color: #252525;
+		}
+
+		&__dots {
+         letter-spacing: 0.54px;
+		}
+
+		&__link--prev {
+         background-color: transparent;
+
+         &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            left: 50%;
+            width: 15px;
+            height: 30px;
+            background-image: url('../images/sprite.svg#icon-arrow-right');
+            background-repeat: no-repeat;
+            background-position: center;
+         }
+
+         &:hover::after{
+            filter: invert(87%) sepia(88%) saturate(0%) hue-rotate(304deg) brightness(107%) contrast(102%);
+         }
+		}
+      
+		&__link--next {
+         background-color: transparent;
+
+         &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            width: 15px;
+            height: 30px;
+            background-image: url('../images/sprite.svg#icon-arrow-right');
+            background-repeat: no-repeat;
+            background-position: center;
+         }
+
+         &:hover::after{
+            filter: invert(87%) sepia(88%) saturate(0%) hue-rotate(304deg) brightness(107%) contrast(102%);
+         }
+      }
+
+      &__link--dasabled {
+         &::after{
+            // filter: invert(84%) sepia(1%) saturate(0%) hue-rotate(19deg) brightness(89%) contrast(103%);
+         }
+
+         &:hover::after{
+            filter: invert(93%) sepia(0%) saturate(2688%) hue-rotate(339deg) brightness(86%) contrast(86%);
+         }
+      }
+}

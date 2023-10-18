@@ -126,19 +126,26 @@ if (languages) {
 const navList = document.querySelector('.nav__list');
 const navItems = document.querySelectorAll('.nav__category');
 
-if (gallery) {
+
+if (navList) {
    navList.addEventListener('click', (e) => {
-      const targer = e.target;
-      if (targer.classList.contains('nav__category') || targer.classList.contains('nav__category-name')) {
+      if (e.target.classList.contains('nav__category')) {
+         console.log('true')
          for (let i = 0; i < navItems.length; i++) {
             navItems[i].classList.remove('active')
          };
 
-         targer.classList.add('active');
+         e.target.classList.add('active');
+
+      } else if (e.target.classList.contains('nav__category-name')) {
+         for (let i = 0; i < navItems.length; i++) {
+            navItems[i].classList.remove('active')
+         };
+
+         e.target.parentElement.classList.add('active');
       }
    });
-};
-
+}
 
 // ----------- Conect mixitup:
 if (document.querySelector('.gallery__items')) {
@@ -184,13 +191,150 @@ if (example) {
 }
 
 // -------------- lightgallery-vide:
-const lightBox = document.querySelector(".video__box");
-if (lightBox) {
-   lightGallery(lightBox, {
+const lightVideo = document.querySelector(".video__box");
+if (lightVideo) {
+   lightGallery(lightVideo, {
       plugins: [lgPager, lgVideo],
       counter: false,
       getCaptionFromTitleOrAlt: false,
    });
 }
 
-// 
+
+
+
+
+// ====================================== catalog-page ========================== //
+
+// -------- filter-top:
+const filterTop = document.querySelector('.filter-top');
+
+if (filterTop) {
+   addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('js-result')) {
+         target.classList.toggle('active');
+         target.nextElementSibling.classList.toggle('hidden');
+
+      } else if (target.classList.contains('js-parameter')) {
+         const parameter = target.textContent;
+         target.parentElement.previousElementSibling.textContent = parameter;
+         target.parentElement.classList.toggle('hidden');
+         target.parentElement.previousElementSibling.classList.toggle('active');
+      }
+   });
+};
+
+
+
+// ====================================== product-page ========================== //
+
+// ------------slider product:
+
+const product = document.querySelector(".product");
+if (product) {
+   const swiper = new Swiper('.swiper-product', {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+   });    
+}
+
+// Light Gallery:
+const lightBox = document.querySelector('.product__slider-items');
+
+if (lightBox) {
+   lightGallery(lightBox, {
+      plugins: [lgPager], // Підключаемо плагін lgPager (підключали разом з lightGallery)
+      speeed: 500, // швидкість
+      addClass: 'product-light-box', // додаємо клас для додаткової стилізації (якщо потрібно)
+      counter: false, // відключаемо каунтер
+      download: false, // відключаємо "зберегти зображення"
+      // closeOnTap: false, // можливість закрити при клікові на саме вікно
+      getCaptionFromTitleOrAlt: false // підпис до галереї
+   })
+};
+
+// static stars rating:
+const staticStars = document.querySelectorAll('.static-stars'); // знаходимо всі блоки з класом static-stars
+
+if (staticStars) {
+   staticStars.forEach((itemStars, index) => {
+      let stars = itemStars.dataset.stars; // шукаємо data атребут
+      console.log(itemStars.dataset.stars)
+      new Starry(itemStars, {
+         name: `stars-${index}`, // ім'я кожного блока з статичним рейтингом
+         readOnly: true, // тільки для демонстрації рейтингу (без можливості голосування)
+         beginWith: 20 * stars, // задається у % (Всего 100%). Тобто 20% * на 4 зірки(залежно скільки в data-stars="4") = 80% -це 4 зірки відповідно
+         icons: { // перестилізовуємо ісонки
+            blank: '../images/sprite.svg#icon-star-blank',
+            hover: '../images/sprite.svg#icon-star-fill',
+            active: '../images/sprite.svg#icon-star-fill'
+         }
+      });
+   });
+};
+
+
+// button of quantity products:
+const orderInner = document.querySelector('.filter-top__inner-order');
+const orderInput = document.querySelector('.filter-top__input');
+
+if (orderInput) {
+   orderInner.addEventListener('click', (e) => {
+      if (e.target.id === 'btn-less') {
+         let targetValue = e.target.parentElement.nextElementSibling.firstElementChild.value;
+   
+         if (targetValue <= 1) {
+            targetValue = 1;
+         } else {
+            e.target.parentElement.nextElementSibling.firstElementChild.value--
+         }
+
+      } else if (e.target.id === 'btn-more') {
+         e.target.parentElement.previousElementSibling.firstElementChild.value++
+      }
+   });
+};
+
+// ---------------- swiper liked ----------------- //
+if (orderInput) {
+   const swiper = new Swiper('.recommend__swiper', {
+      loop: true,
+     // Navigation arrows
+      navigation: {
+         nextEl: '.liked__btn--prev',
+         prevEl: '.liked__btn--next',
+      },
+      pagination: {
+         el: ".liked__dots",
+         bulletClass: 'swiper-dot',
+         bulletActiveClass: 'swiper-dot--active',
+         clickable: true
+      },
+      breakpoints: {
+         1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+         },
+         992: {
+            slidesPerView: 4,
+            spaceBetween: 25,
+         },
+         768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+         },
+         576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+         },
+         325: {
+            slidesPerView: 1,
+            spaceBetween: 5,
+         },
+      },
+   });    
+};

@@ -1,5 +1,6 @@
-@import '../../node_modules/swiper/swiper-bundle'; 
 /* БЕЗ .css !!!!!(Импортируем содержимое, а не строку) */
+@import '../../node_modules/swiper/swiper-bundle'; 
+@import '../../node_modules/starry-rating/dist/starry';  
 @import '../../node_modules/lightgallery/scss/lightgallery'; 
 @import '../../node_modules/lightgallery/scss/lg-video';
 @import '../../node_modules/lightgallery/scss/lg-pager';
@@ -8,6 +9,8 @@
 @import "vars";
 @import "global";
 @import "mixins";
+
+/* ------------- index: */
 @import "./components/header";
 @import "./components/mobile-menu";
 @import "./components/burget-menu";
@@ -19,7 +22,17 @@
 @import "./components/catalog";
 @import "./components/comments";
 @import "./components/video";
+@import "./components/light-gallery";
 @import "./components/form";
 @import "./components/contacts";
 @import "./components/footer";
 
+/* -------- catalog-page: */
+@import "./components/catalog-page/catalog-products";
+@import "./components/catalog-page/pagination";
+
+/* -------- product-page: */
+@import "./components/product-page/bread-crumb";
+@import "./components/product-page/product";
+@import "./components/product-page/comments";
+@import "./components/product-page/recommend-slider";

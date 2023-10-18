@@ -1,111 +1,54 @@
 <!DOCTYPE html>
-<html lang="RU">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title class="header">Masons branding wordshop</title>
-   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-   <link rel="manifest" href="./images/favicon/site.webmanifest">
-   <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-   <meta name="msapplication-TileColor" content="#da532c">
-   <meta name="theme-color" content="#ffffff">
-   <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-   <header class="header">
-      <div class="container">
-         
-         <div class="header__top">
-            <div class="header__search">
-               <input class="input header__input" type="text" id="search" placeholder="Поиск">
-               <label class="sr-only" for="search">Поиск по сайту</label>
-            </div>
-
-            <a class="logo" href="#">
-               <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
-            </a>
-
-            <div class="header__nav-top">
-               <div class="header__languages">
-                  <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
-                  <button class="header__language-btn" data-lg="ua" type="button">UA</button>
-               </div>
-               <div class="header__cabinet">
-                  <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
-                  <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
-               </div>
-            </div>
-            
-            <button class="burger burger-index--open" type="button"> 
-               <span class="burger__line"></span>
-               <span class="sr-only">Открыть меню</span>
-            </button>
-         </div>
-         
-
-         <nav class="nav">
-            <ul class="nav__list">
-               <li class="nav__category-item">
-                  <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
-               </li>
-            </ul>
-         </nav>
-      </div>
-      <section class="mobile-menu-index menu-hidden">
-            <div class="mobile-menu-index__wrapper">
-               <div class="mobile-menu-index__head">
+<html lang="ua">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title class="header">Masons branding wordshop</title>
+      <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="./images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <link rel="stylesheet" href="css/style.min.css">
+   </head>
+   <body>
+         <header class="header">
+            <div class="container">
+               
+               <div class="header__top">
+                  <div class="header__search">
+                     <input class="input header__input" type="text" id="search" placeholder="Поиск">
+                     <label class="sr-only" for="search">Поиск по сайту</label>
+                  </div>
       
                   <a class="logo" href="#">
                      <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
                   </a>
       
-                  <button class="burger burger--active burger-index--close" type="button"> 
+                  <div class="header__nav-top">
+                     <div class="header__languages">
+                        <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
+                        <button class="header__language-btn" data-lg="ua" type="button">UA</button>
+                     </div>
+                     <div class="header__cabinet">
+                        <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
+                        <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                     </div>
+                  </div>
+                  
+                  <button class="burger burger-index--open" type="button"> 
                      <span class="burger__line"></span>
                      <span class="sr-only">Открыть меню</span>
                   </button>
                </div>
                
-               <div class="mobile-menu-index__nav">
-                  <div class="header__cabinet">
-                     <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
-                     <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
-                  </div>
-                  <div class="header__languages mobile-menu-index__languages">
-                     <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
-                     <button class="header__language-btn" data-lg="ua" type="button">UA</button>
-                  </div>
-               </div>
       
                <nav class="nav">
-                  <ul class="nav__list mobile-nav">
+                  <ul class="nav__list">
                      <li class="nav__category-item">
-                        <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
+                        <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
                      </li>
       
                      <li class="nav__category-item">
@@ -133,7 +76,535 @@
                      </li>
                   </ul>
                </nav>
+            </div>
+            <section class="mobile-menu-index menu-hidden">
+                  <div class="mobile-menu-index__wrapper">
+                     <div class="mobile-menu-index__head">
+            
+                        <a class="logo" href="#">
+                           <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
+                        </a>
+            
+                        <button class="burger burger--active burger-index--close" type="button"> 
+                           <span class="burger__line"></span>
+                           <span class="sr-only">Открыть меню</span>
+                        </button>
+                     </div>
+                     
+                     <div class="mobile-menu-index__nav">
+                        <div class="header__cabinet">
+                           <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
+                           <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                        </div>
+                        <div class="header__languages mobile-menu-index__languages">
+                           <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
+                           <button class="header__language-btn" data-lg="ua" type="button">UA</button>
+                        </div>
+                     </div>
+            
+                     <nav class="nav">
+                        <ul class="nav__list mobile-nav">
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
+                           </li>
+            
+                           <li class="nav__category-item">
+                              <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
+                           </li>
+                        </ul>
+                     </nav>
+            
+                     <div class="section-form__data">
+                        <form class="form" action="#" method="post">
+                           <ul class="form__list">
+                              <li class="form__item">
+                                 <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
+                                 <label class="sr-only" for="name">Введите ваше имя</label>
+                              </li>
+               
+                              <li class="form__item">
+                                 <input class="form__fild" id="email" type="email" placeholder="Email">
+                                 <label class="sr-only" for="email">Введите ваше email</label>
+                              </li>
+               
+                              <li class="form__item">
+                                 <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
+                                 <label class="sr-only" for="tel">Введите ваш телефон</label>
+                              </li>
+               
+                              <li class="form__item">
+                                 <textarea class="form__fild form__textarea" name="comment" id="comment" placeholder="Примечание"></textarea>
+                                 <label class="sr-only" for="comment">Введите ваше примечание</label>
+                              </li>
+                           </ul>
+                           <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                        </form>
+                        
+                        <ul class="networks section-form__networks">
+                           <li class="networks__btn">
+                              <a href="#" class="networks__network networks__network--telegram"></a>
+                              <span class="sr-only">Связатся через телеграм</span>
+                           </li>
+                  
+                           <li class="networks__btn">
+                              <a href="#" class="networks__network networks__network--viber"></a>
+                              <span class="sr-only">Связатся через вайбер</span>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                  </div>
+               </section>
+         </header>
+      <main class="main">
+      <section class="section hero">
+         <div class="container hero__contain">
+           <div class="hero__wrapper">
+               <h1 class="hero__title">masons <span class="hero__title-slice">branding </span>wordshop</h1>
+               <p class="hero__text">Высококачественная печать Брендирование одежды и аксессуаров</p>
+               <a class="hero__link" target="_blank" href="catalog-page.html">Каталог</a>
+           </div>
+         </div>
+      </section>
+      <section class="section about" id="about">
+         <div class="container">
+            <h2 class="section-title about__title">Наши <span class="section-title-slice about__title-slice">услуги</span></h2>
+            <p class="section-text about__text">Главной деятельностью масонств</p>
+            <ul class="about__services-list">
       
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-printing-machine" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+      
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-fever" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+      
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-printer" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+      
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-printing-machine" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+      
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-fever" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+      
+               <li class="about__servic">
+                  <a class="about__inner" href="#">
+                     <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
+                     <p class="about__description">Качественная печать При малых тиражах</p>
+                     <a class="about__link" href="#">Подробней</a>
+                     <div class="about__picture">
+                        <img src="./images/sprite.svg#icon-printer" width="133" height="133" alt="принт-машина">
+                     </div>
+                  </a>
+               </li>
+               
+            </ul>
+         </div>
+      </section>
+      <section class="section example" id="example">
+         <div class="container">
+            <h2 class="example__title"><span class="section-title-slice example__title-slice">Пример </span>печати</h2>
+            <p class="example__text">Это может быть на тебе</p>
+      
+            <div class="example__slider-wrapper">
+               <div class="swiper example__slider">
+                  <div class="swiper-wrapper">
+         
+                     <div class="example__slide swiper-slide">
+                        <a class="example__slide-link" href="#">
+                           <div class="example__slide-wrapper">
+                              <!-- <img src="./images/example-product.png" alt="Продукт"> -->
+                           </div>
+                        </a>
+                     </div>
+         
+                     <div class="example__slide swiper-slide">
+                        <a class="example__slide-link" href="#">
+                           <div class="example__slide-wrapper">
+                              <img src="./images/example-product.png"  alt="Продукт">
+                           </div>
+                        </a>
+                     </div>
+      
+                     <div class="example__slide swiper-slide">
+                        <a class="example__slide-link" href="#">
+                           <div class="example__slide-wrapper">
+                              <img src="./images/example-product.png"  alt="Продукт">
+                           </div>
+                        </a>
+                     </div>
+                     
+                     <div class="example__slide swiper-slide">
+                        <a class="example__slide-link" href="#">
+                           <div class="example__slide-wrapper">
+                              <img src="./images/example-product.png"  alt="Продукт">
+                           </div>
+                        </a>
+                     </div>
+         
+         
+                     
+                  </div>
+               </div>
+               <div class="arrows example__swiper-arrows">
+                  <div class="arrow example__arrow--prev"></div>
+                  <div class="arrow example__arrow--next"></div>
+               </div>
+               <div class="example__dots"></div>
+            </div>
+      
+         </div>
+      </section>
+      <section class="section sale">
+         <div class="container">
+            <h2 class="sale__title"><span class="section-title-slice example__title-slice">Акции </span>и предолжения</h2>
+            <p class="sale__text">Успей урвать себе</p>
+         </div>
+      
+         <div class="sale__wrapper">
+            <div class="container">
+               
+               <div class="sale__slider-wrapper">
+                  <div class="sale__slider swiper">
+                     <div class="swiper-wrapper">
+      
+                        <div class="sale-slide swiper-slide">
+                           <div class="sale-slide__content">
+                              <h3>Русский корабль</h3>
+                              <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
+                              <a class="sale-slide__btn" href="#">Подробней</a>
+                           </div>
+                           <div class="sale-slide__photo-wrapper">
+                              <div class="sale-slide__photo">
+                                 <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <div class="sale-slide swiper-slide">
+                           <div class="sale-slide__content">
+                              <h3>Русский корабль</h3>
+                              <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
+                              <a class="sale-slide__btn" href="#">Подробней</a>
+                           </div>
+                           <div class="sale-slide__photo-wrapper">
+                              <div class="sale-slide__photo">
+                                 <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
+                              </div>
+                           </div>
+                        </div>
+      
+                        <div class="sale-slide swiper-slide">
+                           <div class="sale-slide__content">
+                              <h3>Русский корабль</h3>
+                              <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
+                              <a class="sale-slide__btn" href="#">Подробней</a>
+                           </div>
+                           <div class="sale-slide__photo-wrapper">
+                              <div class="sale-slide__photo">
+                                 <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
+                              </div>
+                           </div>
+                        </div>
+      
+                        <div class="sale-slide swiper-slide">
+                           <div class="sale-slide__content">
+                              <h3>Русский корабль</h3>
+                              <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
+                              <a class="sale-slide__btn" href="#">Подробней</a>
+                           </div>
+                           <div class="sale-slide__photo-wrapper">
+                              <div class="sale-slide__photo">
+                                 <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
+                              </div>
+                           </div>
+                        </div>
+         
+                     </div>
+                  </div>
+      
+                  <div class="arrows sale__swiper-arrows">
+                     <div class="arrow sale__arrow--prev"></div>
+                     <div class="arrow sale__arrow--next"></div>
+                  </div>
+                  <div class="sale__dots"></div>
+               </div>
+         
+            </div>
+         </div>
+      </section>
+      <section class="section top" id="top">
+         <div class="container">
+            <h2 class="section-title">Топ <span class="section-title-slice">продаж</span></h2>
+            <p class="section-text">То, что вам нравиться</p>
+      
+            <ul class="gallery top__gallery">
+               <li class="gallery__category">
+                  <button class="gallery__btn active" type="button" data-filter=".category-all">Все</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-cap">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-t-shirt">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-category-t-shirt">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
+               </li>
+               <li class="gallery__category">
+                  <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
+               </li>
+               
+            </ul>
+      
+            <ul class="gallery__items">
+      
+               <li class="gallery__item mix category-all category-cap">
+                  <article class="card">
+                     <a href="./desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-t-shirt">
+                  <article class="card">
+                     <a href="#" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-cap">
+                  <article class="card">
+                     <a href="./desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-sweater">
+                  <article class="card">
+                     <a href="#" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+            </ul>
+         </div>
+      </section>
+      <section class="section catalog" id="catalog">
+         <div class="container">
+            <h2 class="section-title">Ката<span class="section-title-slice">лог</span></h2>
+            <p class="section-text">Выбирай всё что по душе</p>
+            <ul class="catalog__list">
+      
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Футболка</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+      
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Худи</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+      
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Чашки</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+      
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Футболка женская</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+      
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Худи</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+               
+               <li class="catalog__item">
+                  <a class="catalog__item-link" href="#">
+                     <div class="catalog__photo">
+                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                     </div>
+                     <h2 class="catalog__subtitle">Чашки</h2>
+                     <span class="catalog__deskription">Эко материалы</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="section comments" id="comments">
+         <div class="container">
+            <h2 class="section-title">От<span class="section-title-slice">зы</span>вы</h2>
+            <p class="section-text comments__text">Только посмотри что о нас говорит твоя соседка</p>
+         </div>
+      
+         <div class="comments__slider-wrapper">
+            <div class="comments__slider swiper">
+               <div class="comments__swiper-wrapper swiper-wrapper">
+      
+                  <div class="comments__slide swiper-slide">
+                     <div class="comments__slide-wrapper">
+                        <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
+                     </div>
+                  </div>
+      
+                  <div class="comments__slide swiper-slide">
+                     <div class="comments__slide-wrapper">
+                        <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
+                     </div>
+                  </div>
+      
+                  <div class="comments__slide swiper-slide">
+                     <div class="comments__slide-wrapper">
+                        <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
+                     </div>
+                  </div>
+      
+               </div>
+            </div>
+      
+            <div class=" comments__swiper-arrows">
+               <div class="comments__arrow comments__arrow--prev"></div>
+               <div class="comments__arrow comments__arrow--next"></div>
+            </div>
+      
+            <div class="comments__dots"></div>
+         </div>
+      </section>
+      
+      <section class="section video" id="video">
+         <div class="container">
+            <h2 class="vide__title"><span class="section-title-slice">Ещё есть  </span>сомнения?</h2>
+            <p class="video__text">Тогда посмотри это видео и сам всё поймёшь</p>
+      
+            <div class="video__box" id="lightgallery">
+               <a class="video__link" href="https://www.youtube.com/watch?v=9qzGpimEnPE" data-lg-size="1600-2400">
+                  <img class="video__screen" alt="prev" src="./images/screen-video.webp" width="915" height="515" />
+               </a>
+            </div>
+         </div>
+      </section>
+      <section class="section section-form">
+         <div class="container">
+            <h2 class="section-title">Свяжитесь с <span class="section-title-slice">нами</span></h2>
+            <p class="section-text section-form__text">Это бысто и удобно</p>
+      
+            <div class="section-form__inner">
                <div class="section-form__data">
                   <form class="form" action="#" method="post">
                      <ul class="form__list">
@@ -157,7 +628,9 @@
                            <label class="sr-only" for="comment">Введите ваше примечание</label>
                         </li>
                      </ul>
-                     <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                     <div>
+                        <button class="btn form__btn" type="submit">Отправить</button>
+                     </div>
                   </form>
                   
                   <ul class="networks section-form__networks">
@@ -172,591 +645,124 @@
                      </li>
                   </ul>
                </div>
-               
-            </div>
-         </section>
-   </header>
-<main class="main">
-<section class="section hero">
-   <div class="container hero__contain">
-     <div class="hero__wrapper">
-         <h1 class="hero__title">masons <span class="hero__title-slice">branding </span>wordshop</h1>
-         <p class="hero__text">Высококачественная печать Брендирование одежды и аксессуаров</p>
-         <a class="hero__link" href="#">Каталог</a>
-     </div>
-   </div>
-</section>
-<section class="section about" id="about">
-   <div class="container">
-      <h2 class="section-title about__title">Наши <span class="section-title-slice about__title-slice">услуги</span></h2>
-      <p class="section-text about__text">Главной деятельностью масонств</p>
-      <ul class="about__services-list">
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-printing-machine" width="133" height="133" alt="принт-машина">
+      
+               <div class="section-form__map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97724.28023475384!2d36.20460175560365!3d49.936343070392816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1696703593067!5m2!1sru!2sua" width="535" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                </div>
-            </a>
-         </li>
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-fever" width="133" height="133" alt="принт-машина">
-               </div>
-            </a>
-         </li>
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-printer" width="133" height="133" alt="принт-машина">
-               </div>
-            </a>
-         </li>
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-printing-machine" width="133" height="133" alt="принт-машина">
-               </div>
-            </a>
-         </li>
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-fever" width="133" height="133" alt="принт-машина">
-               </div>
-            </a>
-         </li>
-
-         <li class="about__servic">
-            <a class="about__inner" href="#">
-               <h3 class="about__subtitle">Печать флекс/флок плёнкой</h3>
-               <p class="about__description">Качественная печать При малых тиражах</p>
-               <a class="about__link" href="#">Подробней</a>
-               <div class="about__picture">
-                  <img src="./images/sprite.svg#icon-printer" width="133" height="133" alt="принт-машина">
-               </div>
-            </a>
-         </li>
-         
-      </ul>
-   </div>
-</section>
-<section class="section example" id="example">
-   <div class="container">
-      <h2 class="example__title"><span class="section-title-slice example__title-slice">Пример </span>печати</h2>
-      <p class="example__text">Это может быть на тебе</p>
-
-      <div class="example__slider-wrapper">
-         <div class="swiper example__slider">
-            <div class="swiper-wrapper">
-   
-               <div class="example__slide swiper-slide">
-                  <a class="example__slide-link" href="#">
-                     <div class="example__slide-wrapper">
-                        <!-- <img src="./images/example-product.png" alt="Продукт"> -->
-                     </div>
-                  </a>
-               </div>
-   
-               <div class="example__slide swiper-slide">
-                  <a class="example__slide-link" href="#">
-                     <div class="example__slide-wrapper">
-                        <img src="./images/example-product.png"  alt="Продукт">
-                     </div>
-                  </a>
-               </div>
-
-               <div class="example__slide swiper-slide">
-                  <a class="example__slide-link" href="#">
-                     <div class="example__slide-wrapper">
-                        <img src="./images/example-product.png"  alt="Продукт">
-                     </div>
-                  </a>
-               </div>
-               
-               <div class="example__slide swiper-slide">
-                  <a class="example__slide-link" href="#">
-                     <div class="example__slide-wrapper">
-                        <img src="./images/example-product.png"  alt="Продукт">
-                     </div>
-                  </a>
-               </div>
-   
-   
-               
             </div>
          </div>
-         <div class="arrows example__swiper-arrows">
-            <div class="arrow example__arrow--prev"></div>
-            <div class="arrow example__arrow--next"></div>
-         </div>
-         <div class="example__dots"></div>
-      </div>
-
-   </div>
-</section>
-<section class="section sale">
-   <div class="container">
-      <h2 class="sale__title"><span class="section-title-slice example__title-slice">Акции </span>и предолжения</h2>
-      <p class="sale__text">Успей урвать себе</p>
-   </div>
-
-   <div class="sale__wrapper">
-      <div class="container">
-         
-         <div class="sale__slider-wrapper">
-            <div class="sale__slider swiper">
-               <div class="swiper-wrapper">
-
-                  <div class="sale-slide swiper-slide">
-                     <div class="sale-slide__content">
-                        <h3>Русский корабль</h3>
-                        <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
-                        <a class="sale-slide__btn" href="#">Подробней</a>
-                     </div>
-                     <div class="sale-slide__photo-wrapper">
-                        <div class="sale-slide__photo">
-                           <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
-                        </div>
-                     </div>
-                  </div>
-                  
-                  <div class="sale-slide swiper-slide">
-                     <div class="sale-slide__content">
-                        <h3>Русский корабль</h3>
-                        <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
-                        <a class="sale-slide__btn" href="#">Подробней</a>
-                     </div>
-                     <div class="sale-slide__photo-wrapper">
-                        <div class="sale-slide__photo">
-                           <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="sale-slide swiper-slide">
-                     <div class="sale-slide__content">
-                        <h3>Русский корабль</h3>
-                        <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
-                        <a class="sale-slide__btn" href="#">Подробней</a>
-                     </div>
-                     <div class="sale-slide__photo-wrapper">
-                        <div class="sale-slide__photo">
-                           <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
-                        </div>
-                     </div>
-                  </div>
-
-                  <div class="sale-slide swiper-slide">
-                     <div class="sale-slide__content">
-                        <h3>Русский корабль</h3>
-                        <p>Купи футболку и 10% с каждой покупки пойдёт на нуждый ВСУ, купи стильную футболку и поддержи своего брата на фронте</p>
-                        <a class="sale-slide__btn" href="#">Подробней</a>
-                     </div>
-                     <div class="sale-slide__photo-wrapper">
-                        <div class="sale-slide__photo">
-                           <img src="./images/sale-photo.png" width="420" height="420" alt="фото продукта">
-                        </div>
-                     </div>
-                  </div>
-   
-               </div>
-            </div>
-
-            <div class="arrows sale__swiper-arrows">
-               <div class="arrow sale__arrow--prev"></div>
-               <div class="arrow sale__arrow--next"></div>
-            </div>
-            <div class="sale__dots"></div>
-         </div>
-   
-      </div>
-   </div>
-</section>
-<section class="section top" id="top">
-   <div class="container">
-      <h2 class="section-title">Топ <span class="section-title-slice">продаж</span></h2>
-      <p class="section-text">То, что вам нравиться</p>
-
-      <ul class="gallery top__gallery">
-         <li class="gallery__category">
-            <button class="gallery__btn active" type="button" data-filter=".category-all">Все</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-cap">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-t-shirt">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-category-t-shirt">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
-         </li>
-         <li class="gallery__category">
-            <button class="gallery__btn" type="button" data-filter=".category-sweater">Кружки</button>
-         </li>
-         
-      </ul>
-
-      <ul class="gallery__items">
-
-         <li class="gallery__item mix category-all category-cap">
-            <article class="card">
-               <a href="./desсription.html" class="card__wrapper">
-                  <div class="card__img">
-                     <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                  </div>
-                  <h3 class="card__title">Футболка Белая</h3>
-                  <span class="card__pric">230 <span>₴</span></span>
-               </a>
-            </article>
-         </li>
-
-         <li class="gallery__item mix category-all category-t-shirt">
-            <article class="card">
-               <a href="#" class="card__wrapper">
-                  <div class="card__img">
-                     <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                  </div>
-                  <h3 class="card__title">Футболка Белая</h3>
-                  <span class="card__pric">230 <span>₴</span></span>
-               </a>
-            </article>
-         </li>
-
-         <li class="gallery__item mix category-all category-cap">
-            <article class="card">
-               <a href="./desсription.html" class="card__wrapper">
-                  <div class="card__img">
-                     <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                  </div>
-                  <h3 class="card__title">Футболка Белая</h3>
-                  <span class="card__pric">230 <span>₴</span></span>
-               </a>
-            </article>
-         </li>
-
-         <li class="gallery__item mix category-all category-sweater">
-            <article class="card">
-               <a href="#" class="card__wrapper">
-                  <div class="card__img">
-                     <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                  </div>
-                  <h3 class="card__title">Футболка Белая</h3>
-                  <span class="card__pric">230 <span>₴</span></span>
-               </a>
-            </article>
-         </li>
-
-      </ul>
-   </div>
-</section>
-<section class="section catalog" id="catalog">
-   <div class="container">
-      <h2 class="section-title">Ката<span class="section-title-slice">лог</span></h2>
-      <p class="section-text">Выбирай всё что по душе</p>
-      <ul class="catalog__list">
-
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Футболка</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Худи</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Чашки</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Футболка женская</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Худи</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-         
-         <li class="catalog__item">
-            <a class="catalog__item-link" href="#">
-               <div class="catalog__photo">
-                  <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-               </div>
-               <h2 class="catalog__subtitle">Чашки</h2>
-               <span class="catalog__deskription">Эко материалы</span>
-            </a>
-         </li>
-      </ul>
-   </div>
-</section>
-<section class="section comments" id="comments">
-   <div class="container">
-      <h2 class="section-title">От<span class="section-title-slice">зы</span>вы</h2>
-      <p class="section-text comments__text">Только посмотри что о нас говорит твоя соседка</p>
-   </div>
-
-   <div class="comments__slider-wrapper">
-      <div class="comments__slider swiper">
-         <div class="comments__swiper-wrapper swiper-wrapper">
-
-            <div class="comments__slide swiper-slide">
-               <div class="comments__slide-wrapper">
-                  <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
-               </div>
-            </div>
-
-            <div class="comments__slide swiper-slide">
-               <div class="comments__slide-wrapper">
-                  <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
-               </div>
-            </div>
-
-            <div class="comments__slide swiper-slide">
-               <div class="comments__slide-wrapper">
-                  <img class="comments__screen" src="./images/screenshot.png" alt="Коментарии">
-               </div>
-            </div>
-
-         </div>
-      </div>
-
-      <div class=" comments__swiper-arrows">
-         <div class="comments__arrow comments__arrow--prev"></div>
-         <div class="comments__arrow comments__arrow--next"></div>
-      </div>
-
-      <div class="comments__dots"></div>
-   </div>
-</section>
-
-<section class="section video" id="video">
-   <div class="container">
-      <h2 class="vide__title"><span class="section-title-slice">Ещё есть  </span>сомнения?</h2>
-      <p class="video__text">Тогда посмотри это видео и сам всё поймёшь</p>
-
-      <div class="video__box" id="lightgallery">
-         <a class="video__link" href="https://www.youtube.com/watch?v=9qzGpimEnPE" data-lg-size="1600-2400">
-            <img class="video__screen" alt="prev" src="./images/screen-video.webp" width="915" height="515" />
-         </a>
-      </div>
-   </div>
-</section>
-<section class="section section-form">
-   <div class="container">
-      <h2 class="section-title">Свяжитесь с <span class="section-title-slice">нами</span></h2>
-      <p class="section-text section-form__text">Это бысто и удобно</p>
-
-      <div class="section-form__inner">
-         <div class="section-form__data">
-            <form class="form" action="#" method="post">
-               <ul class="form__list">
-                  <li class="form__item">
-                     <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
-                     <label class="sr-only" for="name">Введите ваше имя</label>
-                  </li>
-   
-                  <li class="form__item">
-                     <input class="form__fild" id="email" type="email" placeholder="Email">
-                     <label class="sr-only" for="email">Введите ваше email</label>
-                  </li>
-   
-                  <li class="form__item">
-                     <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
-                     <label class="sr-only" for="tel">Введите ваш телефон</label>
-                  </li>
-   
-                  <li class="form__item">
-                     <textarea class="form__fild form__textarea" name="comment" id="comment" placeholder="Примечание"></textarea>
-                     <label class="sr-only" for="comment">Введите ваше примечание</label>
-                  </li>
-               </ul>
-               <button class="btn form__btn" type="submit">Отправить</button>
-            </form>
-            
-            <ul class="networks section-form__networks">
-               <li class="networks__btn">
-                  <a href="#" class="networks__network networks__network--telegram"></a>
-                  <span class="sr-only">Связатся через телеграм</span>
+      </section>
+      <section class="section contacts" id="contacts">
+         <div class="container">
+            <h2 class="sr-only">График и контакты</h2>
+            <ul class="contacts__wrapper">
+      
+               <li class="contacts__card">
+                  <div class="contacts__picture contacts__picture--days"></div>
+                  <h3 class="contacts__subtitle">График</h3>
+                  <time class="contacts__time">
+                     <span class="contacts__days">ПН-ПТ:</span>
+                     <span>9:00</span> - <span>18:00</span>
+                  </time>
                </li>
       
-               <li class="networks__btn">
-                  <a href="#" class="networks__network networks__network--viber"></a>
-                  <span class="sr-only">Связатся через вайбер</span>
+               <li class="contacts__card">
+                  <div class="contacts__picture contacts__picture--address"></div>
+                  <h3 class="contacts__subtitle">Карта</h3>
+                  <address class="contacts__address"><span class="contacts__sity">г. Киев</span> <span>ул. Название</span></address>
+               </li>
+      
+               <li class="contacts__card">
+                  <div class="contacts__picture contacts__picture--contacts"></div>
+                  <h3 class="contacts__subtitle">Контакты</h3>
+                  <a class="contacts__data" href="tel:+380999999999">+38(099)-999-99-99</a>
+                  <a class="contacts__data" href="mailto:gmailexamp@gmail.com">gmailexamp@gmail.com</a>
                </li>
             </ul>
          </div>
-
-         <div class="section-form__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97724.28023475384!2d36.20460175560365!3d49.936343070392816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a09f63ab0f8b%3A0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sua!4v1696703593067!5m2!1sru!2sua" width="535" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         </div>
-      </div>
-   </div>
-</section>
-<section class="section contacts" id="contacts">
-   <div class="container">
-      <h2 class="sr-only">График и контакты</h2>
-      <ul class="contacts__wrapper">
-
-         <li class="contacts__card">
-            <div class="contacts__picture contacts__picture--days"></div>
-            <h3 class="contacts__subtitle">График</h3>
-            <time class="contacts__time">
-               <span class="contacts__days">ПН-ПТ:</span>
-               <span>9:00</span> - <span>18:00</span>
-            </time>
-         </li>
-
-         <li class="contacts__card">
-            <div class="contacts__picture contacts__picture--address"></div>
-            <h3 class="contacts__subtitle">Карта</h3>
-            <address class="contacts__address"><span class="contacts__sity">г. Киев</span> <span>ул. Название</span></address>
-         </li>
-
-         <li class="contacts__card">
-            <div class="contacts__picture contacts__picture--contacts"></div>
-            <h3 class="contacts__subtitle">Контакты</h3>
-            <a class="contacts__data" href="tel:+380999999999">+38(099)-999-99-99</a>
-            <a class="contacts__data" href="mailto:gmailexamp@gmail.com">gmailexamp@gmail.com</a>
-         </li>
-      </ul>
-   </div>
-</section>
-</main>
-   <footer class="footer">
-      <div class="container">
-         <div class="footer__wrapper">
+      </section>
+      </main>
+         <footer class="footer">
+            <div class="container">
+               <div class="footer__wrapper">
+                  
+                  <div class="footer__networks">
+                     <a class="logo footer__logo" href="#">
+                        <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
+                     </a>
+      
+                     <ul class="networks">
+                        <li class="networks__btn">
+                           <span class="sr-only">Перейти на страницу телеграма</span>
+                           <a class="networks__network networks__network--telegram" href="#" target="_blank"></a>
+                        </li>
+      
+                        <li class="networks__btn">
+                           <span class="sr-only">Перейти на страницу инстаграма</span>
+                           <a class="networks__network networks__network--instagram" href="#" target="_blank"></a>
+                        </li>
+                     </ul>
+                  </div>
             
-            <div class="footer__networks">
-               <a class="logo footer__logo" href="#">
-                  <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
-               </a>
-
-               <ul class="networks">
-                  <li class="networks__btn">
-                     <span class="sr-only">Перейти на страницу телеграма</span>
-                     <a class="networks__network networks__network--telegram" href="#" target="_blank"></a>
-                  </li>
-
-                  <li class="networks__btn">
-                     <span class="sr-only">Перейти на страницу инстаграма</span>
-                     <a class="networks__network networks__network--instagram" href="#" target="_blank"></a>
-                  </li>
-               </ul>
-            </div>
+                  <div class="footer__data">
+                     <div class="footer__data-block">
+                        <h2 class="footer__block-titel">Информация</h2>
       
-            <div class="footer__data">
-               <div class="footer__data-block">
-                  <h2 class="footer__block-titel">Информация</h2>
-
-                  <ul class="footer__data-list">
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">О нас</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
-                     </li>
-                  </ul>
-               </div>
-
-               <div class="footer__data-block">
-                  <h2 class="footer__block-titel">Контакты</h2>
-
-                  <ul class="footer__data-list">
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">О нас</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
-                     </li>
-                     <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
+                        <ul class="footer__data-list">
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">О нас</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
+                           </li>
+                        </ul>
+                     </div>
       
-            <div class="email footer__email">
-               <h2 class="email__title">Узнавай о новинках первым</h2>
-               
-               <p class="email__text">Получай от нас смс с сюрпризами</p>
-               <div class="email__registr">
-                  <input class="input email__fild" type="email" id="email" placeholder="Email">
-                  <label class="sr-only" for="email">Введите свой Email</label>
-                  <button class="btn email__btn" type="button">Отправить</button>
+                     <div class="footer__data-block">
+                        <h2 class="footer__block-titel">Контакты</h2>
+      
+                        <ul class="footer__data-list">
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">О нас</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
+                           </li>
+                           <li class="footer__data-item">
+                              <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+            
+                  <div class="email footer__email">
+                     <h2 class="email__title">Узнавай о новинках первым</h2>
+                     
+                     <p class="email__text">Получай от нас смс с сюрпризами</p>
+                     <form class="email__registr" action="#" method="post">
+                        <div>
+                           <input class="input email__fild" type="email" id="email" placeholder="Email">
+                           <label class="sr-only" for="email">Введите свой Email</label>
+                        </div>
+                        <div>
+                           <button class="btn email__btn" type="submit">Отправить</button>
+                        </div>
+                     </form>
+                  </div>
                </div>
             </div>
-         </div>
-      </div>
-   </footer>
-
-   <script src="js/main.min.js"></script>
-</body>
+         </footer>
+      <script src="js/main.min.js"></script>
+   </body>
 </html>
+
 

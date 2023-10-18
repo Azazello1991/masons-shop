@@ -1,0 +1,27 @@
+.recommend {
+
+		&__title {
+         font-size: 36px;
+         @extend %montserrat-700;
+
+         @include r(768) {
+            font-size: 28px;
+         }
+		}
+
+		&__swiper {
+         padding: 50px 0 50px 20px;
+         // overflow: visible;
+
+         @include r(576) {
+            width: 375px;
+            margin: 0 auto;
+         }
+		}
+}
+.product {
+
+		&__recommend {
+		}
+}
+

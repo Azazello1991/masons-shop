@@ -14,6 +14,7 @@ const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const include = require('gulp-include');
 const lightgallery = require('lightgallery');
+const starryRating = require('starry-rating');
 
 
 
@@ -68,10 +69,13 @@ function sprite() {
 function scripts() {
    return src([ // Добавляем нужные файлы для конкатинации
       'app/js/jquery.js',
-      'node_modules/swiper/swiper-bundle.js',
+      './node_modules/swiper/swiper-bundle.js',
+      './node_modules/starry-rating/dist/starry.min.js',
       'app/js/lightgallery.min.js',
-      'app/js/lg-video.min.js',
-      'app/js/lg-pager.min.js',
+      './node_modules/lightgallery/plugins/pager/lg-pager.min.js',
+      './node_modules/lightgallery/plugins/video/lg-video.min.js',
+      // 'app/js/lg-pager.min.js',
+      // 'app/js/lg-video.min.js',
       'app/js/mixitup.js',
       'app/js/main.js',
       // 'app/js/*.js',
@@ -101,7 +105,7 @@ function watching() {
    watch(['app/scss/**/*.scss'], styles) // наблюдаем за изменениями в файле style.scss, и если есть изменения, то запускаем функцию styles
    watch(['app/images/src'], images) // наблюдаем за изменениями в файле style.scss, и если есть изменения, то запускаем функцию styles
    watch(['app/js/main.js'], scripts) // наблюдаем за изменениями в файле main.js, и если есть изменения, то запускаем функцию scripts
-   watch(['app/components/*','app/pages/*'], pages) // наблюдаем за изменениями в файле main.js, и если есть изменения, то запускаем функцию scripts
+   watch(['app/components/**/*.html','app/pages/*'], pages) // наблюдаем за изменениями в файле main.js, и если есть изменения, то запускаем функцию scripts
    watch(['app/**/*.html']).on('change', browserSync.reload) // наблюдаем за изменениями у ВСЕХ файлах html (*.html) у всех папках app/**/*.html
 }
 

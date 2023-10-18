@@ -1,0 +1,91 @@
+.comments {
+
+		&__list {
+		}
+
+		&__item {
+         display: flex;
+         column-gap: 30px;
+         margin-bottom: 115px;
+
+         @include r(992) {
+            margin-bottom: 80px;
+         }
+         @include r(768) {
+            margin-bottom: 50px;
+         }
+		}
+
+      &__inner {
+         padding: 15px 0;
+      }
+
+		&__photo {
+         min-width: 80px;
+         height: 80px;
+         border-radius: 50%;
+		}
+
+		&__img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+		}
+
+      &__autor {
+         @extend %montserrat-600;
+         font-size: 24px;
+         margin-bottom: 7px;
+
+         @include r(768) {
+            font-size: 20px;
+         }
+      }
+
+      &__stars-2 {
+         margin-bottom: 32px;
+      }
+
+      &__comment {
+         color: #A5A5A5;
+         font-size: 20px;
+         line-height: 1.3;
+         @extend %montserrat-400;
+
+         @include r(768) {
+            margin-left: -90px;
+            font-size: 16px;
+         }
+      }
+}
+
+.stars {
+   .Starry .Starry-star {
+      min-width: 25px;
+      width: 25px;
+      height: 25px;
+   }
+}
+
+.stars.comments__stars-2 {
+   .Starry .Starry-star {
+      min-width: 30px;
+      width: 30px;
+      height: 30px;
+
+      @include r(768) {
+         min-width: 20px;
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   .Starry-active.Starry-static,
+   .Starry-blank {
+      column-gap: 10px;
+
+      @include r(768) {
+         column-gap: 5px;
+      }
+   }
+}

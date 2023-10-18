@@ -1,0 +1,123 @@
+<section class="product">
+   <div class="container product__container">
+      <h1 class="sr-only">Описание продукта</h1>
+      <div class="bread-crumbs">
+         <div class="container bread-crumbs__flexbox">
+            <a class="bread-crumbs__item" href="index.html">Каталог</a>
+            <a class="bread-crumbs__item" href="catalog-page.html">Худи</a>
+            <a class="bread-crumbs__item">Желтое худи</a>
+         </div>
+      </div>
+
+      <div class="product__inner">
+         <div class="swiper-product swiper">
+            <div class="product__slider-items swiper-wrapper">
+   
+               <a class="product__img swiper-slide" href="./images/product-800x800.png" data-lg-size="800-800">
+                  <img class="product__photo" src="./images/favicon.png" alt="фото продукта" class="product__photo" width="535" height="530">
+               </a>
+
+               <a class="product__img swiper-slide" href="./images/product-800x800.png" data-lg-size="800-800">
+                  <img class="product__photo" src="./images/product-800x800.png" alt="фото продукта" class="product__photo" width="535" height="530">
+               </a>
+
+               <a class="product__img swiper-slide" href="./images/product-800x800.png" data-lg-size="800-800">
+                  <img class="product__photo" src="./images/product-800x800.png" alt="фото продукта" class="product__photo" width="535" height="530">
+               </a>
+
+               <a class="product__img swiper-slide" href="./images/product-800x800.png" data-lg-size="800-800">
+                  <img class="product__photo" src="./images/product-800x800.png" alt="фото продукта" class="product__photo" width="535" height="530">
+               </a>
+
+               <a class="product__img swiper-slide" href="./images/product-800x800.png" data-lg-size="800-800">
+                  <img class="product__photo" src="./images/product-800x800.png" alt="фото продукта" class="product__photo" width="535" height="530">
+               </a>
+
+            </div>
+         </div>
+   
+         <div class="product__description">
+            <h2 class="product__title">Желтое худи</h2>
+            <span class="product__subtitle">худи, одежда</span>
+
+            <div class="stars static-stars product__stars" data-stars="4"></div>
+   
+            <span class="product__pric">1199.00 <span>грн.</span></span>
+            <ul class="filter-top product__filter">
+               <li class="filter-top__item product__item">
+                  <span class="filter-top__subtitle product__filter-subtitle">Количество:</span>
+                  
+                  <div class="filter-top__inner-order">
+                     <div class="filter-top__order-item">
+                        <button class="filter-top__btn btn--lass" type="button" id="btn-less">-</button>
+                        <span class="sr-only">Кнопка "минус одна едининица товара"</span>
+                     </div>
+
+                     <div class="filter-top__order-item">
+                        <input class="filter-top__input" type="text" id="quantity" value="90">
+                        <label class="sr-only" for="quantity">Количество продукта</label>
+                     </div>
+
+                     <div class="filter-top__order-item">
+                        <button class="filter-top__btn btn--more" type="button" id="btn-more">+</button>
+                        <span class="sr-only">Кнопка "плюс одна едининица товара"</span>
+                     </div>
+                  </div>
+               </li>
+
+               <li class="filter-top__item product__item">
+                  <span class="filter-top__subtitle product__filter-subtitle">Размер:</span>
+                  <div class="filter-top__inner">
+                     <h3 class="sr-only">Сортировать по размеру</h3>
+                     <button class="filter-top__result js-result" type="button">XL</button>
+                     <ul class="filter-top__parameters hidden">
+                        <li class="filter-top__parameter js-parameter">XXL</li>
+                        <li class="filter-top__parameter js-parameter">XL</li>
+                        <li class="filter-top__parameter js-parameter">L</li>
+                        <li class="filter-top__parameter js-parameter">M</li>
+                     </ul>
+                  </div>
+               </li>
+   
+               <li class="filter-top__item product__item">
+                  <span class="filter-top__subtitle product__filter-subtitle">Цвет:</span>
+                  <div class="filter-top__inner">
+                     <h3 class="sr-only">Сортировать по цвету</h3>
+                     <button class="filter-top__result js-result" type="button">Желтый</button>
+                     <ul class="filter-top__parameters hidden">
+                        <li class="filter-top__parameter js-parameter" id="white">Белый</li>
+                        <li class="filter-top__parameter js-parameter" id="black">Черный</li>
+                        <li class="filter-top__parameter js-parameter" id="red">Красный</li>
+                        <li class="filter-top__parameter js-parameter" id="yellow">Желтый</li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+   
+            <div class="product__buy-wrapper">
+               <button class="btn product__btn-buy">КУПИТЬ</button>
+      
+               <div>
+                  <input class="product__checkbox sr-only" type="checkbox" id="like" name="like">
+                  <span class="sr-only">Кнопка "добавить в избранное"</span>
+                  <label class="product__label-like" for="like"></label>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <h2 class="product__title-description">Описание</h2>
+
+      <div class="product__about">
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor aenean enim, bibendum sed massa tellus in. In ultrices et egestas faucibus vestibulum in. Eget nunc leo, in pellentesque. Sed habitant a lectus velit neque. Sed in accumsan in dictum ac.
+         </p>
+      </div>
+
+      <div class="product__add-comments">
+         <h2 class="product__title-comments">Отзывы</h2>
+         <button class="btn product__btn-add" type="button">Оставить отзыв</button>
+      </div>
+   </div>
+</section>
+

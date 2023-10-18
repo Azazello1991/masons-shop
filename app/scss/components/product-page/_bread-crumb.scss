@@ -1,0 +1,35 @@
+.bread-crumbs {
+   margin-bottom: 35px;
+   
+      &__flexbox {
+         display: flex;
+         justify-content: center;
+         column-gap: 10px;
+      }
+
+      &__item {
+         color: #A4A4A4;
+         @extend %montserrat-300;
+         font-size: 16px;
+
+         &:last-child {
+            color: $accent;
+         }
+      }
+
+		&__item:not(:last-child) {
+         position: relative;
+         padding: 0 10px 0 0;
+
+         &::after {
+            content: '/';
+            position: absolute;
+            top: 0;
+            right: 0;
+         }
+
+         &:hover {
+            text-decoration-line: underline;
+         }
+		}
+}
