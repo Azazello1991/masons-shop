@@ -30,9 +30,13 @@
 /* -------- catalog-page: */
 @import "./components/catalog-page/catalog-products";
 @import "./components/catalog-page/pagination";
+@import "./components/filter";
 
 /* -------- product-page: */
 @import "./components/product-page/bread-crumb";
 @import "./components/product-page/product";
 @import "./components/product-page/comments";
 @import "./components/product-page/recommend-slider";
+
+/* -------- product-page: */
+@import "./components/cart/cart";

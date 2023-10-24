@@ -109,6 +109,8 @@
 
 		&__cart-btn,
       &__lickes-btn {
+         position: relative;
+
          &::after {
             content: '';
             position: absolute;
@@ -124,6 +126,21 @@
       
       &__cart-btn::after {
          background-image: url('../images/sprite.svg#icon-cart');
+      }
+
+      &__quantity {
+         position: absolute;
+         top: 0px;
+         right: -5px;
+         color: $accent;
+         font-size: 12px;
+         line-height: 1.3;
+         text-align: center;
+         background-color: red;
+         border-radius: 50%;
+         width: 15px;
+         height: 15px;
+         z-index: 2;
       }
 
 		&__lickes-btn {

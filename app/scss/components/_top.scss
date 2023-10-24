@@ -32,21 +32,10 @@
          @extend %montserrat-400;
          background-color: transparent;
          transition: all 0.3s ease-in-out;
-         border: 0 solid transparent;
+         border: 1 solid transparent;
 
          @include r(992) { 
             padding: 8px 15px;
-         }
-
-         &:hover {
-            color: $accent;
-            background-color: $fontColor;
-            outline: 1px solid $accent;
-         }
-
-         &:active {
-            box-shadow: 0px 0px 5px 2px $accent;
-            color: $fontColor;
          }
 		}
 

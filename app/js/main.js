@@ -91,7 +91,7 @@ if (example) {
 }
 
 
-// Add class "active" to gallery:
+// Adding class "active" to gallery:
 const gallery = document.querySelector('.gallery');
 const menuItems = document.querySelectorAll('.gallery__btn');
 
@@ -106,9 +106,17 @@ if (gallery) {
    });
 }
 
-// Add class "active" to language:
+// Adding class "active" to language:
 const languages = document.querySelectorAll('.header__languages');
 const languageBtns = document.querySelectorAll('.header__language-btn');
+
+// check what language in Storage:
+languageBtns.forEach((item) => item.classList.remove('active'));
+[...languageBtns].forEach((item) => {
+   if (item.dataset.lg === localStorage.lenguage) {
+      item.classList.add('active');
+   }
+})
 
 if (languages) {
    languages.forEach((item) => item.addEventListener('click', (e) => {
@@ -117,12 +125,20 @@ if (languages) {
          const lg = e.target.getAttribute('data-lg');
          const lgBtn = [...languageBtns].filter(item => item.getAttribute('data-lg') === lg);
          lgBtn.forEach(item => item.classList.add('active'));
+         addlenguageInStorage()
       };
    }));
 };
 
+// Adding language data in Local Storage:
+function addlenguageInStorage() {
+   const lenguage = document.querySelector('.header__language-btn.active');
+   const languageData = lenguage.dataset.lg
+   localStorage.setItem('lenguage', `${languageData}`)
+   console.log(localStorage.lenguage);
+}
 
-// Add class "active" to nav:
+// Adding class "active" to nav:
 const navList = document.querySelector('.nav__list');
 const navItems = document.querySelectorAll('.nav__category');
 
@@ -190,7 +206,7 @@ if (example) {
    });
 }
 
-// -------------- lightgallery-vide:
+// -------------- lightgallery-video:
 const lightVideo = document.querySelector(".video__box");
 if (lightVideo) {
    lightGallery(lightVideo, {
@@ -200,14 +216,10 @@ if (lightVideo) {
    });
 }
 
-
-
-
-
 // ====================================== catalog-page ========================== //
 
-// -------- filter-top:
-const filterTop = document.querySelector('.filter-top');
+// -------- filter:
+const filterTop = document.querySelector('.filter');
 
 if (filterTop) {
    addEventListener('click', (e) => {
@@ -222,6 +234,19 @@ if (filterTop) {
          target.parentElement.previousElementSibling.textContent = parameter;
          target.parentElement.classList.toggle('hidden');
          target.parentElement.previousElementSibling.classList.toggle('active');
+
+      } else if(!target.classList.contains('js-parameter')){
+         const resultBoxes = document.querySelectorAll('.js-result');
+         const paramrtersBoxes = document.querySelectorAll('.filter__parameters');
+         
+         [...resultBoxes].forEach((item) => {
+            if (item.classList.contains('active')) {
+               item.classList.remove('active');
+               [...paramrtersBoxes].forEach((item) => {
+                  item.classList.add('hidden')
+               })
+            }
+         })
       }
    });
 };
@@ -231,7 +256,6 @@ if (filterTop) {
 // ====================================== product-page ========================== //
 
 // ------------slider product:
-
 const product = document.querySelector(".product");
 if (product) {
    const swiper = new Swiper('.swiper-product', {
@@ -263,7 +287,6 @@ const staticStars = document.querySelectorAll('.static-stars'); // знаход�
 if (staticStars) {
    staticStars.forEach((itemStars, index) => {
       let stars = itemStars.dataset.stars; // шукаємо data атребут
-      console.log(itemStars.dataset.stars)
       new Starry(itemStars, {
          name: `stars-${index}`, // ім'я кожного блока з статичним рейтингом
          readOnly: true, // тільки для демонстрації рейтингу (без можливості голосування)
@@ -278,12 +301,12 @@ if (staticStars) {
 };
 
 
-// button of quantity products:
-const orderInner = document.querySelector('.filter-top__inner-order');
-const orderInput = document.querySelector('.filter-top__input');
+// filter button of quantity products:
+const orderInner = document.querySelectorAll('.filter__inner-order');
+const orderInput = document.querySelector('.filter__input');
 
 if (orderInput) {
-   orderInner.addEventListener('click', (e) => {
+   orderInner.forEach((item)=>item.addEventListener('click', (e) => {
       if (e.target.id === 'btn-less') {
          let targetValue = e.target.parentElement.nextElementSibling.firstElementChild.value;
    
@@ -296,7 +319,8 @@ if (orderInput) {
       } else if (e.target.id === 'btn-more') {
          e.target.parentElement.previousElementSibling.firstElementChild.value++
       }
-   });
+   })
+   )
 };
 
 // ---------------- swiper liked ----------------- //
@@ -338,3 +362,170 @@ if (orderInput) {
       },
    });    
 };
+
+// adding event on buy-button:
+const buyBox = document.querySelector('.product__buy-wrapper');
+
+if (buyBox) {
+   buyBox.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('product__btn-buy')) {
+         collectingData();
+         checkQuantityProducts();
+      }
+   })
+}
+
+// collecting product data and add to local storage:
+function collectingData() {
+   const objProducts = {};
+   const arrProduct = []
+
+   const way = document.querySelector('.product__photo').getAttribute('src');
+   const title = document.querySelector('.product__title').textContent;
+   const subtitle = document.querySelector('.product__subtitle').textContent;
+   const quantity = document.querySelector('.filter__input').value;
+   const size = document.getElementById('size').textContent;
+   const color = document.getElementById('color').textContent;
+   const price = document.querySelector('.product__price').textContent;
+   const currency = document.querySelector('.product__currency').textContent;
+   const id = Math.ceil(Math.random() * 1000);
+   objProducts.way = way;
+   objProducts.title = title;
+   objProducts.subtitle = subtitle;
+   objProducts.quantity = quantity;
+   objProducts.size = size;
+   objProducts.color = color;
+   objProducts.price = price;
+   objProducts.currency = currency;
+   objProducts.id = id;
+
+   if (localStorage.arrProduct) {
+      const arrProduct = JSON.parse(localStorage['arrProduct']);
+      arrProduct.push(objProducts);
+      localStorage.setItem('arrProduct', JSON.stringify(arrProduct));
+
+   } else {
+      arrProduct.push(objProducts);
+      localStorage.setItem('arrProduct', JSON.stringify(arrProduct));
+   }
+}
+
+// ===================================== Cart =========================================== //
+
+const productsList = document.querySelector('.cart__products-list');
+
+// adding event on delete buttons:
+if (productsList) {
+   productsList.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('cart__delete')) {
+         deleteProduct(target);
+         checkQuantityProducts();
+      }
+   })
+}
+
+
+// checking product in Local Storage:
+if (productsList) {
+   if (localStorage.arrProduct) {
+      addProductInCart(JSON.parse(localStorage['arrProduct']));
+   }
+}
+checkQuantityProducts();
+
+// checking quantity products in shopping list:
+function checkQuantityProducts() {
+   const quatityBox = document.querySelector('.header__quantity');
+   const arrLength = (JSON.parse(localStorage['arrProduct'])).length;
+   quatityBox.textContent = arrLength;
+}
+
+function deleteProduct(e) {
+   const productId = +(e.closest('.cart__product').id);
+   e.closest('.cart__product').remove();
+   const arrParce = JSON.parse(localStorage['arrProduct']);
+   const arrProduct = [...arrParce].filter(item => item.id !== productId);
+   localStorage.setItem('arrProduct', JSON.stringify(arrProduct));
+}
+
+function addProductInCart(arrProduct) {
+   const productsList = document.querySelector('.cart__products-list');
+
+   for (let i = 0; i < arrProduct.length; i++){
+      productsList.insertAdjacentHTML(`afterBegin`,
+      `<li class="cart__product" id="${arrProduct[i].id}">
+               <div class="cart__flex">
+                  <div class="cart__photo">
+                     <img class="cart__img" src=${arrProduct[i].way} width="160" height="165" alt="фото продукта">
+                  </div>
+   
+                  <div class="cart__text">
+                     <a class="cart__subtitle" href="#">${arrProduct[i].title}</a>
+                     <span class="cart__group">${arrProduct[i].subtitle}</span>
+                  </div>
+               </div>
+   
+               <div class="cart__filter-wrapper">
+                  <ul class="filter product__filter">
+                     <li class="filter__item product__item">
+                        <span class="filter__subtitle product__filter-subtitle">Количество:</span>
+                        
+                        <div class="filter__inner-order">
+                           <div class="filter__order-item">
+                              <button class="filter__btn btn--lass" type="button" id="btn-less">-</button>
+                              <span class="sr-only">Кнопка "минус одна едининица товара"</span>
+                           </div>
+   
+                           <div class="filter__order-item">
+                              <input class="filter__input" type="text" id="quantity" value="${arrProduct[i].quantity}">
+                              <label class="sr-only" for="quantity">Количество продукта</label>
+                           </div>
+   
+                           <div class="filter__order-item">
+                              <button class="filter__btn btn--more" type="button" id="btn-more">+</button>
+                              <span class="sr-only">Кнопка "плюс одна едининица товара"</span>
+                           </div>
+                        </div>
+                     </li>
+   
+                     <li class="filter__item product__item">
+                        <span class="filter__subtitle product__filter-subtitle">Размер:</span>
+                        <div class="filter__inner">
+                           <h3 class="sr-only">Сортировать по размеру</h3>
+                           <button class="filter__result js-result" type="button">${arrProduct[i].size}</button>
+                           <ul class="filter__parameters hidden">
+                              <li class="filter__parameter js-parameter">XXL</li>
+                              <li class="filter__parameter js-parameter">XL</li>
+                              <li class="filter__parameter js-parameter">L</li>
+                              <li class="filter__parameter js-parameter">M</li>
+                           </ul>
+                        </div>
+                     </li>
+                     
+                     <li class="filter__item product__item">
+                        <span class="filter__subtitle product__filter-subtitle">Цвет:</span>
+                        <div class="filter__inner">
+                           <h3 class="sr-only">Сортировать по цвету</h3>
+                           <button class="filter__result js-result" type="button">${arrProduct[i].color}</button>
+                           <ul class="filter__parameters hidden">
+                              <li class="filter__parameter js-parameter" id="white">Белый</li>
+                              <li class="filter__parameter js-parameter" id="black">Черный</li>
+                              <li class="filter__parameter js-parameter" id="red">Красный</li>
+                              <li class="filter__parameter js-parameter" id="yellow">Желтый</li>
+                           </ul>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+   
+               <div class="cart__price-wrapper">
+                  <span class="cart__price">${arrProduct[i].price}<span class="cart__currency">${arrProduct[i].currency}</span></span>
+                  <button class="cart__delete" type="button"></button>
+               </div>
+            </li>`);
+      }
+}

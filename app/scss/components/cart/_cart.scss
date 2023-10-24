@@ -1,0 +1,187 @@
+.cart {
+   padding-top: 205px;
+
+		&__title {
+         text-align: center;
+         font-size: 36px;
+         @extend %montserrat-600;
+         margin-bottom: 30px;
+		}
+
+		&__products-list {
+         margin-bottom: 75px;
+		}
+
+		&__product {
+         position: relative;
+         display: flex;
+         align-items: center;
+         column-gap: 50px;
+         padding-bottom: 20px;
+         border-bottom: 1px $accent solid;
+         margin-bottom: 30px;
+
+         @include r(992) { 
+            column-gap: 30px;
+         }
+
+         @include r(768) { 
+            justify-content: space-between;
+            align-items: start;
+         }
+
+         @include r(576) { 
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+         }
+
+         &:hover .cart__delete {
+            opacity: 1;
+         }
+
+         &:focus .cart__delete {
+            opacity: 1;
+         }
+
+		}
+
+		&__flex {
+         display: flex;
+         column-gap: 30px;
+         align-items: center;
+
+         @include r(992) { 
+            flex-direction: column;
+         }
+		}
+
+		&__photo {
+         max-width: 157px;
+         height: 163px;
+		}
+
+		&__img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+		}
+
+      &__text {
+         display: flex;
+         flex-direction: column;
+
+         @include r(992) { 
+            align-items: center
+         }
+      }
+
+		&__subtitle {
+         @extend %montserrat-400;
+         font-size: 28px;
+         white-space: nowrap;
+		}
+
+		&__group {
+         color: #B5B5B5;
+         @extend %montserrat-400;
+         font-size: 20px;
+		}
+
+		&__filter-wrapper {
+
+         .filter {
+            margin-bottom: 0;
+            max-width: 350px;
+
+            @include r(768) { 
+               bottom: 100px;
+               right: 0;
+               position: absolute;
+            }
+
+            @include r(576) { 
+               position: relative;
+               bottom: 0;
+            }
+         }
+
+         .filter__subtitle {
+            display: none;
+         }
+		}
+
+		&__price-wrapper {
+         display: flex;
+         align-items: center;
+         column-gap: 30px;
+
+         @include r(768) { 
+            padding-top: 50px;
+         }
+
+         @include r(576) { 
+            padding-top: 0;
+         }
+		}
+
+      &__price {
+         @extend %montserrat-600;
+         color: $accent;
+
+         @include r(992) { 
+            font-size: 24px;
+         }
+      }
+
+		&__delete {
+         position: relative;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         background-color: $fontColor;
+         border: 1px solid transparent;
+         transition: all 0.3s ease-out;
+         opacity: 0;
+         outline: 0 solid transparent;
+         cursor: pointer;
+
+         @include r(576) { 
+            opacity: 1;
+            width: 30px;
+            height: 30px;
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/sprite.svg#icon-close');
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.3s ease-out;
+         }
+
+         &:hover::after {
+            filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(72deg) brightness(98%) contrast(90%);
+         }
+
+         &:active::after {
+            filter: invert(100%) sepia(0%) saturate(7498%) hue-rotate(72deg) brightness(98%) contrast(90%);
+         }
+         
+         &:hover {
+            background-color: $accent;
+            box-shadow: inset 0px 3px 6px 5px rgba(245,40,12,1);
+         }
+         
+         &:active {
+            background-color: rgb(224, 109, 14);
+         }
+		}
+}
+
