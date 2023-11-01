@@ -91,7 +91,7 @@ if (example) {
 }
 
 
-// Adding class "active" to gallery:
+// ---------- Adding class "active" to gallery:
 const gallery = document.querySelector('.gallery');
 const menuItems = document.querySelectorAll('.gallery__btn');
 
@@ -106,11 +106,13 @@ if (gallery) {
    });
 }
 
-// Adding class "active" to language:
+// ---------- Adding class "active" to languages:
 const languages = document.querySelectorAll('.header__languages');
 const languageBtns = document.querySelectorAll('.header__language-btn');
 
-// check what language in Storage:
+
+
+// ---------- check what language in Storage:
 languageBtns.forEach((item) => item.classList.remove('active'));
 [...languageBtns].forEach((item) => {
    if (item.dataset.lg === localStorage.lenguage) {
@@ -130,6 +132,8 @@ if (languages) {
    }));
 };
 
+
+
 // Adding language data in Local Storage:
 function addlenguageInStorage() {
    const lenguage = document.querySelector('.header__language-btn.active');
@@ -138,7 +142,9 @@ function addlenguageInStorage() {
    console.log(localStorage.lenguage);
 }
 
-// Adding class "active" to nav:
+
+
+// Adding class "active" to navigation:
 const navList = document.querySelector('.nav__list');
 const navItems = document.querySelectorAll('.nav__category');
 
@@ -161,7 +167,9 @@ if (navList) {
          e.target.parentElement.classList.add('active');
       }
    });
-}
+};
+
+
 
 // ----------- Conect mixitup:
 if (document.querySelector('.gallery__items')) {
@@ -169,6 +177,7 @@ if (document.querySelector('.gallery__items')) {
       const mixer = mixitup(".gallery__items");
    });
 };
+
 
 
 // ---------- header sticky:
@@ -183,6 +192,7 @@ if (header) {
       }
    });
 }
+
 
 
 // ------- swiper comment:
@@ -206,6 +216,8 @@ if (example) {
    });
 }
 
+
+
 // -------------- lightgallery-video:
 const lightVideo = document.querySelector(".video__box");
 if (lightVideo) {
@@ -215,6 +227,8 @@ if (lightVideo) {
       getCaptionFromTitleOrAlt: false,
    });
 }
+
+
 
 // ====================================== catalog-page ========================== //
 
@@ -266,7 +280,9 @@ if (product) {
    });    
 }
 
-// Light Gallery:
+
+
+// ------- Light Gallery:
 const lightBox = document.querySelector('.product__slider-items');
 
 if (lightBox) {
@@ -281,7 +297,9 @@ if (lightBox) {
    })
 };
 
-// static stars rating:
+
+
+// ---------- static stars rating:
 const staticStars = document.querySelectorAll('.static-stars'); // знаходимо всі блоки з класом static-stars
 
 if (staticStars) {
@@ -301,7 +319,8 @@ if (staticStars) {
 };
 
 
-// filter button of quantity products:
+
+// ----------- filter button of quantity products:
 const orderInner = document.querySelectorAll('.filter__inner-order');
 const orderInput = document.querySelector('.filter__input');
 
@@ -323,7 +342,9 @@ if (orderInput) {
    )
 };
 
-// ---------------- swiper liked ----------------- //
+
+
+// ---------------- swiper liked:
 if (orderInput) {
    const swiper = new Swiper('.recommend__swiper', {
       loop: true,
@@ -363,7 +384,9 @@ if (orderInput) {
    });    
 };
 
-// adding event on buy-button:
+
+
+// ------ adding event on buy-button:
 const buyBox = document.querySelector('.product__buy-wrapper');
 
 if (buyBox) {
@@ -377,7 +400,9 @@ if (buyBox) {
    })
 }
 
-// collecting product data and add to local storage:
+
+
+// --------- collecting product data and adding to local storage:
 function collectingData() {
    const objProducts = {};
    const arrProduct = []
@@ -412,11 +437,13 @@ function collectingData() {
    }
 }
 
+
+
 // ===================================== Cart =========================================== //
 
+// adding event on delete buttons:
 const productsList = document.querySelector('.cart__products-list');
 
-// adding event on delete buttons:
 if (productsList) {
    productsList.addEventListener('click', (e) => {
       const target = e.target;
@@ -429,21 +456,31 @@ if (productsList) {
 }
 
 
-// checking product in Local Storage:
+
+// ----------- checking product in Local Storage to build a shopping list:
 if (productsList) {
    if (localStorage.arrProduct) {
       addProductInCart(JSON.parse(localStorage['arrProduct']));
    }
 }
-checkQuantityProducts();
 
-// checking quantity products in shopping list:
+
+
+// ---------- checking quantity products in shopping list:
 function checkQuantityProducts() {
    const quatityBox = document.querySelector('.header__quantity');
    const arrLength = (JSON.parse(localStorage['arrProduct'])).length;
    quatityBox.textContent = arrLength;
-}
+};
 
+
+
+// ----------- checking quantity products in local storage, after loading page: 
+checkQuantityProducts();
+
+
+
+// ----------- function for delet item in shopping list:
 function deleteProduct(e) {
    const productId = +(e.closest('.cart__product').id);
    e.closest('.cart__product').remove();
@@ -452,6 +489,9 @@ function deleteProduct(e) {
    localStorage.setItem('arrProduct', JSON.stringify(arrProduct));
 }
 
+
+
+// function for adding products in shopping cart:
 function addProductInCart(arrProduct) {
    const productsList = document.querySelector('.cart__products-list');
 
@@ -529,3 +569,99 @@ function addProductInCart(arrProduct) {
             </li>`);
       }
 }
+
+
+// ---------------------- Validation cart form:
+const patterns = {
+   namePattern: /^[а-яА-ЯҐґЄєІіЇї'-]{2,}$/,
+   emailPattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
+   phonePattern: /^0\d{9}$/,
+   passwordPattern: /^(?!.*\s).{8,}$/
+};
+
+const formCart = document.forms[1];
+const filds = formCart.querySelectorAll('.order__fild');
+const orderBtn = formCart.querySelector('.order__btn');
+
+// adding event input:
+if (orderBtn) {
+   formCart.addEventListener('input', e => {
+      const target = e.target;
+   
+      if (target.classList.contains('order__fild') && target.name === 'name') {
+         validationData(patterns.namePattern, target);
+   
+      } else if (target.classList.contains('order__fild') && target.name === 'email') {
+         validationData(patterns.emailPattern, target);
+   
+      } else if (target.classList.contains('order__fild') && target.name === 'tel') {
+         validationData(patterns.phonePattern, target);
+   
+      } else if (target.classList.contains('order__fild') && target.name === 'city') {
+         validationData(patterns.namePattern, target);
+   
+      } else if (target.classList.contains('order__fild') && target.name === 'postOffice') {
+   
+         if (target.value.length < 1) {
+            target.classList.remove('success');
+            target.classList.add('error');
+         } else {
+            target.classList.remove('error');
+            target.classList.add('success');
+         }
+      }
+   });
+}
+
+
+// adding event click:
+if (orderBtn) {
+   orderBtn.addEventListener('click', (e) => {
+      const filterFilds = [...filds].filter(item => !(item.classList.contains('success')));
+      filterFilds.forEach(item => {
+         item.classList.add('error');
+         setTimeout(() => item.classList.remove('error'), 300);
+         setTimeout(() => item.classList.add('error'), 600);
+      });
+   });
+}
+
+
+// adding event blur:
+if (orderBtn) {
+   filds.forEach(item => item.addEventListener('blur', (e) => {
+      const target = e.target;
+   
+      if (target.value.length < 1) {
+         target.classList.add('error');
+      }
+   }));
+}
+
+// Validationing form data:
+function validationData(pattern, target) {
+
+   if (!(pattern.test(target.value))) {
+      target.classList.remove('success');
+      target.classList.add('error');
+
+   } else if (pattern.test(target.value)) {
+      target.classList.remove('error');
+      target.classList.add('success');
+   }
+};
+
+
+
+//// ---------------------- Validation page form:
+const formPage = document.forms[1];
+
+console.log(formPage);
+
+
+
+
+
+
+
+

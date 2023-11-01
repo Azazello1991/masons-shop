@@ -1,6 +1,12 @@
 .footer {
-   background-color: $bgColor;
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+   background-color: #191919;
    padding: 43px 0 66px;
+
+      &__container {
+      }
 
       &__logo{
          margin-bottom: 14px;

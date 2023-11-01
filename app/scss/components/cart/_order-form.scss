@@ -1,0 +1,152 @@
+.order {
+   margin-bottom: 130px;
+
+		&__title {
+         margin-bottom: 70px;
+		}
+
+		&__form {
+         display: flex;
+         column-gap: 90px;
+		}
+
+		&__filds {
+         display: flex;
+         flex-direction: column;
+         row-gap: 30px;
+         max-width: 440px;
+         width: 100%;
+		}
+
+      &__fild-wrapper {
+         width: 100%;
+         max-width: 440px;
+      }
+
+		&__fild {
+         padding: 17px 25px;
+         background-color: #111111;
+         width: 100%;
+         font-size: 12px;
+         line-height: 1.3;
+         border: 1px solid transparent;
+         outline: 0px solid transparent;
+         transition: all 0.3s ease-in-out;
+         color: $accent;
+
+         &::placeholder {
+            color: $accent;
+            font-size: 12px;
+            @extend %inter-400;
+         }
+
+         &:focus::placeholder {
+            color: transparent;
+         }
+
+         &:hover {
+            border: solid 1px $accent;
+         }
+
+         &:focus {
+            border: solid 1px $accent;
+         }
+		}
+
+		&__check-boxes {
+         display: flex;
+         column-gap: 90px;
+         margin-bottom: 65px;
+		}
+
+		&__subtitle {
+         font-size: 18px;
+         @extend %montserrat-600;
+         margin-bottom: 25px;
+		}
+
+		&__redio-lable {
+         position: relative;
+         display: block;
+         font-size: 16px;
+         @extend %montserrat-400;
+         padding-left: 30px;
+         color: $accent;
+         cursor: pointer;
+
+         &:not(:last-child){
+            margin-bottom: 20px;   
+         }
+
+         &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #111111;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 12px 10px;
+            transition: all 0.3s ease-in;
+            transition: all 0.3s ease-in;
+         }
+
+         &:hover::after {
+            border: solid 1px $accent;
+         }
+		}
+
+      &__redio:checked + &__redio-lable::after {
+         background-image: url('../images/sprite.svg#icon-check');
+      }
+
+      &__parameter-list {
+         margin-bottom: 30px;
+      }
+
+      &__result-inner {
+         color: #9B9B9B;
+         @extend %montserrat-500;
+         font-size: 16px;
+
+         &:not(:last-child) {
+            margin-bottom: 12px;
+         }
+      }
+
+      &__result {
+         margin-left: 10px;
+         color: $accent;
+      }
+      
+      &__result-slice {
+         color: $accent;
+      }
+
+      &__pay {
+         margin-bottom: 30px;
+      }
+
+		&__btn {
+         border: 2px solid $accent;
+         background-color: transparent;
+         color: $accent;
+         font-size: 16px;
+         padding: 15px 45px;
+         @extend %inter-600
+		}
+}
+
+.error {
+   border: 1px solid rgb(255, 0, 0);
+   &:hover,
+   :focus {
+      border: 1px solid rgb(255, 0, 0);
+   }
+}
+
+.success {
+   border: 1px solid $accent;
+}
