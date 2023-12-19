@@ -1,136 +1,135 @@
 .about {
 
-		&__services-list {
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         grid-auto-rows: 1fr;
-         column-gap: 42px;
-         row-gap: 100px;
+   &__services-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      column-gap: 42px;
+      row-gap: 100px;
 
-         @include r(992) { 
-            column-gap: 15px;
-            row-gap: 70px;
-         }
-
-         @include r(768) { 
-            grid-template-columns: repeat(2, 1fr);
-            justify-items: center;
-         }
-
-         @include r(576) { 
-            grid-template-columns: repeat(1, 1fr);
-            justify-items: center;
-            row-gap: 50px;
-         }
-		}
-
-		&__servic {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 30px 65px;
-         max-width: 334px;
-         height: 100%;
-         transition: all 0.4s ease-in-out;
-
-         @include r(992) { 
-            padding: 20px 45px;
-         }
-
-         &:hover .about__picture {
-            transform: rotateY(180deg);
-         }
-
-         &:hover {
-            transform: scale(1.2, 1.2);
-            border-radius: 35px;
-            box-shadow: inset 0px 0px 30px 0px $accent;
-         }
-
-         &:hover .about__subtitle {
-            color: $accent;
-            transform: scale(1.5, 1.5);
-            margin-bottom: 20px;
-         }
-
-         &:hover .catalog__deskription {
-            transform: scale(1.5, 1.5) rotate(360deg);
-            transition: all 1s ease-in-out;
-         }
-		}
-
-      &__inner {
-         display: flex;
-         flex-direction: column;
-         height: 100%;
+      @include r(992) {
+         column-gap: 15px;
+         row-gap: 70px;
       }
 
-		&__subtitle {
-         max-width: 188px;
-         font-size: 24px;
-         @extend %montserrat-700;
-         text-align: center;
-         margin-bottom: 15px;
-         transition: all 0.2s ease-in-out;
+      @include r(768) {
+         grid-template-columns: repeat(2, 1fr);
+         justify-items: center;
+      }
 
-         @include r(992) { 
-            font-size: 22px;
-         }
+      @include r(576) {
+         grid-template-columns: repeat(1, 1fr);
+         justify-items: center;
+         row-gap: 50px;
+      }
+   }
 
-         @include r(768) { 
-            margin-bottom: 10px;
-         }
-		}
+   &__servic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 65px;
+      max-width: 334px;
+      height: 100%;
+      transition: all 0.4s ease-in-out;
 
-		&__description {
-         font-size: 16px;
-         @extend %montserratAlternates-300;
-         margin-bottom: 35px;
-         flex: 1 0 auto;
+      @include r(992) {
+         padding: 20px 45px;
+      }
 
-         @include r(768) { 
-            margin-bottom: 15px;
-         }
-		}
+      &:hover .about__picture {
+         transform: rotateY(180deg);
+      }
 
-		&__link {
-         padding: 3px;
-         display: block;
-         @extend %montserrat-500;
-         font-size: 16px;
+      &:hover {
+         transform: scale(1.2, 1.2);
+         border-radius: 20px;
+         box-shadow: inset 0px 0px 20px 0px $accent;
+      }
+
+      &:hover>.about__subtitle {
          color: $accent;
-         text-align: center;
-         margin-bottom: 45px;
-         transition: all 0.2s ease-in-out;
-
-         @include r(768) { 
-            margin-bottom: 15px;
-         }
-
-         &:hover {
-            outline: 1px solid $accent;
-         }
-
-         &:hover + .about__picture {
-            transform: rotateY(180deg);
-         }
-
-         &:active {
-            box-shadow: 0px 0px 5px 2px $accent;
-            color: $fontColor;
-         }
-		}
-
-      &__picture {
-         width: 133px;
-         height: 133px;
-         transition: all 0.5s ease-in-out;
+         transform: scale(1.2, 1.2);
+         margin-bottom: 20px;
       }
 
-      &__picture img{
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
+      &:hover .catalog__deskription {
+         transform: scale(1.2, 1.2) rotate(360deg);
+         transition: all 1s ease-in-out;
       }
+   }
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+   }
+
+   &__subtitle {
+      max-width: 188px;
+      font-size: 24px;
+      @extend %montserrat-700;
+      text-align: center;
+      margin-bottom: 15px;
+      transition: all 0.2s ease-in-out;
+
+      @include r(992) {
+         font-size: 22px;
+      }
+
+      @include r(768) {
+         margin-bottom: 10px;
+      }
+   }
+
+   &__description {
+      font-size: 16px;
+      @extend %montserratAlternates-300;
+      margin-bottom: 35px;
+      flex: 1 0 auto;
+
+      @include r(768) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__link {
+      padding: 3px;
+      display: block;
+      @extend %montserrat-500;
+      font-size: 16px;
+      color: $accent;
+      text-align: center;
+      margin-bottom: 45px;
+      transition: all 0.2s ease-in-out;
+
+      @include r(768) {
+         margin-bottom: 15px;
+      }
+
+      &:hover {
+         outline: 1px solid $accent;
+      }
+
+      &:hover+.about__picture {
+         transform: rotateY(180deg);
+      }
+
+      &:active {
+         box-shadow: 0px 0px 5px 2px $accent;
+         color: $fontColor;
+      }
+   }
+
+   &__picture {
+      width: 133px;
+      height: 133px;
+      transition: all 0.5s ease-in-out;
+   }
+
+   &__picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 }
-

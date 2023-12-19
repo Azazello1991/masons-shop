@@ -35,20 +35,33 @@ document.addEventListener('DOMContentLoaded', () => {
 const example = document.querySelector('.example');
 if (example) {
    const swiper = new Swiper('.example__slider', {
+      autoplay: {
+         delay: 3000,
+      },
+
+      mousewheel: {
+         sensitivity: 1, 
+      },
       loop: true,
+
       pagination: {
          el: '.example__dots',
          bulletClass: 'swiper-dot',
          bulletActiveClass: 'swiper-dot--active',
          clickable: true,
       },
+
+      dynamicBullets: true,
+
       slidesPerView: 3,
       spaceBetween: 30,
-     // Navigation arrows
+
       navigation: {
          nextEl: '.example__arrow--next',
          prevEl: '.example__arrow--prev',
       },
+      
+
       breakpoints: {
          1200: {
             slidesPerView: 3,
@@ -85,6 +98,9 @@ if (example) {
          bulletClass: 'swiper-dot',
          bulletActiveClass: 'swiper-dot--active',
          clickable: true,
+      },
+      autoplay: {
+         delay: 3000,
       },
       
    });
@@ -443,6 +459,8 @@ function collectingData() {
 
 // adding event on delete buttons:
 const productsList = document.querySelector('.cart__products-list');
+const blockMessage = document.querySelector('.cart__message-text');
+const orderBtn = document.querySelector('.order__btn');
 
 if (productsList) {
    productsList.addEventListener('click', (e) => {
@@ -457,7 +475,7 @@ if (productsList) {
 
 
 
-// ----------- checking product in Local Storage to build a shopping list:
+// checking product in Local Storage to build a shopping list:
 if (productsList) {
    if (localStorage.arrProduct) {
       addProductInCart(JSON.parse(localStorage['arrProduct']));
@@ -466,21 +484,38 @@ if (productsList) {
 
 
 
-// ---------- checking quantity products in shopping list:
+// checking quantity products in shopping list:
 function checkQuantityProducts() {
    const quatityBox = document.querySelector('.header__quantity');
-   const arrLength = (JSON.parse(localStorage['arrProduct'])).length;
-   quatityBox.textContent = arrLength;
+   // const listLength = productsList.childElementCount;
+   const listLength = JSON.parse(localStorage['arrProduct']).length;
+   quatityBox.textContent = listLength;
+   showHiddenMessCart();
+};
+
+
+// 
+function showHiddenMessCart() {
+   const listLength = productsList.childElementCount;
+   if (listLength < 2) {
+      blockMessage.classList.remove('hidden');
+      orderBtn.setAttribute('disabled', '');
+      orderBtn.textContent = "Корзина пуста"
+   } else {
+      blockMessage.classList.add('hidden');
+      orderBtn.removeAttribute('disabled');
+      orderBtn.textContent = "Оформыть заказ";
+   }
 };
 
 
 
-// ----------- checking quantity products in local storage, after loading page: 
+// checking quantity products in local storage, after loading page: 
 checkQuantityProducts();
 
 
 
-// ----------- function for delet item in shopping list:
+// function for delet item in shopping list:
 function deleteProduct(e) {
    const productId = +(e.closest('.cart__product').id);
    e.closest('.cart__product').remove();
@@ -581,7 +616,7 @@ const patterns = {
 
 const formCart = document.forms[1];
 const filds = formCart.querySelectorAll('.order__fild');
-const orderBtn = formCart.querySelector('.order__btn');
+// const orderBtn = formCart.querySelector('.order__btn');
 
 // adding event input:
 if (orderBtn) {
@@ -611,7 +646,7 @@ if (orderBtn) {
          }
       }
    });
-}
+};
 
 
 // adding event click:
@@ -624,19 +659,19 @@ if (orderBtn) {
          setTimeout(() => item.classList.add('error'), 600);
       });
    });
-}
+};
 
 
 // adding event blur:
 if (orderBtn) {
    filds.forEach(item => item.addEventListener('blur', (e) => {
       const target = e.target;
-   
+
       if (target.value.length < 1) {
          target.classList.add('error');
       }
    }));
-}
+};
 
 // Validationing form data:
 function validationData(pattern, target) {
