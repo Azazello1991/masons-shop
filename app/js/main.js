@@ -412,7 +412,7 @@ if (buyBox) {
       if (target.classList.contains('product__btn-buy')) {
          collectingData();
          checkQuantityProducts();
-      }
+      } 
    })
 }
 
@@ -461,6 +461,19 @@ function collectingData() {
 const productsList = document.querySelector('.cart__products-list');
 const blockMessage = document.querySelector('.cart__message-text');
 const orderBtn = document.querySelector('.order__btn');
+const order = document.querySelector('.order');
+
+// add event click to order block:
+if (order) {
+   order.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.classList.contains('order__redio')) {
+         checkDelivery();
+         culcOrderPrice();
+      }
+   });
+};
+
 
 if (productsList) {
    productsList.addEventListener('click', (e) => {
@@ -469,7 +482,8 @@ if (productsList) {
       if (target.classList.contains('cart__delete')) {
          deleteProduct(target);
          checkQuantityProducts();
-      }
+         culcOrderPrice();
+      } 
    })
 }
 
@@ -479,6 +493,7 @@ if (productsList) {
 if (productsList) {
    if (localStorage.arrProduct) {
       addProductInCart(JSON.parse(localStorage['arrProduct']));
+      culcOrderPrice();
    }
 }
 
@@ -490,13 +505,21 @@ function checkQuantityProducts() {
    // const listLength = productsList.childElementCount;
    const listLength = JSON.parse(localStorage['arrProduct']).length;
    quatityBox.textContent = listLength;
-   showHiddenMessCart();
+
+   if (productsList) {
+      showHiddenMessCart();
+   }
 };
 
+checkQuantityProducts();
 
-// 
+
+
+
+// show and hidden message cart:
 function showHiddenMessCart() {
    const listLength = productsList.childElementCount;
+
    if (listLength < 2) {
       blockMessage.classList.remove('hidden');
       orderBtn.setAttribute('disabled', '');
@@ -509,9 +532,6 @@ function showHiddenMessCart() {
 };
 
 
-
-// checking quantity products in local storage, after loading page: 
-checkQuantityProducts();
 
 
 
@@ -606,7 +626,11 @@ function addProductInCart(arrProduct) {
 }
 
 
-// ---------------------- Validation cart form:
+
+
+
+
+// ---------------------- Validation cart form ------------------------------- //
 const patterns = {
    namePattern: /^[а-яА-ЯҐґЄєІіЇї'-]{2,}$/,
    emailPattern: /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/,
@@ -616,7 +640,6 @@ const patterns = {
 
 const formCart = document.forms[1];
 const filds = formCart.querySelectorAll('.order__fild');
-// const orderBtn = formCart.querySelector('.order__btn');
 
 // adding event input:
 if (orderBtn) {
@@ -686,12 +709,50 @@ function validationData(pattern, target) {
    }
 };
 
+// checking delivery:
+function checkDelivery() {
+   const checkBoxPickup = document.querySelector('#pickup');
+   const deliveryPrice = document.querySelector('.order__result--delivery');
+
+   if (checkBoxPickup.checked) {
+      deliveryPrice.textContent = '0';
+   } else {
+      deliveryPrice.textContent = '50';
+   }
+}
 
 
-//// ---------------------- Validation page form:
-const formPage = document.forms[1];
 
-console.log(formPage);
+// calc price orders:
+function culcOrderPrice() {
+   const arrProduct = JSON.parse(localStorage['arrProduct']);
+   const deliveryPrice = document.querySelector('.order__result--delivery').textContent;
+   const orderSum = document.querySelector('.order__result--order');
+   const resultPay = document.querySelector('.order__result--pay');
+   let sum = 0;
+   
+   arrProduct.forEach(item => {
+      sum = sum + (+item.price)
+   });
+   orderSum.textContent = sum;
+   const pay = sum + (+deliveryPrice);
+   resultPay.textContent = pay;
+};
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------- Validation page form:
+const formPage = document.forms;
+
+// console.log(formPage);
 
 
 

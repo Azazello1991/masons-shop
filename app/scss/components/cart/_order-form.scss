@@ -140,12 +140,7 @@
 
       &__btn[disabled]{
          background-color: #4e4b4b;
-         &:hover{
-            background-color: #4e4b4b;
-            color: $accent;
-            box-shadow: inset 0px 0px 0px 10px transparent;
-            border: 2px solid$accent;
-         }
+         pointer-events: none;
       }
 }
 
