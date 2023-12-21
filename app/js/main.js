@@ -31,6 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Create arrProduct in localStorage:
+if (!localStorage.arrProduct) {
+   const arrProduct = [];
+   localStorage.setItem('arrProduct', JSON.stringify(arrProduct));
+}
+
+
 // ------- swiper example:
 const example = document.querySelector('.example');
 if (example) {
@@ -106,7 +113,6 @@ if (example) {
    });
 }
 
-
 // ---------- Adding class "active" to gallery:
 const gallery = document.querySelector('.gallery');
 const menuItems = document.querySelectorAll('.gallery__btn');
@@ -122,41 +128,58 @@ if (gallery) {
    });
 }
 
-// ---------- Adding class "active" to languages:
+// ============================ Language ========================= //
+
 const languages = document.querySelectorAll('.header__languages');
 const languageBtns = document.querySelectorAll('.header__language-btn');
 
+languages.forEach((item) => item.addEventListener('click', (e) => {
+   const target = e.target;
+
+   if (target.classList.contains('header__language-btn')) {
+      addActiveLg(target);
+      addlenguageInStorage();
+   };
+}));
 
 
-// ---------- check what language in Storage:
-languageBtns.forEach((item) => item.classList.remove('active'));
-[...languageBtns].forEach((item) => {
-   if (item.dataset.lg === localStorage.lenguage) {
-      item.classList.add('active');
-   }
-})
-
-if (languages) {
-   languages.forEach((item) => item.addEventListener('click', (e) => {
-      if (e.target.classList.contains('header__language-btn')) {
-         languageBtns.forEach((item) => item.classList.remove('active'));
-         const lg = e.target.getAttribute('data-lg');
-         const lgBtn = [...languageBtns].filter(item => item.getAttribute('data-lg') === lg);
-         lgBtn.forEach(item => item.classList.add('active'));
-         addlenguageInStorage()
-      };
-   }));
+// add class "active" by language btn`s:
+function addActiveLg(target) {
+   languageBtns.forEach((item) => item.classList.remove('active'));
+   const lg = target.getAttribute('data-lg');
+   const lgBtn = [...languageBtns].filter(item => item.getAttribute('data-lg') === lg);
+   lgBtn.forEach(item => item.classList.add('active'));
 };
-
 
 
 // Adding language data in Local Storage:
 function addlenguageInStorage() {
    const lenguage = document.querySelector('.header__language-btn.active');
-   const languageData = lenguage.dataset.lg
-   localStorage.setItem('lenguage', `${languageData}`)
-   console.log(localStorage.lenguage);
+   const languageData = lenguage.dataset.lg;
+   localStorage.setItem('lenguage', `${languageData}`);
+};
+
+
+// Checking language in storage:
+function checkLgInStorage() {
+   if (localStorage.lenguage) {
+      const storageLg = localStorage.lenguage;
+      languageBtns.forEach((item) => item.classList.remove('active'));
+      const lgBtn = [...languageBtns].filter(item => item.getAttribute('data-lg') === storageLg);
+      lgBtn.forEach(item => item.classList.add('active'));
+   }
 }
+checkLgInStorage();
+
+// ====================================================================== //
+
+
+
+
+
+
+
+
 
 
 
@@ -402,7 +425,7 @@ if (orderInput) {
 
 
 
-// ------ adding event on buy-button:
+// ------ adding event by buy-button:
 const buyBox = document.querySelector('.product__buy-wrapper');
 
 if (buyBox) {
@@ -503,11 +526,16 @@ if (productsList) {
 function checkQuantityProducts() {
    const quatityBox = document.querySelector('.header__quantity');
    // const listLength = productsList.childElementCount;
-   const listLength = JSON.parse(localStorage['arrProduct']).length;
-   quatityBox.textContent = listLength;
+   if (localStorage.arrProduct) {
+      const listLength = JSON.parse(localStorage['arrProduct']).length;
+      quatityBox.textContent = listLength;
+   } else {
+      quatityBox.textContent = '0';
+   }
 
    if (productsList) {
       showHiddenMessCart();
+      culcOrderPrice();
    }
 };
 
@@ -709,6 +737,7 @@ function validationData(pattern, target) {
    }
 };
 
+// ============================= counter cart ========================== //
 // checking delivery:
 function checkDelivery() {
    const checkBoxPickup = document.querySelector('#pickup');
@@ -734,30 +763,70 @@ function culcOrderPrice() {
    arrProduct.forEach(item => {
       sum = sum + (+item.price)
    });
+
    orderSum.textContent = sum;
    const pay = sum + (+deliveryPrice);
    resultPay.textContent = pay;
 };
 
 
+// ============================ Validation page form =========================== //
+const formPage = document.forms[1];
+const pageFilds = formCart.querySelectorAll('.form__fild');
+const formBtn = formCart.querySelector('.form__btn');
+console.log(formBtn)
+
+if (formPage) {
+   formPage.addEventListener('input', e => {
+      const target = e.target;
+   
+      if (target.classList.contains('form__fild') && target.id === 'name') {
+         console.log(target.value)
+         validationData(patterns.namePattern, target);
+   
+      } else if (target.classList.contains('form__fild') && target.id === 'email') {
+         validationData(patterns.emailPattern, target);
+   
+      } else if (target.classList.contains('form__fild') && target.id === 'tel') {
+         validationData(patterns.phonePattern, target);
+      } 
+   });
+};
+
+// adding event blur:
+if (formPage) {
+   pageFilds.forEach(item => item.addEventListener('blur', (e) => {
+      const target = e.target;
+
+      if (target.value.length < 1 && !(target.name === 'comment')) {
+         target.classList.add('error');
+      }
+   }));
+};
+
+// adding event click by :
+if (formPage) {
+   formBtn.addEventListener('click', (e) => {
+      const filterFilds = [...pageFilds].filter(item => !(item.classList.contains('success')) && !(item.name === 'comment'));
+      filterFilds.forEach(item => {
+         item.classList.add('error');
+         setTimeout(() => item.classList.remove('error'), 300);
+         setTimeout(() => item.classList.add('error'), 600);
+      });
+   });
+};
 
 
+// ============================ Validation footer form =========================== //
+const formFooter = document.forms[2];
 
+formFooter.addEventListener('input', e => {
+   const target = e.target;
 
-
-
-
-
-
-// ---------------------- Validation page form:
-const formPage = document.forms;
-
-// console.log(formPage);
-
-
-
-
-
-
-
-
+   if (target.classList.contains('email__fild')) {
+      validationData(patterns.emailPattern, target);
+   }
+   if (target.value.length < 1) {
+      target.classList.remove('error');
+   }
+});

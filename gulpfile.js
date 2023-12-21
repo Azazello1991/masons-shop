@@ -74,12 +74,8 @@ function scripts() {
       'app/js/lightgallery.min.js',
       './node_modules/lightgallery/plugins/pager/lg-pager.min.js',
       './node_modules/lightgallery/plugins/video/lg-video.min.js',
-      // 'app/js/lg-pager.min.js',
-      // 'app/js/lg-video.min.js',
       'app/js/mixitup.js',
       'app/js/main.js',
-      // 'app/js/*.js',
-      // '!app/js/main.min.js'
    ]) // получаем файл style.scss (может быть несколько)
    .pipe(concat('main.min.js')) // Соберет указаные файли и вложит в один что в скобках
    .pipe(uglify()) // через константу uglify(в которой припроцессор) пропускаем наш файл
