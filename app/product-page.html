@@ -83,7 +83,7 @@
                <div class="mobile-menu-index__wrapper">
                   <div class="mobile-menu-index__head">
          
-                     <a class="logo" href="#">
+                     <a class="logo" href="index.html">
                         <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
                      </a>
          
@@ -95,8 +95,11 @@
                   
                   <div class="mobile-menu-index__nav">
                      <div class="header__cabinet">
-                        <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
-                        <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                        <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn" >
+                           <span class="header__quantity">3</span>
+                        </a>
+         
+                        <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
                      </div>
                      <div class="header__languages mobile-menu-index__languages">
                         <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
@@ -106,31 +109,31 @@
          
                   <nav class="nav">
                      <ul class="nav__list mobile-nav">
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
                         </li>
                      </ul>
@@ -140,17 +143,17 @@
                      <form class="form mobile-form" action="#" method="post">
                         <ul class="form__list">
                            <li class="form__item">
-                              <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
+                              <input class="form__fild" id="name" type="text" placeholder="Ваше имя" required>
                               <label class="sr-only" for="name">Введите ваше имя</label>
                            </li>
             
                            <li class="form__item">
-                              <input class="form__fild" id="email" type="email" placeholder="Email">
+                              <input class="form__fild" id="email" type="email" placeholder="Email" required>
                               <label class="sr-only" for="email">Введите ваше email</label>
                            </li>
             
                            <li class="form__item">
-                              <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
+                              <input class="form__fild" id="tel" type="tel" placeholder="Телефон" required>
                               <label class="sr-only" for="tel">Введите ваш телефон</label>
                            </li>
             
@@ -159,7 +162,7 @@
                               <label class="sr-only" for="comment">Введите ваше примечание</label>
                            </li>
                         </ul>
-                        <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                        <button class="btn form__btn" type="submit">Отправить</button>
                      </form>
                      
                      <ul class="networks section-form__networks">

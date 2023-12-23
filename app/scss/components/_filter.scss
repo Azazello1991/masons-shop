@@ -6,13 +6,6 @@
    min-width: 325px;
    padding: 0 20px;
 
-      @include r(992) { 
-         flex-direction: column;
-      }
-
-      @include r(768) { 
-         flex-direction: row;
-      }
 
       &__inner {
          display: flex;
@@ -28,7 +21,7 @@
          font-size: 20px;
          white-space: nowrap;
 
-         @include r(768) { 
+         @include r(992) { 
             display: none;
          }
       }

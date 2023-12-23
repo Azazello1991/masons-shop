@@ -83,7 +83,7 @@
                   <div class="mobile-menu-index__wrapper">
                      <div class="mobile-menu-index__head">
             
-                        <a class="logo" href="#">
+                        <a class="logo" href="index.html">
                            <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
                         </a>
             
@@ -95,8 +95,11 @@
                      
                      <div class="mobile-menu-index__nav">
                         <div class="header__cabinet">
-                           <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
-                           <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                           <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn" >
+                              <span class="header__quantity">3</span>
+                           </a>
+            
+                           <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
                         </div>
                         <div class="header__languages mobile-menu-index__languages">
                            <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
@@ -106,31 +109,31 @@
             
                      <nav class="nav">
                         <ul class="nav__list mobile-nav">
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
                            </li>
             
-                           <li class="nav__category-item">
+                           <li class="nav__category-item mobile__category">
                               <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
                            </li>
                         </ul>
@@ -140,17 +143,17 @@
                         <form class="form mobile-form" action="#" method="post">
                            <ul class="form__list">
                               <li class="form__item">
-                                 <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
+                                 <input class="form__fild" id="name" type="text" placeholder="Ваше имя" required>
                                  <label class="sr-only" for="name">Введите ваше имя</label>
                               </li>
                
                               <li class="form__item">
-                                 <input class="form__fild" id="email" type="email" placeholder="Email">
+                                 <input class="form__fild" id="email" type="email" placeholder="Email" required>
                                  <label class="sr-only" for="email">Введите ваше email</label>
                               </li>
                
                               <li class="form__item">
-                                 <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
+                                 <input class="form__fild" id="tel" type="tel" placeholder="Телефон" required>
                                  <label class="sr-only" for="tel">Введите ваш телефон</label>
                               </li>
                
@@ -159,7 +162,7 @@
                                  <label class="sr-only" for="comment">Введите ваше примечание</label>
                               </li>
                            </ul>
-                           <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                           <button class="btn form__btn" type="submit">Отправить</button>
                         </form>
                         
                         <ul class="networks section-form__networks">
@@ -341,10 +344,10 @@
                   </div>
                </div>
       
-               <div class="arrows example__swiper-arrows">
+               <!-- <div class="arrows example__swiper-arrows">
                   <div class="arrow example__arrow--prev"></div>
                   <div class="arrow example__arrow--next"></div>
-               </div>
+               </div> -->
       
                <div class="example__dots"></div>
             </div>
@@ -419,10 +422,10 @@
                      </div>
                   </div>
       
-                  <div class="arrows sale__swiper-arrows">
+                  <!-- <div class="arrows sale__swiper-arrows">
                      <div class="arrow sale__arrow--prev"></div>
                      <div class="arrow sale__arrow--next"></div>
-                  </div>
+                  </div> -->
                   <div class="sale__dots"></div>
                </div>
          
@@ -466,7 +469,7 @@
       
                <li class="gallery__item mix category-all category-cap">
                   <article class="card">
-                     <a href="./desсription.html" class="card__wrapper">
+                     <a href="desсription.html" class="card__wrapper">
                         <div class="card__img">
                            <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
                         </div>
@@ -478,7 +481,7 @@
       
                <li class="gallery__item mix category-all category-t-shirt">
                   <article class="card">
-                     <a href="#" class="card__wrapper">
+                     <a href="desсription.html" class="card__wrapper">
                         <div class="card__img">
                            <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
                         </div>
@@ -490,7 +493,7 @@
       
                <li class="gallery__item mix category-all category-cap">
                   <article class="card">
-                     <a href="./desсription.html" class="card__wrapper">
+                     <a href="desсription.html" class="card__wrapper">
                         <div class="card__img">
                            <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
                         </div>
@@ -502,7 +505,54 @@
       
                <li class="gallery__item mix category-all category-sweater">
                   <article class="card">
-                     <a href="#" class="card__wrapper">
+                     <a href="desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+               <li class="gallery__item mix category-all category-cap">
+                  <article class="card">
+                     <a href="desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-t-shirt">
+                  <article class="card">
+                     <a href="desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-cap">
+                  <article class="card">
+                     <a href="desсription.html" class="card__wrapper">
+                        <div class="card__img">
+                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
+                        </div>
+                        <h3 class="card__title">Футболка Белая</h3>
+                        <span class="card__pric">230 <span>₴</span></span>
+                     </a>
+                  </article>
+               </li>
+      
+               <li class="gallery__item mix category-all category-sweater">
+                  <article class="card">
+                     <a href="desсription.html" class="card__wrapper">
                         <div class="card__img">
                            <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
                         </div>
@@ -519,68 +569,73 @@
          <div class="container">
             <h2 class="section-title">Ката<span class="section-title-slice">лог</span></h2>
             <p class="section-text">Выбирай всё что по душе</p>
-            <ul class="catalog__list">
       
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Футболка</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-      
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Худи</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-      
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Чашки</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-      
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Футболка женская</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-      
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Худи</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-               
-               <li class="catalog__item">
-                  <a class="catalog__item-link" href="#">
-                     <div class="catalog__photo">
-                        <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
-                     </div>
-                     <h2 class="catalog__subtitle">Чашки</h2>
-                     <span class="catalog__deskription">Эко материалы</span>
-                  </a>
-               </li>
-            </ul>
+            <div class="swiper catalog__swiper">
+               <div class="swiper-wrapper catalog__list">
+         
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Футболка</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+         
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Худи</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+         
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Чашки</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+         
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Футболка женская</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+         
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/sale-photo.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Худи</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+                  
+                  <div class="catalog__item swiper-slide">
+                     <a class="catalog__item-link" href="catalog-page.html">
+                        <div class="catalog__photo">
+                           <img class="catalog__img" src="./images/example-product.png" width="250" height="250" alt="продукт">
+                        </div>
+                        <h2 class="catalog__subtitle">Чашки</h2>
+                        <span class="catalog__deskription">Эко материалы</span>
+                     </a>
+                  </div>
+                  
+               </div>
+            </div>
+            <div class="catalog__dots"></div>
          </div>
       </section>
       <section class="section comments" id="comments">
@@ -642,7 +697,7 @@
       
             <div class="section-form__inner">
                <div class="section-form__data">
-                  <form class="form" action="#" method="post">
+                  <form class="form form-page" action="#" method="post">
                      <ul class="form__list">
                         <li class="form__item">
                            <input class="form__fild" id="name" type="text" placeholder="Ваше имя" required>

@@ -5,22 +5,35 @@
          grid-template-columns: repeat(3, 1fr);
          column-gap: 60px;
 
+         // @include r(992) { 
+         //    column-gap: 10px;
+         // }
+
          @include r(768) { 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // row-gap: 30px;
+            grid-template: repeat(3, 1fr) / 1fr;
             row-gap: 30px;
+            max-width: 300px;
+            margin: 0 auto;
          }
       }
 
 		&__card {
-         max-width: 285px;
+         min-width: calc((100% - 120px) / 3);
          background: #1A1A1A;
          border-radius: 40px 0px;
          padding: 60px 80px 80px 75px;
          display: flex;
          flex-direction: column;
          align-items: center;
+
+         @include r(992) {
+            padding: 40px 60px 60px 55px;
+
+         }
 		}
 
 		&__picture {
@@ -49,6 +62,10 @@
          @extend %montserrat-600;
          color: $fontColor;
          margin-bottom: 25px;
+
+         @include r(992) {
+            font-size: 24px;
+         }
 		}
 
 		&__time, 
@@ -58,6 +75,10 @@
          font-size: 16px;
          @extend %montserratAlternates-400;
          color: $fontColor;
+
+         @include r(992) {
+            font-size: 14px;
+         }
 		}
 
       &__picture--days {

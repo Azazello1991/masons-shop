@@ -69,3 +69,10 @@
 .header__languages.mobile-menu-index__languages {
    display: block;
 }
+
+.mobile__category {
+   border-bottom: 1px solid $accent;
+   width: 200px;
+   text-align: center;
+   margin: 0 auto;
+}

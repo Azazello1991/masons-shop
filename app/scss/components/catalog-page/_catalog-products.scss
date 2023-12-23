@@ -10,6 +10,7 @@
 
          @include r(768) { 
             flex-direction: column;
+            align-items: center;
             padding-top: 100px;
             margin-bottom: 80px;
          }
@@ -21,6 +22,7 @@
 
          @include r(992) { 
             font-size: 38px;
+            text-align: center
          }
 		}
 
@@ -30,6 +32,10 @@
 
          @include r(992) { 
             font-size: 20px;
+         }
+
+         @include r(768) { 
+            margin-bottom: 20px;
          }
 		}
 

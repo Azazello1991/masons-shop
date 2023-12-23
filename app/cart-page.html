@@ -84,7 +84,7 @@
                <div class="mobile-menu-index__wrapper">
                   <div class="mobile-menu-index__head">
          
-                     <a class="logo" href="#">
+                     <a class="logo" href="index.html">
                         <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
                      </a>
          
@@ -96,8 +96,11 @@
                   
                   <div class="mobile-menu-index__nav">
                      <div class="header__cabinet">
-                        <button class="btn-icon header__cabinet-btn header__cart-btn" type="button"></button>
-                        <button class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></button>
+                        <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn" >
+                           <span class="header__quantity">3</span>
+                        </a>
+         
+                        <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
                      </div>
                      <div class="header__languages mobile-menu-index__languages">
                         <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
@@ -107,31 +110,31 @@
          
                   <nav class="nav">
                      <ul class="nav__list mobile-nav">
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
                         </li>
          
-                        <li class="nav__category-item">
+                        <li class="nav__category-item mobile__category">
                            <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
                         </li>
                      </ul>
@@ -141,17 +144,17 @@
                      <form class="form mobile-form" action="#" method="post">
                         <ul class="form__list">
                            <li class="form__item">
-                              <input class="form__fild" id="name" type="text" placeholder="Ваше имя">
+                              <input class="form__fild" id="name" type="text" placeholder="Ваше имя" required>
                               <label class="sr-only" for="name">Введите ваше имя</label>
                            </li>
             
                            <li class="form__item">
-                              <input class="form__fild" id="email" type="email" placeholder="Email">
+                              <input class="form__fild" id="email" type="email" placeholder="Email" required>
                               <label class="sr-only" for="email">Введите ваше email</label>
                            </li>
             
                            <li class="form__item">
-                              <input class="form__fild" id="tel" type="tel" placeholder="Телефон">
+                              <input class="form__fild" id="tel" type="tel" placeholder="Телефон" required>
                               <label class="sr-only" for="tel">Введите ваш телефон</label>
                            </li>
             
@@ -160,7 +163,7 @@
                               <label class="sr-only" for="comment">Введите ваше примечание</label>
                            </li>
                         </ul>
-                        <button class="btn form__btn mobile-menu-index__btn" type="submit">Отправить</button>
+                        <button class="btn form__btn" type="submit">Отправить</button>
                      </form>
                      
                      <ul class="networks section-form__networks">
@@ -186,222 +189,9 @@
             <h1 class="cart__title">Корзина</h1>
       
             <ul class="cart__products-list">
-               <div class="cart__message-text hidden">Корзина пуста</div>
-      
-               <!-- <li class="cart__product" id="1">
-                  
-                  <div class="cart__flex">
-                     <div class="cart__photo">
-                        <img class="cart__img" src="./images/product-800x800.png" width="160" height="165" alt="фото продукта">
-                     </div>
-      
-                     <div class="cart__text">
-                        <a class="cart__subtitle" href="#">Желтое худи</a>
-                        <span class="cart__group">худи, одежда</span>
-                     </div>
-                  </div>
-      
-                  <div class="cart__filter-wrapper">
-                     <ul class="filter product__filter">
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Количество:</span>
-                           
-                           <div class="filter__inner-order">
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--lass" type="button" id="btn-less">-</button>
-                                 <span class="sr-only">Кнопка "минус одна едининица товара"</span>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <input class="filter__input" type="text" id="quantity" value="90">
-                                 <label class="sr-only" for="quantity">Количество продукта</label>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--more" type="button" id="btn-more">+</button>
-                                 <span class="sr-only">Кнопка "плюс одна едининица товара"</span>
-                              </div>
-                           </div>
-                        </li>
-                     
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Размер:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по размеру</h3>
-                              <button class="filter__result js-result" id="size" type="button">XL</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter">XXL</li>
-                                 <li class="filter__parameter js-parameter">XL</li>
-                                 <li class="filter__parameter js-parameter">L</li>
-                                 <li class="filter__parameter js-parameter">M</li>
-                              </ul>
-                           </div>
-                        </li>
-                        
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Цвет:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по цвету</h3>
-                              <button class="filter__result js-result" id="color" type="button">Желтый</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter" id="white">Белый</li>
-                                 <li class="filter__parameter js-parameter" id="black">Черный</li>
-                                 <li class="filter__parameter js-parameter" id="red">Красный</li>
-                                 <li class="filter__parameter js-parameter" id="yellow">Желтый</li>
-                              </ul>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-      
-                  <div class="cart__price-wrapper">
-                     <span class="cart__price">1199.00 <span class="cart__currency">грн.</span></span>
-                     <button class="cart__delete" type="button"></button>
-                  </div>
-               </li> 
-      
-               <li class="cart__product" id="2">
-                  
-                  <div class="cart__flex">
-                     <div class="cart__photo">
-                        <img class="cart__img" src="./images/product-800x800.png" width="160" height="165" alt="фото продукта">
-                     </div>
-      
-                     <div class="cart__text">
-                        <a class="cart__subtitle" href="#">Желтое худи</a>
-                        <span class="cart__group">худи, одежда</span>
-                     </div>
-                  </div>
-      
-                  <div class="cart__filter-wrapper">
-                     <ul class="filter product__filter">
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Количество:</span>
-                           
-                           <div class="filter__inner-order">
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--lass" type="button" id="btn-less">-</button>
-                                 <span class="sr-only">Кнопка "минус одна едининица товара"</span>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <input class="filter__input" type="text" id="quantity" value="90">
-                                 <label class="sr-only" for="quantity">Количество продукта</label>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--more" type="button" id="btn-more">+</button>
-                                 <span class="sr-only">Кнопка "плюс одна едининица товара"</span>
-                              </div>
-                           </div>
-                        </li>
-                     
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Размер:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по размеру</h3>
-                              <button class="filter__result js-result" id="size" type="button">XL</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter">XXL</li>
-                                 <li class="filter__parameter js-parameter">XL</li>
-                                 <li class="filter__parameter js-parameter">L</li>
-                                 <li class="filter__parameter js-parameter">M</li>
-                              </ul>
-                           </div>
-                        </li>
-                        
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Цвет:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по цвету</h3>
-                              <button class="filter__result js-result" id="color" type="button">Желтый</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter" id="white">Белый</li>
-                                 <li class="filter__parameter js-parameter" id="black">Черный</li>
-                                 <li class="filter__parameter js-parameter" id="red">Красный</li>
-                                 <li class="filter__parameter js-parameter" id="yellow">Желтый</li>
-                              </ul>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-      
-                  <div class="cart__price-wrapper">
-                     <span class="cart__price">1199.00 <span class="cart__currency">грн.</span></span>
-                     <button class="cart__delete" type="button"></button>
-                  </div>
-               </li>
-               <li class="cart__product" id="3">
-                  
-                  <div class="cart__flex">
-                     <div class="cart__photo">
-                        <img class="cart__img" src="./images/product-800x800.png" width="160" height="165" alt="фото продукта">
-                     </div>
-      
-                     <div class="cart__text">
-                        <a class="cart__subtitle" href="#">Желтое худи</a>
-                        <span class="cart__group">худи, одежда</span>
-                     </div>
-                  </div>
-      
-                  <div class="cart__filter-wrapper">
-                     <ul class="filter product__filter">
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Количество:</span>
-                           
-                           <div class="filter__inner-order">
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--lass" type="button" id="btn-less">-</button>
-                                 <span class="sr-only">Кнопка "минус одна едининица товара"</span>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <input class="filter__input" type="text" id="quantity" value="90">
-                                 <label class="sr-only" for="quantity">Количество продукта</label>
-                              </div>
-                     
-                              <div class="filter__order-item">
-                                 <button class="filter__btn btn--more" type="button" id="btn-more">+</button>
-                                 <span class="sr-only">Кнопка "плюс одна едининица товара"</span>
-                              </div>
-                           </div>
-                        </li>
-                     
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Размер:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по размеру</h3>
-                              <button class="filter__result js-result" id="size" type="button">XL</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter">XXL</li>
-                                 <li class="filter__parameter js-parameter">XL</li>
-                                 <li class="filter__parameter js-parameter">L</li>
-                                 <li class="filter__parameter js-parameter">M</li>
-                              </ul>
-                           </div>
-                        </li>
-                        
-                        <li class="filter__item product__item">
-                           <span class="filter__subtitle product__filter-subtitle">Цвет:</span>
-                           <div class="filter__inner">
-                              <h3 class="sr-only">Сортировать по цвету</h3>
-                              <button class="filter__result js-result" id="color" type="button">Желтый</button>
-                              <ul class="filter__parameters hidden">
-                                 <li class="filter__parameter js-parameter" id="white">Белый</li>
-                                 <li class="filter__parameter js-parameter" id="black">Черный</li>
-                                 <li class="filter__parameter js-parameter" id="red">Красный</li>
-                                 <li class="filter__parameter js-parameter" id="yellow">Желтый</li>
-                              </ul>
-                           </div>
-                        </li>
-                     </ul>
-                  </div> 
-      
-                  <div class="cart__price-wrapper">
-                     <span class="cart__price">1199.00 <span class="cart__currency">грн.</span></span>
-                     <button class="cart__delete" type="button"></button>
-                  </div>
-               </li>-->
+               <div class="cart__message-text hidden">У Вас нет товара в корзине.
+                  <a class="cart__message-transfer" href="catalog-page.html">Перейти к покупкам...</a>
+               </div>
             </ul>
          </div>
       </section>

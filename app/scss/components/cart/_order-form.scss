@@ -8,6 +8,12 @@
 		&__form {
          display: flex;
          column-gap: 90px;
+
+         @include r(768) {
+            flex-direction: column;
+            row-gap: 50px;
+            align-items: center;
+         }
 		}
 
 		&__filds {

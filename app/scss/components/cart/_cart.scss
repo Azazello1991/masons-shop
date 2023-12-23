@@ -12,6 +12,31 @@
          margin-bottom: 75px;
 		}
 
+      &__message-transfer {
+         display: block;
+         width: fit-content;
+         margin: 0 auto;
+         position: relative;
+         padding-left: 120px;
+         font-size: 24px;
+         color: $accent;
+         text-decoration: underline;
+         cursor: pointer;
+
+         &::after {
+            content: '';
+            position: absolute;
+            background-image: url('../images/logo-masons-shop.svg');
+            background-repeat: no-repeat;
+            background-size: 120px 30px;
+            background-position: 10px center;
+            height: 100%;
+            width: 100px;
+            top: 0;
+            left: 0;
+         }
+      }
+
       &__message-text {
          padding: 50px 10px;
          text-align: center;
