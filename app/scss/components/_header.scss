@@ -67,6 +67,26 @@
          }
 		}
 
+      &__log-in {
+         @extend %inter-400;
+         font-size: 18px;
+         background-color: transparent;
+         border: 1px solid transparent;
+         color: $accent;
+         border-radius: 5px;
+         transition: all 0.3s ease-in-out;
+         cursor: pointer;
+         
+         &:hover {
+            border: 1px solid #09d135;
+         }
+
+         @include r(768) { 
+            display: none;
+         }
+
+      }
+
 		&__language-btn {
          font-size: 16px;
          background-color: transparent;

@@ -1,0 +1,191 @@
+.log-in.hidden,
+.registration.hidden {
+   transform: translateX(-200%);
+   opacity: 0;
+   z-index: -10;
+}
+
+.log-in,
+.registration {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   min-height: 100vh;
+   padding: 0 30px;
+   opacity: 1;
+   background-color: rgba(20, 20, 20, 0.95);
+   z-index: 999;
+   transition: all 0.5s ease-in-out;
+   
+   &__container {
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__inner {
+      width: 100%;
+      max-width: 422px;
+      transform: skew(-3deg);
+      background-color: #111111;
+      border: 1px solid $accent;
+   }
+
+   &__content {
+      padding: 35px 40px 40px 40px;
+      transform: skew(3deg);
+   }
+
+   &__title {
+      font-size: 32px;
+      font-weight: 600;
+      @extend %montserrat-600;
+      text-align: center;
+      margin-bottom: 25px;
+   }
+
+   &__regist,
+   &__log-in {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      @extend %montserratAlternates-400;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: $fontColor;
+      border: 0 solid transparent;
+      text-align: center;
+      background-color: transparent;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+         color: $accent;
+         text-decoration: underline;
+      }
+   }
+}
+
+
+.form-log,
+.registration-form {
+
+   &__item--password,
+   &__first-pass,
+   &__second-pass {
+      display: flex;
+   }
+
+   &__fild {
+      max-width: 340px;
+      padding: 12px 15px;
+      background-color: $bgColor;
+      margin-bottom: 20px;
+   }
+
+   &__fild--password {
+      width: 100%;
+   }
+
+   &__box-check {
+      margin-bottom: 40px;
+   }
+   
+   &__check-lable {
+      position: relative;
+      display: inline-block;
+      padding-left: 30px;
+      @extend %montserratAlternates-400;
+      font-size: 12px;
+      color: $accent;
+      
+      &::after {
+         content: '';
+         width: 20px;
+         height: 20px;
+         background-color: $bgColor;
+         position: absolute;
+         top: -5px;
+         left: 0;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 12px 10px;
+         transition: all 0.3s ease-in;
+      }
+
+      
+      &:hover::after {
+         border: solid 1px $accent;
+      }
+   }
+   
+   &__check:checked+&__check-lable::after {
+      background-image: url('../images/sprite.svg#icon-check');
+   }
+   
+
+   &__btn {
+      display: block;
+      padding: 15px 80px;
+      font-size: 16px;
+      color: $accent;
+      @extend %inter-600;
+      font-weight: 600;
+      width: fit-content;
+      margin: 0 auto 15px;
+      cursor: pointer;
+      border: 2px solid $accent;
+      background-color: #111111;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+         color: #000000;
+         background-color: $fontColor;
+         box-shadow: inset 0px 0px 47px 10px rgba(199,172,40,1);
+         border: 2px solid$accent;
+      }
+
+      &:active {
+         box-shadow:0px 0px 113px 10px rgb(223, 181, 14);
+         color: #000000;
+      }
+   }
+
+   &__forgat-link {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      @extend %montserratAlternates-600;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+         color: $accent;
+         text-decoration: underline;
+      }
+   }
+}
+
+.show-password {
+   height: 42px;
+   width: 40px;
+   background-color: $bgColor;
+   border: 0px solid transparent;
+   outline: 0px solid transparent;
+   background-image: url('../images/sprite.svg#icon-eye-close');
+   mask-image: url("../images/sprite.svg#icon-eye-close"); // замените на своё изображение
+   background-color: #ffc700;
+   mask-repeat: no-repeat;
+   mask-size: contain;
+   mask-position: center;
+   cursor: pointer;
+}
+
+.show-password.active {
+   background-image: url('../images/sprite.svg#icon-eye-open');
+   mask-image: url("../images/sprite.svg#icon-eye-open"); // замените на своё изображение
+   
+}

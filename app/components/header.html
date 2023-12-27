@@ -1,67 +1,70 @@
-   <header class="header">
-      <div class="container">
-         
-         <div class="header__top">
-            <div class="header__search">
-               <input class="input header__input" type="text" id="search" placeholder="Поиск">
-               <label class="sr-only" for="search">Поиск по сайту</label>
-            </div>
+<header class="header">
+   <div class="container">
 
-            <a class="logo" href="./index.html">
-               <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
-            </a>
-
-            <div class="header__nav-top">
-               <div class="header__languages">
-                  <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
-                  <button class="header__language-btn" data-lg="ua" type="button">UA</button>
-               </div>
-               <div class="header__cabinet">
-                  <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn" >
-                     <span class="header__quantity">3</span>
-                  </a>
-                  <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
-               </div>
-            </div>
-            
-            <button class="burger burger-index--open" type="button"> 
-               <span class="burger__line"></span>
-               <span class="sr-only">Открыть меню</span>
-            </button>
+      <div class="header__top">
+         <div class="header__search">
+            <input class="input header__input" type="text" id="search" placeholder="Поиск">
+            <label class="sr-only" for="search">Поиск по сайту</label>
          </div>
-         
 
-         <nav class="nav">
-            <ul class="nav__list">
-               <li class="nav__category-item">
-                  <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
-               </li>
+         <a class="logo" href="./index.html">
+            <img class="logo__icon" src="./images/logo-masons-shop.svg" width="184" height="63" alt="логотип">
+         </a>
 
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
-               </li>
+         <div class="header__nav-top">
+            <div class="header__languages">
+               <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
+               <button class="header__language-btn" data-lg="ua" type="button">UA</button>
+            </div>
+            <div class="header__cabinet">
+               <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn">
+                  <span class="header__quantity">3</span>
+               </a>
+               <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
+               <button class="header__log-in" type="button">Log</button>
+            </div>
+         </div>
 
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
-               </li>
-
-               <li class="nav__category-item">
-                  <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
-               </li>
-            </ul>
-         </nav>
+         <button class="burger burger-index--open" type="button">
+            <span class="burger__line"></span>
+            <span class="sr-only">Открыть меню</span>
+         </button>
       </div>
-      <!--=include mobile-menu.html -->
-   </header>
+
+
+      <nav class="nav">
+         <ul class="nav__list">
+            <li class="nav__category-item">
+               <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#top"><span class="nav__category-name">Топ</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#catalog"><span class="nav__category-name">Каталог</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#video"><span class="nav__category-name">Про нас</span></a>
+            </li>
+
+            <li class="nav__category-item">
+               <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
+            </li>
+         </ul>
+      </nav>
+   </div>
+   <!--=include mobile-menu.html -->
+   <!--=include log-in.html -->
+   <!--=include registration.html -->
+</header>

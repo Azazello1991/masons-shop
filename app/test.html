@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title class="header">Masons wordshop | Каталог</title>
-      <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
-      <link rel="manifest" href="./images/favicon/site.webmanifest">
-      <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-      <meta name="msapplication-TileColor" content="#da532c">
-      <meta name="theme-color" content="#ffffff">
-      <link rel="stylesheet" href="css/style.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>test</title>
+   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+   <link rel="manifest" href="./images/favicon/site.webmanifest">
+   <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#ffffff">
+   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
    <header class="header">
@@ -28,6 +28,7 @@
             </a>
    
             <div class="header__nav-top">
+               <button class="header__log-in" type="button">Log</button>
                <div class="header__languages">
                   <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
                   <button class="header__language-btn" data-lg="ua" type="button">UA</button>
@@ -37,7 +38,6 @@
                      <span class="header__quantity">3</span>
                   </a>
                   <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
-                  <button class="header__log-in" type="button">Log</button>
                </div>
             </div>
    
@@ -96,12 +96,11 @@
       
             <div class="mobile-menu-index__nav">
                <div class="header__cabinet">
-                  <a class="btn-icon header__cabinet-btn header__cart-btn"  href="./cart-page.html">
+                  <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn">
                      <span class="header__quantity">3</span>
                   </a>
       
                   <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
-                  <button class="header__log-in header__mobile-log-in" type="button">Log</button>
                </div>
                <div class="header__languages mobile-menu-index__languages">
                   <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
@@ -190,7 +189,7 @@
                <div class="log-in__content">
       
                   <h1 class="log-in__title">Вход</h1>
-                  <button class="log-in__regist" type="button">У меня ещё нет аккаунта</button>
+                  <a class="log-in__regist" href="#">У меня ещё нет аккаунта</a>
       
                   <form class="form-log log-in__form" action="#" method="post">
       
@@ -212,7 +211,7 @@
                      </div>
       
                      <button class="form-log__btn" type="submit">Вход</button>
-                     <a class="form-log__forgat-link" href="#">Забыли пароль?</a>
+                     <a class="form-log__forgat-link" href="#">Забыл пароль</a>
       
                   </form>
                </div>
@@ -243,7 +242,7 @@
          
                      <div class="registration-form__item registration-form__second-pass">
                         <label class="sr-only" for="regPassSecond">Повторите пароль</label>
-                        <input class="fild registration-form__fild registration-form__second-password" type="password"
+                        <input class="fild registration-form__fild registration-form__first-password" type="password"
                            id="regPassSecond" name="password" placeholder="Повторите пароль" required>
                         <button class="show-password" type="button"></button>
                      </div>
@@ -265,215 +264,51 @@
          </div>
       </section>
    </header>
-   <main class="main">
-      <section class="section catalog-page">
-         <div class="container">
+   <section class="section registration hidden">
+      <div class="registration__container">
+         <div class="registration__inner">
+            <div class="registration__content">
       
-            <div class="catalog-page__head">
-               <div class="catalog-page__title">
-                  <h2 class="catalog-page__title"><span class="section-title-slice">Фут</span>болки</h2>
-                  <p class="catalog-page__text">Любые размеры и формы</p>
-               </div>
+               <h1 class="registration__title">Регыстрация</h1>
+               <a class="registration__log-in" href="#">У меня есть аккаунт</a>
       
-               <ul class="filter catalog-page__filter">
-                  <li class="filter__item">
-                     <span class="filter__subtitle">Сортировка:</span>
-                     <div class="filter__inner">
-                        <h3 class="sr-only">Сортировать по категории</h3>
-                        <button class="filter__result js-result" type="button">Дешевле - Дорже</button>
-                        <ul class="filter__parameters hidden">
-                           <li class="filter__parameter js-parameter">Дешевле - Дорже</li>
-                           <li class="filter__parameter js-parameter">Дорже - Дешевле</li>
-                           <li class="filter__parameter js-parameter">По популярности</li>
-                        </ul>
-                     </div>
-                  </li>
+               <form class="registration-form" action="#" method="post">
       
-                  <li class="filter__item">
-                     <span class="filter__subtitle">Нас странице:</span>
-                     <div class="filter__inner">
-                        <h3 class="sr-only">Сортировать по количеству на странице</h3>
-                        <button class="filter__result js-result" type="button">По 16</button>
-                        <ul class="filter__parameters hidden">
-                           <li class="filter__parameter js-parameter" id="16">По 16</li>
-                           <li class="filter__parameter js-parameter" id="24">По 8</li>
-                           <li class="filter__parameter js-parameter" id="40">по 4</li>
-                        </ul>
-                     </div>
-                  </li>
-               </ul>
-            </div>
+                  <div class="registration-form__item">
+                     <label class="sr-only" for="regMail">Введите ваш email</label>
+                     <input class="fild registration-form__fild" id="regMail" type="email" placeholder="Email" required>
+                  </div>
       
-            <ul class="catalog-page__catalog catalog-list">
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
+                  <div class="registration-form__item registration-form__first-pass">
+                     <label class="sr-only" for="regPassFirst">Введите ваш пароль</label>
+                     <input class="fild registration-form__fild registration-form__first-password" type="password"
+                        id="regPassFirst" name="password" placeholder="Введите пароль" required>
+                     <button class="show-password" type="button"></button>
+                  </div>
       
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
+                  <div class="registration-form__item registration-form__second-pass">
+                     <label class="sr-only" for="regPassSecond">Повторите пароль</label>
+                     <input class="fild registration-form__fild registration-form__first-password" type="password"
+                        id="regPassSecond" name="password" placeholder="Повторите пароль" required>
+                     <button class="show-password" type="button"></button>
+                  </div>
       
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
+                  <div class="registration-form__item">
+                     <label class="sr-only" for="regTel">Введите ваш email</label>
+                     <input class="fild registration-form__fild" id="regTel" type="tel" placeholder="Телефон" required>
+                  </div>
       
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-               
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
+                  <div class="registration-form__box-check">
+                     <input class="registration-form__check sr-only" type="checkbox" id="igree">
+                     <label class="registration-form__check-lable" for="igree">Я принимаю условыя пользования</label>
+                  </div>
       
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/sale-photo.png" width="230" height="240" alt="Футболка">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-      
-               <li class="catalog-list__item">
-                  <article class="card">
-                     <a href="./product-page.html" class="card__wrapper">
-                        <div class="card__img">
-                           <img class="card__pictur" src="./images/example-product.png" width="230" height="240" alt="Свитер">
-                        </div>
-                        <h3 class="card__title">Футболка Белая</h3>
-                        <span class="card__pric">230 <span>₴</span></span>
-                     </a>
-                  </article>
-               </li>
-            </ul>
-      
-            <div class="pagination catalog-page__pagination">
-               <ul class="pagination__list">
-                  <li class="pagination__item">
-                     <a class="pagination__link pagination__link--prev pagination__link--dasabled">
-                        <span class="sr-only">Вернутся на предидущую страницу</span>
-                     </a>
-                  </li>
-                  <li class="pagination__item">
-                     <a href="#" class="pagination__link">1</a>
-                  </li>
-                  <li class="pagination__item">
-                     <a href="#" class="pagination__link pagination__link--current">2</a>
-                  </li>
-                  <li class="pagination__item">
-                     <a href="#" class="pagination__link">3</a>
-                  </li>
-                  <li class="pagination__item">
-                     <a class="pagination__link pagination__link--next">
-                        <span class="sr-only">Перейти на наступну страницу</span>
-                     </a>
-                  </li>
-               </ul>
+                  <button class="registration-form__btn" type="submit">Регистрация</button>
+               </form>
             </div>
          </div>
-      </section>
-   </main>
+      </div>
+   </section>
    <footer class="footer">
       <div class="container footer__container">
          <div class="footer__wrapper">

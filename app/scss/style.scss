@@ -20,7 +20,6 @@
 @import "./components/sale";
 @import "./components/top";
 @import "./components/catalog";
-/* @import "./components/catalog-mod"; */
 @import "./components/comments";
 @import "./components/video";
 @import "./components/light-gallery";
@@ -42,3 +41,6 @@
 /* -------- cart-page: */
 @import "./components/cart/cart";
 @import "./components/cart/order-form";
+
+/* -------- log-in & registration: */
+@import "./components/log-inAndRegist/log-inAndRegist";

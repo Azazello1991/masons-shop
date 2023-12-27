@@ -145,33 +145,76 @@ body {
 
 .swiper-dot {
    display: inline-block;
-      width: 15px;
-      height: 15px;
-      opacity: 1;
-      background-color: $silverLight;
-      transition: all 0.2s ease-in-out;
+   width: 15px;
+   height: 15px;
+   opacity: 1;
+   background-color: $silverLight;
+   transition: all 0.2s ease-in-out;
+   outline: 0 solid transparent;
+   border-radius: 50%;
+   
+   &:focus {
+      outline: 2px solid $accent;
+   }
+
+   &:hover {
+      outline: 2px solid $accent;
+      background-color: #FFF2ED;
+   }
+
+   &:active {
+      background-color: #FFAE94;
       outline: 0 solid transparent;
-      border-radius: 50%;
-      
-      &:focus {
-         outline: 2px solid $accent;
-      }
-
-      &:hover {
-         outline: 2px solid $accent;
-         background-color: #FFF2ED;
-      }
-
-      &:active {
-         background-color: #FFAE94;
-         outline: 0 solid transparent;
-      }
-
-      &:not(:last-child) {
-         margin-right: 15px;
-      }
    }
 
-   .swiper-dot--active {
-      background-color: $accent;
+   &:not(:last-child) {
+      margin-right: 15px;
    }
+}
+
+.swiper-dot--active {
+   background-color: $accent;
+}
+
+.fild {
+   width: 100%;
+   font-size: 12px;
+   line-height: 1.3;
+   color: $accent;
+   border: 1px solid transparent;
+   outline: 0px solid transparent;
+   transition: all 0.3s ease-in-out;
+
+   &::placeholder {
+      color: $accent;
+      @extend %inter-400;
+   }
+
+   &:focus::placeholder {
+      color: transparent;
+   }
+
+   &:hover {
+      border: solid 1px $accent;
+   }
+
+   &:focus {
+      border: solid 1px $accent;
+   }
+}
+
+.error {
+   border: 1px solid rgb(255, 0, 0);
+
+   &:hover {
+      border: 1px solid rgb(255, 0, 0);
+   }
+
+   &:focus {
+      border: 1px solid rgb(255, 0, 0);
+   }
+}
+
+.success {
+   border: 1px solid $accent;
+}

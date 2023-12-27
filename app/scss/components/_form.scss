@@ -52,33 +52,16 @@
       }
       
 		&__fild {
-         color: $fontColor;
          transform: skew(-10deg);
          background-color: #111111;
-         border: 1px solid transparent;
          padding: 20px 40px;
          max-width: 454px;
-         width: 100%;
-         min-width: 100%;
          font-size: 16px;
          line-height: 1.5;
-         outline: 0px solid transparent;
-         transition: all 0.3s ease-in-out;
 
-         &:hover {
-            border: solid 1px $accent;
-         }
-
-         
          &::placeholder {
-            color: $accent;
             @extend %montserrat-400;
-            font-size: 16px;
             transform: skew(10deg);
-         }
-
-         &:focus::placeholder {
-            color: transparent;
          }
 		}
 

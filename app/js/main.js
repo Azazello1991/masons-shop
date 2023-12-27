@@ -7,9 +7,9 @@ if (!localStorage.arrProduct) {
 
 
 // --------------- burger-menu:
-const burgerOpenIndex = document.querySelector('.burger-index--open'); 
-const burgerCloseindex = document.querySelector('.burger-index--close'); 
-const mobileMenuIndex = document.querySelector('.mobile-menu-index'); 
+const burgerOpenIndex = document.querySelector('.burger-index--open');
+const burgerCloseindex = document.querySelector('.burger-index--close');
+const mobileMenuIndex = document.querySelector('.mobile-menu-index');
 const bodyLock = document.querySelector('body');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,19 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
    });
 
    burgerCloseindex.addEventListener('click', () => {
-      mobileMenuIndex.classList.add('menu-hidden'); 
+      mobileMenuIndex.classList.add('menu-hidden');
       bodyLock.classList.remove('lock');
    });
 
 
    // --------- closing mobile-menu after click on catagory:
    const nav = document.querySelector('.mobile-nav');
-   
+
    nav.addEventListener('click', (e) => {
       const targer = e.target;
-   
+
       if (targer.classList.contains('nav__category') || targer.classList.contains('nav__category-name')) {
-         mobileMenuIndex.classList.add('menu-hidden'); 
+         mobileMenuIndex.classList.add('menu-hidden');
          bodyLock.classList.remove('lock');
       }
    })
@@ -59,7 +59,7 @@ if (example) {
       },
 
       mousewheel: {
-         sensitivity: 1, 
+         sensitivity: 1,
       },
       loop: true,
 
@@ -79,7 +79,7 @@ if (example) {
          nextEl: '.example__arrow--next',
          prevEl: '.example__arrow--prev',
       }, */
-      
+
 
       breakpoints: {
          1200: {
@@ -106,18 +106,18 @@ const catalog = document.querySelector('.catalog');
 const catalogSlider = document.querySelector('.catalog__swiper');
 
 window.addEventListener("resize", (e) => {
-   if (window.matchMedia("(max-width: 768px)").matches) { 
+   if (window.matchMedia("(max-width: 768px)").matches) {
 
       const catalogSwiper = new Swiper('.catalog__swiper', {
          loop: true,
          slidesPerGroup: 1,
-         centeredSlides:true,
-         centeredSlidesBounds:true,
+         centeredSlides: true,
+         centeredSlidesBounds: true,
          spaceBetween: 20,
          autoplay: {
             delay: 4000,
          },
-      
+
          pagination: {
             el: '.catalog__dots',
             bulletClass: 'swiper-dot',
@@ -126,49 +126,25 @@ window.addEventListener("resize", (e) => {
          },
 
          breakpoints: {
-         
-         768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+
+            768: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+            576: {
+               slidesPerView: 2,
+               spaceBetween: 20,
+            },
+            325: {
+               slidesPerView: 1,
+            },
          },
-         576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-         },
-         325: {
-            slidesPerView: 1,
-         },
-      },
       });
 
-   } else if (window.matchMedia("(min-width: 768px)").matches)  {
+   } else if (window.matchMedia("(min-width: 768px)").matches) {
       location.reload()
    }
 });
-
-// ============================================//
-// example slider:
-// const catalogSwiper = new Swiper('.examole-swiper', {
-//          loop: true,
-//          slidesPerGroup: 1,
-//          centeredSlides:true,
-//          centeredSlidesBounds:true,
-//          slidesPerView: 1,
-//          spaceBetween: 20,
-//          autoplay: {
-//             delay: 3000,
-//          },
-      
-//          pagination: {
-//             el: '.examole__dots',
-//             bulletClass: 'swiper-dot',
-//             bulletActiveClass: 'swiper-dot--active',
-//             clickable: true,
-//          }
-//       });
-// ===============================================//
-
-
 
 
 // swiper sale:
@@ -176,7 +152,7 @@ const sale = document.querySelector('.example');
 if (example) {
    const swiper = new Swiper('.sale__slider', {
       loop: true,
-     // Navigation arrows
+      // Navigation arrows
       /* navigation: {
          nextEl: '.sale__arrow--next',
          prevEl: '.sale__arrow--prev',
@@ -190,7 +166,7 @@ if (example) {
       autoplay: {
          delay: 3000,
       },
-      
+
    });
 }
 
@@ -300,7 +276,7 @@ if (header) {
    $(window).scroll(function () {
       if ($(window).scrollTop() >= 1) {
          $('.header').addClass('header--sticky');
-   
+
       } else {
          $('.header').removeClass('header--sticky');
       }
@@ -321,12 +297,12 @@ if (example) {
          bulletActiveClass: 'swiper-dot--active',
          clickable: true,
       },
-     // Navigation arrows
+      // Navigation arrows
       navigation: {
          nextEl: '.comments__arrow--next',
          prevEl: '.comments__arrow--prev',
       }
-      
+
    });
 }
 
@@ -363,10 +339,10 @@ if (filterTop) {
          target.parentElement.classList.toggle('hidden');
          target.parentElement.previousElementSibling.classList.toggle('active');
 
-      } else if(!target.classList.contains('js-parameter')){
+      } else if (!target.classList.contains('js-parameter')) {
          const resultBoxes = document.querySelectorAll('.js-result');
          const paramrtersBoxes = document.querySelectorAll('.filter__parameters');
-         
+
          [...resultBoxes].forEach((item) => {
             if (item.classList.contains('active')) {
                item.classList.remove('active');
@@ -391,7 +367,7 @@ if (product) {
       slidesPerGroup: 1,
       centeredSlides: true,
       centeredSlidesBounds: true,
-   });    
+   });
 }
 
 
@@ -439,10 +415,10 @@ const orderInner = document.querySelectorAll('.filter__inner-order');
 const orderInput = document.querySelector('.filter__input');
 
 if (orderInput) {
-   orderInner.forEach((item)=>item.addEventListener('click', (e) => {
+   orderInner.forEach((item) => item.addEventListener('click', (e) => {
       if (e.target.id === 'btn-less') {
          let targetValue = e.target.parentElement.nextElementSibling.firstElementChild.value;
-   
+
          if (targetValue <= 1) {
             targetValue = 1;
          } else {
@@ -462,7 +438,7 @@ if (orderInput) {
 if (orderInput) {
    const swiper = new Swiper('.recommend__swiper', {
       loop: true,
-     // Navigation arrows
+      // Navigation arrows
       navigation: {
          nextEl: '.liked__btn--prev',
          prevEl: '.liked__btn--next',
@@ -495,7 +471,7 @@ if (orderInput) {
             spaceBetween: 5,
          },
       },
-   });    
+   });
 };
 
 
@@ -510,7 +486,7 @@ if (buyBox) {
       if (target.classList.contains('product__btn-buy')) {
          collectingData();
          checkQuantityProducts();
-      } 
+      }
    })
 }
 
@@ -581,7 +557,7 @@ if (productsList) {
          deleteProduct(target);
          checkQuantityProducts();
          culcOrderPrice();
-      } 
+      }
    })
 }
 
@@ -653,9 +629,9 @@ function deleteProduct(e) {
 function addProductInCart(arrProduct) {
    const productsList = document.querySelector('.cart__products-list');
 
-   for (let i = 0; i < arrProduct.length; i++){
+   for (let i = 0; i < arrProduct.length; i++) {
       productsList.insertAdjacentHTML(`afterBegin`,
-      `<li class="cart__product" id="${arrProduct[i].id}">
+         `<li class="cart__product" id="${arrProduct[i].id}">
                <div class="cart__flex">
                   <div class="cart__photo">
                      <img class="cart__img" src=${arrProduct[i].way} width="160" height="165" alt="фото продукта">
@@ -725,11 +701,8 @@ function addProductInCart(arrProduct) {
                   <button class="cart__delete" type="button"></button>
                </div>
             </li>`);
-      }
+   }
 }
-
-
-
 
 
 
@@ -741,28 +714,28 @@ const patterns = {
    passwordPattern: /^(?!.*\s).{8,}$/
 };
 
-const formCart = document.forms[1];
-const filds = formCart.querySelectorAll('.order__fild');
+const formCart = document.querySelector('.order__form');
+const filds = document.querySelectorAll('.order__fild');
 
 // adding event input:
-if (orderBtn) {
+if (filds.length > 1) {
    formCart.addEventListener('input', e => {
       const target = e.target;
-   
+
       if (target.classList.contains('order__fild') && target.name === 'name') {
          validationData(patterns.namePattern, target);
-   
+
       } else if (target.classList.contains('order__fild') && target.name === 'email') {
          validationData(patterns.emailPattern, target);
-   
+
       } else if (target.classList.contains('order__fild') && target.name === 'tel') {
          validationData(patterns.phonePattern, target);
-   
+
       } else if (target.classList.contains('order__fild') && target.name === 'city') {
          validationData(patterns.namePattern, target);
-   
+
       } else if (target.classList.contains('order__fild') && target.name === 'postOffice') {
-   
+
          if (target.value.length < 1) {
             target.classList.remove('success');
             target.classList.add('error');
@@ -814,25 +787,25 @@ function validationData(pattern, target) {
 
 // ============================ Validation page form =========================== //
 const formPage = document.querySelector('.form-page');
-const pageFilds = formCart.querySelectorAll('.form__fild');
-const formBtn = formCart.querySelector('.form__btn');
+const pageFilds = document.querySelectorAll('.form__fild');
+const formBtn = document.querySelector('.form__btn');
 
 if (formPage) {
    formPage.addEventListener('input', e => {
       const target = e.target;
-   
-      if (target.classList.contains('form__fild') && target.id === 'name') {
-         console.log(target.value)
+
+      if (target.classList.contains('form__fild') && target.id === 'formName') {
          validationData(patterns.namePattern, target);
-   
-      } else if (target.classList.contains('form__fild') && target.id === 'email') {
+
+      } else if (target.classList.contains('form__fild') && target.id === 'formMail') {
          validationData(patterns.emailPattern, target);
-   
-      } else if (target.classList.contains('form__fild') && target.id === 'tel') {
+
+      } else if (target.classList.contains('form__fild') && target.id === 'formTel') {
          validationData(patterns.phonePattern, target);
-      } 
+      }
    });
 };
+
 
 // adding event blur:
 if (formPage) {
@@ -844,6 +817,7 @@ if (formPage) {
       }
    }));
 };
+
 
 // adding event click by :
 if (formBtn) {
@@ -877,23 +851,22 @@ formFooter.addEventListener('input', e => {
 // ============================ Validation mobile form =========================== //
 const mobileForm = mobileMenuIndex.querySelector('.mobile-form');
 const mobileInputs = mobileForm.querySelectorAll('.form__fild');
-const mobileFormBtn = mobileForm.querySelector('.form__btn');
+const mobileFormBtn = mobileForm.querySelector('.form__btn-ph');
 
 // add event inpute by mobile form:
 if (mobileForm) {
    mobileForm.addEventListener('input', e => {
       const target = e.target;
-   
-      if (target.classList.contains('form__fild') && target.id === 'name') {
-         console.log(target.value)
+
+      if (target.classList.contains('form__fild') && target.id === 'name-ph') {
          validationData(patterns.namePattern, target);
-   
-      } else if (target.classList.contains('form__fild') && target.id === 'email') {
+
+      } else if (target.classList.contains('form__fild') && target.id === 'email-ph') {
          validationData(patterns.emailPattern, target);
-   
-      } else if (target.classList.contains('form__fild') && target.id === 'tel') {
+
+      } else if (target.classList.contains('form__fild') && target.id === 'tel-ph') {
          validationData(patterns.phonePattern, target);
-      } 
+      }
    });
 };
 
@@ -943,7 +916,7 @@ function culcOrderPrice() {
    const orderSum = document.querySelector('.order__result--order');
    const resultPay = document.querySelector('.order__result--pay');
    let sum = 0;
-   
+
    arrProduct.forEach(item => {
       sum = sum + (+item.price);
    });
@@ -956,6 +929,196 @@ function culcOrderPrice() {
 
 
 
-// window.addEventListener("resize", (e) => {
-//    console.log(window.innerWidth)
-// });
+
+// ============================================ log-in page =============================== //
+
+const logBtn = document.querySelectorAll('.header__log-in');
+const logBlock = document.querySelector('.log-in');
+const logForm = document.querySelector('.log-in__form');
+const logFormBtn = document.querySelector('.form-log__btn');
+const fildsLog = document.querySelectorAll('.form-log__fild');
+const passwordBlock = document.querySelector('.form-log__fild--password');
+const registration = document.querySelector('.registration');
+// console.log(logBtn)
+
+if (logForm) {
+
+   // show/hidden page:
+   logBtn.forEach(item => {
+      item.addEventListener('click', (e) => {
+         logBlock.classList.remove('hidden');
+      })
+   });
+
+   logBlock.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('log-in__container')) {
+         logBlock.classList.add('hidden')
+      }
+   });
+
+
+   // Validation log-in:
+   logForm.addEventListener('input', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('form-log__fild') && target.id === 'logMail') {
+         validationData(patterns.emailPattern, target);
+
+      } else if (target.classList.contains('form-log__fild') && target.id === 'logPassword') {
+         validationData(patterns.passwordPattern, target);
+      }
+   });
+
+
+   // adding event blur by form-log fild's:
+   fildsLog.forEach(item => item.addEventListener('blur', (e) => {
+      const target = e.target;
+      console.log(item)
+
+      if (target.value.length < 1) {
+         target.classList.add('error');
+      }
+   }));
+
+
+   // event "click" by form-log:
+   logBlock.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('form-log__btn')) {
+         const filterFilds = [...fildsLog].filter(item => !(item.classList.contains('success')));
+
+         filterFilds.forEach(item => {
+            item.classList.add('error');
+            setTimeout(() => item.classList.remove('error'), 300);
+            setTimeout(() => item.classList.add('error'), 600);
+         });
+
+         // show/hidden password:
+      } else if (target.classList.contains('show-password')) {
+
+         if (target.classList.contains("show-password")) {
+            showHiddenPass(target);
+         }
+
+         // show/hidden registration:
+      } else if (target.classList.contains('log-in__regist')) {
+         logBlock.classList.add('hidden');
+         registration.classList.remove('hidden');
+      }
+   });
+}
+
+
+// ============================================ registration page =============================== //
+// event "click" by registration:
+
+if (registration) {
+   registration.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.classList.contains('show-password')) {
+         showHiddenPass(target);
+
+      } else if (target.classList.contains('registration__log-in')) {
+         registration.classList.add('hidden');
+         logBlock.classList.remove('hidden');
+
+      } else if (target.classList.contains('registration__container')) {
+         registration.classList.add('hidden');
+      }
+   })
+}
+
+
+// show/hidden password:
+function showHiddenPass(target) {
+   if (target.classList.contains('show-password')) {
+
+      if (!target.classList.contains("active")) {
+         target.previousElementSibling.type = "text";
+      } else {
+         target.previousElementSibling.type = "password";
+      }
+      target.classList.toggle("active");
+   }
+}
+
+
+// validation registration form:
+const registForm = document.querySelector('.registration-form');
+const registFilds = document.querySelectorAll('.registration-form__fild');
+const registFormBtn = document.querySelector('.registration-form__btn');
+
+if (registForm) {
+
+   // add event inpute by registration form:
+   registForm.addEventListener('input', e => {
+      const target = e.target;
+
+      if (target.classList.contains('registration-form__fild') && target.id === 'regMail') {
+         validationData(patterns.emailPattern, target);
+
+      } else if (target.classList.contains('registration-form__fild') && target.id === 'regPassFirst') {
+         checkPasswords();
+         validationData(patterns.passwordPattern, target);
+
+      } else if (target.classList.contains('registration-form__fild') && target.id === 'regPassSecond') {
+         checkPasswords();
+         validationData(patterns.passwordPattern, target);
+
+      } else if (target.classList.contains('registration-form__fild') && target.id === 'regTel') {
+         validationData(patterns.phonePattern, target);
+      }
+   });
+
+
+   // adding event blur:
+   registFilds.forEach(item => item.addEventListener('blur', (e) => {
+      const target = e.target;
+
+      if (target.value.length < 1) {
+         target.classList.add('error');
+      }
+   }));
+
+
+   // adding event click by regist form btn:
+   registFormBtn.addEventListener('click', (e) => {
+      const filterFilds = [...registFilds].filter(item => !(item.classList.contains('success')));
+      e.preventDefault();
+
+      filterFilds.forEach(item => {
+         item.classList.add('error');
+         setTimeout(() => item.classList.remove('error'), 300);
+         setTimeout(() => item.classList.add('error'), 600);
+      });
+
+   });
+
+   // checking password's:
+   function checkPasswords() {
+      const firstPass = [...registFilds].filter(item => item.classList.contains('registration-form__first-password'));
+      const secondPass = [...registFilds].filter(item => item.classList.contains('registration-form__second-password'));
+
+      if (!(firstPass[0].value === secondPass[0].value)) {
+         firstPass[0].classList.remove('success');
+         secondPass[0].classList.remove('success');
+         firstPass[0].classList.add('error');
+         secondPass[0].classList.add('error');
+         return false
+
+      } else if (firstPass[0].value.length > 8 && secondPass[0].value.length > 8) {
+         firstPass[0].classList.remove('error');
+         secondPass[0].classList.remove('error');
+         firstPass[0].classList.add('success');
+         secondPass[0].classList.add('success');
+      }
+   }
+
+
+};
+
+
