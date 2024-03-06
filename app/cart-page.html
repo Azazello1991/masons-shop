@@ -20,8 +20,8 @@
    
          <div class="header__top">
             <div class="header__search">
-               <input class="input header__input" type="text" id="search" placeholder="Поиск">
-               <label class="sr-only" for="search">Поиск по сайту</label>
+               <input class="input header__input" type="text" id="search" placeholder="Пошук">
+               <label class="sr-only" for="search">Пошук по сайту</label>
             </div>
    
             <a class="logo" href="./index.html">
@@ -30,21 +30,21 @@
    
             <div class="header__nav-top">
                <div class="header__languages">
-                  <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
+                  <button class="header__language-btn active" data-lg="en" type="button">EN</button>
                   <button class="header__language-btn" data-lg="ua" type="button">UA</button>
                </div>
                <div class="header__cabinet">
-                  <a href="./cart-page.html" class="btn-icon header__cabinet-btn header__cart-btn">
-                     <span class="header__quantity">3</span>
+                  <a class="btn-icon header__cabinet-btn header__cart-btn" href="./cart-page.html" title="Кошик" aria-label="Кошик">
+                     <span class="header__quantity" aria-label="Килькисть товару в кошику">3</span>
                   </a>
-                  <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
-                  <button class="header__log-in" type="button">Log</button>
+                  <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button" title="Обране" aria-label="Обране"></a>
+                  <button class="header__log-in" type="button" title="Реєстрація" aria-label="Реєстрація">Log</button>
                </div>
             </div>
    
             <button class="burger burger-index--open" type="button">
                <span class="burger__line"></span>
-               <span class="sr-only">Открыть меню</span>
+               <span class="sr-only">Відкрити меню</span>
             </button>
          </div>
    
@@ -52,11 +52,11 @@
          <nav class="nav">
             <ul class="nav__list">
                <li class="nav__category-item">
-                  <a class="nav__category active" href="#about"><span class="nav__category-name">Услуги</span></a>
+                  <a class="nav__category active" href="#about"><span class="nav__category-name">Послуги</span></a>
                </li>
    
                <li class="nav__category-item">
-                  <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
+                  <a class="nav__category" href="#example"><span class="nav__category-name">Приклад</span></a>
                </li>
    
                <li class="nav__category-item">
@@ -68,7 +68,7 @@
                </li>
    
                <li class="nav__category-item">
-                  <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
+                  <a class="nav__category" href="#comments"><span class="nav__category-name">Відгуки</span></a>
                </li>
    
                <li class="nav__category-item">
@@ -76,7 +76,7 @@
                </li>
    
                <li class="nav__category-item">
-                  <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
+                  <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакти</span></a>
                </li>
             </ul>
          </nav>
@@ -91,21 +91,21 @@
       
                <button class="burger burger--active burger-index--close" type="button">
                   <span class="burger__line"></span>
-                  <span class="sr-only">Открыть меню</span>
+                  <span class="sr-only">Відкрити меню</span>
                </button>
             </div>
       
             <div class="mobile-menu-index__nav">
                <div class="header__cabinet">
-                  <a class="btn-icon header__cabinet-btn header__cart-btn"  href="./cart-page.html">
-                     <span class="header__quantity">3</span>
+                  <a class="btn-icon header__cabinet-btn header__cart-btn"  href="./cart-page.html" aria-label="Кошик">
+                     <span class="header__quantity" aria-label="Килькисть товару в кошику">3</span>
                   </a>
       
                   <a href="#" class="btn-icon header__cabinet-btn header__lickes-btn" type="button"></a>
-                  <button class="header__log-in header__mobile-log-in" type="button">Log</button>
+                  <button class="header__log-in header__mobile-log-in" type="button" aria-label="Реєстрація">Log</button>
                </div>
                <div class="header__languages mobile-menu-index__languages">
-                  <button class="header__language-btn active" data-lg="ru" type="button">RU</button>
+                  <button class="header__language-btn active" data-lg="en" type="button">EN</button>
                   <button class="header__language-btn" data-lg="ua" type="button">UA</button>
                </div>
             </div>
@@ -113,11 +113,11 @@
             <nav class="nav">
                <ul class="nav__list mobile-nav">
                   <li class="nav__category-item mobile__category">
-                     <a class="nav__category" href="#about"><span class="nav__category-name">Услуги</span></a>
+                     <a class="nav__category" href="#about"><span class="nav__category-name">Послуги</span></a>
                   </li>
       
                   <li class="nav__category-item mobile__category">
-                     <a class="nav__category" href="#example"><span class="nav__category-name">Пример</span></a>
+                     <a class="nav__category" href="#example"><span class="nav__category-name">Приклад</span></a>
                   </li>
       
                   <li class="nav__category-item mobile__category">
@@ -129,7 +129,7 @@
                   </li>
       
                   <li class="nav__category-item mobile__category">
-                     <a class="nav__category" href="#comments"><span class="nav__category-name">Отзывы</span></a>
+                     <a class="nav__category" href="#comments"><span class="nav__category-name">Відгуки</span></a>
                   </li>
       
                   <li class="nav__category-item mobile__category">
@@ -137,7 +137,7 @@
                   </li>
       
                   <li class="nav__category-item mobile__category">
-                     <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакты</span></a>
+                     <a class="nav__category" href="#contacts"><span class="nav__category-name">Контакти</span></a>
                   </li>
                </ul>
             </nav>
@@ -146,38 +146,38 @@
                <form class="form mobile-form" action="#" method="post">
                   <ul class="form__list">
                      <li class="form__item">
-                        <input class="fild form__fild" id="name-ph" type="text" placeholder="Ваше имя" required>
-                        <label class="sr-only" for="name-ph">Введите ваше имя</label>
+                        <input class="fild form__fild" id="name-ph" type="text" placeholder="Ваше ім'я" required>
+                        <label class="sr-only" for="name-ph">Введіть Ваше ім'я</label>
                      </li>
       
                      <li class="form__item">
                         <input class="fild form__fild" id="email-ph" type="email" placeholder="Email" required>
-                        <label class="sr-only" for="email-ph">Введите ваше email</label>
+                        <label class="sr-only" for="email-ph">Введіть Ваш email</label>
                      </li>
       
                      <li class="form__item">
                         <input class="fild form__fild" id="tel-ph" type="tel" placeholder="Телефон" required>
-                        <label class="sr-only" for="tel-ph">Введите ваш телефон</label>
+                        <label class="sr-only" for="tel-ph">Введіть Ваш телефон</label>
                      </li>
       
                      <li class="form__item">
                         <textarea class="fild form__fild form__textarea" name="comment" id="comment-ph"
-                           placeholder="Примечание"></textarea>
-                        <label class="sr-only" for="comment-ph">Введите ваше примечание</label>
+                           placeholder="Примітка"></textarea>
+                        <label class="sr-only" for="comment-ph">Введіть Вашу примітку</label>
                      </li>
                   </ul>
-                  <button class="btn form__btn-ph" type="submit">Отправить</button>
+                  <button class="btn form__btn-ph" type="submit">Надіслати</button>
                </form>
       
                <ul class="networks section-form__networks">
                   <li class="networks__btn">
                      <a href="#" class="networks__network networks__network--telegram"></a>
-                     <span class="sr-only">Связатся через телеграм</span>
+                     <span class="sr-only">Зв'язатися через телеграм</span>
                   </li>
       
                   <li class="networks__btn">
                      <a href="#" class="networks__network networks__network--viber"></a>
-                     <span class="sr-only">Связатся через вайбер</span>
+                     <span class="sr-only">Зв'язатися через вайбер</span>
                   </li>
                </ul>
             </div>
@@ -190,30 +190,30 @@
             <div class="log-in__inner">
                <div class="log-in__content">
       
-                  <h1 class="log-in__title">Вход</h1>
-                  <button class="log-in__regist" type="button">У меня ещё нет аккаунта</button>
+                  <h1 class="log-in__title">Вхід</h1>
+                  <button class="log-in__regist" type="button">У мене ще немає облікового запису</button>
       
                   <form class="form-log log-in__form" action="#" method="post">
       
                      <div class="form-log__item">
-                        <label class="sr-only" for="logMail">Введите ваш email</label>
+                        <label class="sr-only" for="logMail">Введіть Ваш email</label>
                         <input class="fild form-log__fild" id="logMail" type="email" placeholder="Email" required>
                      </div>
       
                      <div class="form-log__item form-log__item--password">
-                        <label class="sr-only" for="logPassword">Введите ваш пароль</label>
+                        <label class="sr-only" for="logPassword">Введіть Ваш пароль</label>
                         <input class="fild form-log__fild form-log__fild--password" type="password" id="logPassword"
-                           name="password" placeholder="Введите пароль" required>
+                           name="password" placeholder="Введіть пароль" required>
                         <button class="show-password" type="button"></button>
                      </div>
       
                      <div class="form-log__box-check">
                         <input class="form-log__check sr-only" type="checkbox" id="remember" name="remember">
-                        <label class="form-log__check-lable" for="remember">Запомнить меня</label>
+                        <label class="form-log__check-lable" for="remember">Запам'ятати мене</label>
                      </div>
       
-                     <button class="form-log__btn" type="submit">Вход</button>
-                     <a class="form-log__forgat-link" href="#">Забыли пароль?</a>
+                     <button class="form-log__btn" type="submit">Вхід</button>
+                     <a class="form-log__forgat-link" href="#">Забули пароль?</a>
       
                   </form>
                </div>
@@ -225,41 +225,41 @@
             <div class="registration__inner">
                <div class="registration__content">
          
-                  <h1 class="registration__title">Регыстрация</h1>
-                  <a class="registration__log-in" href="#">У меня есть аккаунт</a>
+                  <h1 class="registration__title">Реєстрація</h1>
+                  <a class="registration__log-in" href="#">У мене є обліковий запис</a>
          
                   <form class="registration-form" action="#" method="post">
          
                      <div class="registration-form__item">
-                        <label class="sr-only" for="regMail">Введите ваш email</label>
+                        <label class="sr-only" for="regMail">Введіть Ваш email</label>
                         <input class="fild registration-form__fild" id="regMail" type="email" placeholder="Email" required>
                      </div>
          
                      <div class="registration-form__item registration-form__first-pass">
-                        <label class="sr-only" for="regPassFirst">Введите ваш пароль</label>
+                        <label class="sr-only" for="regPassFirst">Введіть Ваш пароль</label>
                         <input class="fild registration-form__fild registration-form__first-password" type="password"
-                           id="regPassFirst" name="password" placeholder="Введите пароль" required>
+                           id="regPassFirst" name="password" placeholder="Введіть пароль" required>
                         <button class="show-password" type="button"></button>
                      </div>
          
                      <div class="registration-form__item registration-form__second-pass">
-                        <label class="sr-only" for="regPassSecond">Повторите пароль</label>
+                        <label class="sr-only" for="regPassSecond">Повторіть пароль</label>
                         <input class="fild registration-form__fild registration-form__second-password" type="password"
-                           id="regPassSecond" name="password" placeholder="Повторите пароль" required>
+                           id="regPassSecond" name="password" placeholder="Повторіть пароль" required>
                         <button class="show-password" type="button"></button>
                      </div>
          
                      <div class="registration-form__item">
-                        <label class="sr-only" for="regTel">Введите ваш email</label>
+                        <label class="sr-only" for="regTel">Введіть Ваш email</label>
                         <input class="fild registration-form__fild" id="regTel" type="tel" placeholder="Телефон" required>
                      </div>
          
                      <div class="registration-form__box-check">
                         <input class="registration-form__check sr-only" type="checkbox" id="igree">
-                        <label class="registration-form__check-lable" for="igree">Я принимаю условыя пользования</label>
+                        <label class="registration-form__check-lable" for="igree">Я приймаю умови користування</label>
                      </div>
          
-                     <button class="registration-form__btn" type="submit">Регистрация</button>
+                     <button class="registration-form__btn" type="submit">Зареєструватися</button>
                   </form>
                </div>
             </div>
@@ -270,18 +270,18 @@
       <section class="cart">
          <div class="container">
       
-            <h1 class="cart__title">Корзина</h1>
+            <h1 class="cart__title">Кошик</h1>
       
             <ul class="cart__products-list">
-               <div class="cart__message-text hidden">У Вас нет товара в корзине.
-                  <a class="cart__message-transfer" href="catalog-page.html">Перейти к покупкам...</a>
+               <div class="cart__message-text hidden">У Вас немає товару в кошику.
+                  <a class="cart__message-transfer" href="catalog-page.html">Перейти до покупок...</a>
                </div>
             </ul>
          </div>
       </section>
       <section class="order">
          <div class="container">
-            <h2 class="order__title cart__title">Оформить заказ</h2>
+            <h2 class="order__title cart__title">Оформити заказ</h2>
       
             <div class="order__content">
                <form class="form order__form" action="#" method="post" name="orderName">
@@ -289,35 +289,35 @@
                   <ul class="order__filds">
       
                      <li class="order__fild-wrapper">
-                        <input class="fild order__fild" type="text" name="name" id="order-name" placeholder="Ваше имя"
+                        <input class="fild order__fild" type="text" name="name" id="order-name" placeholder="Ваше ім'я"
                            required>
-                        <label class="sr-only" for="order-name">Введите ваше имя</label>
+                        <label class="sr-only" for="order-name">Введіть Ваше ім'я</label>
                         <div class="form-msg"></div>
                      </li>
       
                      <li class="order__fild-wrapper">
                         <input class="fild order__fild" type="email" name="email" id="order-email" placeholder="Email"
                            required>
-                        <label class="sr-only" for="order-email">Введите ваш email</label>
+                        <label class="sr-only" for="order-email">Введіть Ваш email</label>
                         <div class="form-msg"></div>
                      </li>
       
                      <li class="order__fild-wrapper">
                         <input class="fild order__fild" type="tel" name="tel" id="order-tel" placeholder="Телефон" required>
-                        <label class="sr-only" for="order-tel">Введите ваш телефон</label>
+                        <label class="sr-only" for="order-tel">Введіть Ваш телефон</label>
                         <div class="form-msg"></div>
                      </li>
       
                      <li class="order__fild-wrapper">
-                        <input class="fild order__fild" type="text" name="city" id="order-city" placeholder="Город" required>
-                        <label class="sr-only" for="order-city">Введите ваш город</label>
+                        <input class="fild order__fild" type="text" name="city" id="order-city" placeholder="Місто" required>
+                        <label class="sr-only" for="order-city">Введіть Ваше місто</label>
                         <div class="form-msg"></div>
                      </li>
       
                      <li class="order__fild-wrapper">
-                        <input class="fild order__fild" type="text" name="postOffice" id="post-office" placeholder="Отделение"
+                        <input class="fild order__fild" type="text" name="postOffice" id="post-office" placeholder="Відділення"
                            required>
-                        <label class="sr-only" for="post-office">Введите ваше отделение почты</label>
+                        <label class="sr-only" for="post-office">Введіть відділення пошти</label>
                         <div class="form-msg"></div>
                      </li>
                   </ul>
@@ -329,22 +329,22 @@
                            <h3 class="order__subtitle">Доставка</h3>
       
                            <input class="order__redio sr-only" type="radio" id="pickup" name="delivery" value="pickup">
-                           <label class="order__redio-lable" for="pickup">Самовывоз</label>
+                           <label class="order__redio-lable" for="pickup">Самовивіз</label>
       
                            <input class="order__redio sr-only" type="radio" id="novaPoshta" name="delivery" value="novaPoshta"
                               checked>
-                           <label class="order__redio-lable" for="novaPoshta">Новая почта</label>
+                           <label class="order__redio-lable" for="novaPoshta">Нова пошта</label>
                         </li>
       
                         <li class="order__redio-box">
-                           <h3 class="order__subtitle">Оплата</h3>
+                           <h3 class="order__subtitle">Розрахунок</h3>
       
                            <input class="order__redio sr-only" type="radio" id="cash" name="payment" value="cash">
-                           <label class="order__redio-lable" for="cash">Наложеный платёж</label>
+                           <label class="order__redio-lable" for="cash">Накладений платіж</label>
       
                            <input class="order__redio sr-only" type="radio" id="non-cash" name="payment" value="nonСash"
                               checked>
-                           <label class="order__redio-lable" for="non-cash">Безналичный</label>
+                           <label class="order__redio-lable" for="non-cash">Безготівковий</label>
                         </li>
                      </ul>
       
@@ -361,12 +361,12 @@
                      </ul>
       
                      <div class="order__pay-wraper">
-                        <div class="order__pay">Итого:
+                        <div class="order__pay">Разом:
                            <span class="order__result order__result--pay">1150</span>
                            <span class="order__result-slice"> грн</span>
                         </div>
       
-                        <button class="btn order__btn" type="submit">Оформить заказ</button>
+                        <button class="btn order__btn" type="submit">Оформити замовлення</button>
                      </div>
       
                   </div>
@@ -386,68 +386,68 @@
    
                <ul class="networks">
                   <li class="networks__btn">
-                     <span class="sr-only">Перейти на страницу телеграма</span>
-                     <a class="networks__network networks__network--telegram" href="#" target="_blank"></a>
+                     <span class="sr-only">Перейти на сторінку телеграма</span>
+                     <a class="networks__network networks__network--telegram" href="#" target="_blank" title="Telegram"></a>
                   </li>
    
                   <li class="networks__btn">
-                     <span class="sr-only">Перейти на страницу инстаграма</span>
-                     <a class="networks__network networks__network--instagram" href="#" target="_blank"></a>
+                     <span class="sr-only">Перейти на сторінку інстаграма</span>
+                     <a class="networks__network networks__network--instagram" href="#" target="_blank" title="Viber"></a>
                   </li>
                </ul>
             </div>
    
             <div class="footer__data">
                <div class="footer__data-block">
-                  <h2 class="footer__block-titel">Информация</h2>
+                  <h2 class="footer__block-titel">Інформація</h2>
    
                   <ul class="footer__data-list">
                      <li class="footer__data-item">
                         <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">О нас</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Про нас</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Доставка та оплата</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Повернення</a>
                      </li>
                   </ul>
                </div>
    
                <div class="footer__data-block">
-                  <h2 class="footer__block-titel">Контакты</h2>
+                  <h2 class="footer__block-titel">Контакти</h2>
    
                   <ul class="footer__data-list">
                      <li class="footer__data-item">
                         <a href="#" class="link footer__data-link" target="_blank">Каталог</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">О нас</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Про нас</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Доставка и оплата</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Доставка та оплата</a>
                      </li>
                      <li class="footer__data-item">
-                        <a href="#" class="link footer__data-link" target="_blank">Возвращение</a>
+                        <a href="#" class="link footer__data-link" target="_blank">Повернення</a>
                      </li>
                   </ul>
                </div>
             </div>
    
             <div class="email footer__email">
-               <h2 class="email__title">Узнавай о новинках первым</h2>
+               <h2 class="email__title">Дізнавайся про новинки першим</h2>
    
-               <p class="email__text">Получай от нас смс с сюрпризами</p>
+               <p class="email__text">Отримуй від нас смс із сюрпризами</p>
                <form class="email__registr" action="#" method="post">
                   <div>
                      <input class="input email__fild" type="email" id="email" placeholder="Email" required>
-                     <label class="sr-only" for="email">Введите свой Email</label>
+                     <label class="sr-only" for="email">Введіть свій Email</label>
                   </div>
                   <div>
-                     <button class="btn email__btn" type="submit">Отправить</button>
+                     <button class="btn email__btn" type="submit">Надіслати</button>
                   </div>
                </form>
             </div>

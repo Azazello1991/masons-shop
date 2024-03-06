@@ -1,8 +1,5 @@
 .comments {
 
-		&__list {
-		}
-
 		&__item {
          display: flex;
          column-gap: 30px;
@@ -57,6 +54,89 @@
             font-size: 16px;
          }
       }
+}
+
+.product {
+
+   &__form-subtitle {
+      font-size: 24px;
+      color: #ffffff;
+      max-width: 80%;
+      text-align: center;
+      margin: 0 auto 30px;
+   }
+
+   &__form {
+      border: 1px solid $accent;
+      transform: skew(-3deg);
+      padding: 30px 50px 50px;
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      transition: all 0.3s ease-in-out;
+   }
+
+   &__form.hidden {
+      position: absolute;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -10;
+      transform: translateX(-200%);
+   }
+
+   &__form-wrapper {
+      transform: skew(3deg);
+   }
+
+   &__inner {
+      margin-bottom: 20px;
+   }
+
+   &__stars-wrapper {
+      margin-bottom: 15px;
+   }
+
+   &__form-stars {
+      margin-bottom: 10px;
+   }
+
+   &__rating-title {
+      font-size: 14px;
+      color: $accent;
+      margin-bottom: 10px;
+   }
+
+   &__fild {
+      max-width: 400px;
+      font-size: 18px;
+      padding: 20px 40px;
+      background-color: black;
+      width: 100%;
+   }
+
+   &__textarea {
+      resize: vertical;
+      min-height: 150px;
+   }
+
+   &__btns {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__btn-cansel {
+
+   }
+
+   &__btn-form {
+      font-size: 18px;
+   }
+}
+
+.comments {
+
+   &__stars-2 {}
 }
 
 .stars {

@@ -75,12 +75,6 @@ if (example) {
       slidesPerView: 3,
       spaceBetween: 30,
 
-      /* navigation: {
-         nextEl: '.example__arrow--next',
-         prevEl: '.example__arrow--prev',
-      }, */
-
-
       breakpoints: {
          1200: {
             slidesPerView: 3,
@@ -101,7 +95,7 @@ if (example) {
    });
 }
 
-// catalog swiper: ===========!!!!!!!!
+// --------- catalog swiper: 
 const catalog = document.querySelector('.catalog');
 const catalogSlider = document.querySelector('.catalog__swiper');
 
@@ -152,11 +146,6 @@ const sale = document.querySelector('.example');
 if (example) {
    const swiper = new Swiper('.sale__slider', {
       loop: true,
-      // Navigation arrows
-      /* navigation: {
-         nextEl: '.sale__arrow--next',
-         prevEl: '.sale__arrow--prev',
-      }, */
       pagination: {
          el: '.sale__dots',
          bulletClass: 'swiper-dot',
@@ -259,7 +248,7 @@ if (navList) {
    });
 };
 
-
+// ++++++++++++++++ jquery +++++++++++++ // !!!! Перекласти на ванільний
 
 // ----------- Conect mixitup:
 if (document.querySelector('.gallery__items')) {
@@ -267,8 +256,6 @@ if (document.querySelector('.gallery__items')) {
       const mixer = mixitup(".gallery__items");
    });
 };
-
-
 
 // ---------- header sticky:
 const header = document.querySelector('.header');
@@ -282,7 +269,7 @@ if (header) {
       }
    });
 }
-
+// +++++++++++++++ end jquery +++++++++++++++++ //
 
 
 // ------- swiper comment:
@@ -389,7 +376,23 @@ if (lightBox) {
 
 
 
-// ---------- static stars rating:
+// ---------- rating stars:
+const starsRating = document.querySelectorAll('.product__form-stars'); // знаходимо всі блоки з класом static-stars
+
+if (starsRating) {
+   starsRating.forEach((itemStars) => {
+      new Starry(itemStars, {
+         readOnly: false, // з можливістю голосування
+         icons: { // перестилізовуємо ісонки
+            blank: './images/sprite.svg#icon-star-blank',
+            hover: './images/sprite.svg#icon-star-fill',
+            active: './images/sprite.svg#icon-star-fill'
+         }
+      });
+   });
+};
+
+// ---------- static stars:
 const staticStars = document.querySelectorAll('.static-stars'); // знаходимо всі блоки з класом static-stars
 
 if (staticStars) {
@@ -408,6 +411,20 @@ if (staticStars) {
    });
 };
 
+// event buttons-coments:
+const commentForm = document.querySelector('.product__form');
+
+document.addEventListener('click', (e) => {
+   const target = e.target;
+
+   if (target.classList.contains('product__btn-add')) {
+      commentForm.classList.toggle('hidden');
+
+   } else if (target.classList.contains('product__form-btn--cansel')) {
+      commentForm.classList.add('hidden');
+   }
+   
+})
 
 
 // ----------- filter button of quantity products:
@@ -602,11 +619,11 @@ function showHiddenMessCart() {
    if (listLength < 2) {
       blockMessage.classList.remove('hidden');
       orderBtn.setAttribute('disabled', '');
-      orderBtn.textContent = "Корзина пуста"
+      orderBtn.textContent = "Кошик порожній"
    } else {
       blockMessage.classList.add('hidden');
       orderBtn.removeAttribute('disabled');
-      orderBtn.textContent = "Оформыть заказ";
+      orderBtn.textContent = "Оформити замовлення";
    }
 };
 
@@ -1116,9 +1133,7 @@ if (registForm) {
          firstPass[0].classList.add('success');
          secondPass[0].classList.add('success');
       }
-   }
-
-
+   };
 };
 
 
